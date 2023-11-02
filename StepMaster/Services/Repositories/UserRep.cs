@@ -24,6 +24,19 @@ namespace StepMaster.Services.Repositories
             return list;
         }
 
+        public async Task<User> GetUser(string login, string password)
+        {
+            try
+            {
+                User user = await _users.FindAsync( user => user.login == login && user.password == password).Result.FirstAsync();
+                return user;
+            }
+            catch 
+            {
+                return null;
+            }
+        }
+
         public Task NewUser()
         {
             throw new NotImplementedException();

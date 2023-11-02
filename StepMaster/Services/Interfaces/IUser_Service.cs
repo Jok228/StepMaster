@@ -8,5 +8,7 @@ namespace StepMaster.Services.Interfaces
 
         public Task<List<User>> GetAllUser();
 
+        public Task<User> GetUser(string username, string password);
+
     }
 }

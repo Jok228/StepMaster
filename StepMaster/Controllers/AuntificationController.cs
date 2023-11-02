@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using API.Entity.SecrurityClass;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
 using StepMaster.Models.Entity;
 using StepMaster.Services.Interfaces;
+using System.Net;
 
 namespace StepMaster.Controllers
 {
@@ -17,9 +20,19 @@ namespace StepMaster.Controllers
         }
         [HttpGet]
         [Route("Auth")]
-        public async Task<List<User>> Auth()
-        {            
-            return await _user.GetAllUser();
+        [BasicAuthorization]
+        public Cookie Auth()
+        {
+            var resp = new HttpResponseMessage();
+
+            var cookie = new CookieHeaderValue("session-id", "12345");
+             
+            Cookie answer = new Cookie();
+            answer.Name = "username";
+            answer.Value = "12345";
+
+            
+            return answer;
         }
     }
 }
