@@ -1,21 +1,24 @@
-﻿using API.DAL.Entity.APIDatebaseSet;
-using Microsoft.Extensions.Caching.Memory;
+﻿using Microsoft.Extensions.Caching.Memory;
 using MongoDB.Driver;
 using StepMaster.Models.Entity;
 using StepMaster.Services.Interfaces;
+using System.Security.Cryptography;
+using StepMaster.Models.APIDatebaseSet;
+using StepMaster.Models.HashSup;
 
 namespace StepMaster.Services.Repositories
 {
     public class UserRep : IUser_Service
     {
-        
+        IMemoryCache _cache;
         private readonly IMongoCollection<User> _users;        
         
-        public UserRep(IAPIDatabaseSettings settings, IMongoClient mongoClient)
+        public UserRep(IAPIDatabaseSettings settings, IMongoClient mongoClient ,IMemoryCache cache)
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
-            _users = database.GetCollection<User>("User");            
-            
+            _users = database.GetCollection<User>("User");
+            _cache = cache;
+
         }
         public async  Task<List<User>> GetAllUser()
         {
@@ -37,9 +40,25 @@ namespace StepMaster.Services.Repositories
             }
         }
 
-        public Task NewUser()
+       
+
+        public async Task<User> RegUserAsync(User newUser)
         {
-            throw new NotImplementedException();
+            try
+            {
+                
+                
+                newUser.password = HashCoder.GetHash(newUser.password);
+                newUser.role = "user";
+                newUser.region_id = "1";
+
+                await _users.InsertOneAsync(newUser);
+                return newUser;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

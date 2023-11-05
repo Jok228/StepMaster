@@ -11,6 +11,7 @@ namespace API
         public static void InitializerServices(this IServiceCollection service)
         {
             service.AddScoped<IUser_Service, UserRep>();
+            service.AddScoped<IRegion_Service, RegionRep>();
         }
         public static void InitializerRateLimiter(this IServiceCollection service)
         {

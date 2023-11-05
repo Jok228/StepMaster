@@ -1,6 +1,6 @@
-﻿namespace API.DAL.Entity.APIDatebaseSet
+﻿namespace StepMaster.Models.APIDatebaseSet
 {
-    public class APIDatabaseSettings : IAPIDatabaseSettings
+    public class ApiDatabaseSettings : IAPIDatabaseSettings
     {
         public string NameCollection { get; set; } = string.Empty;
         public string ConnectionString { get; set; } = string.Empty;

@@ -1,4 +1,4 @@
-﻿namespace API.DAL.Entity.APIDatebaseSet
+﻿namespace StepMaster.Models.APIDatebaseSet
 {
     public interface IAPIDatabaseSettings
     {

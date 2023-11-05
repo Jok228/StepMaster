@@ -4,7 +4,7 @@ namespace StepMaster.Services.Interfaces
 {
     public interface IUser_Service
     {
-        public Task NewUser();
+        public Task<User> RegUserAsync(User newUser);
 
         public Task<List<User>> GetAllUser();
 

@@ -7,6 +7,7 @@ using System.Text;
 using API.Entity.SecrurityClass;
 using StepMaster.Services.Interfaces;
 using StepMaster.Models.Entity;
+using StepMaster.Models.HashSup;
 
 namespace API.DAL.Entity.SecrurityClass
 {
@@ -52,11 +53,11 @@ namespace API.DAL.Entity.SecrurityClass
             
             // Store the client ID and secret
             var clientId = authSplit[0];
-            var clientSecret = authSplit[1];
+            var clientSecret = HashCoder.GetHash(authSplit[1]);
 
             // Client ID and secret are incorrect
             User user = await _userService.GetUser(clientId, clientSecret);
-                       
+            var nameIndentity = user.login;         
             
             if (user == null)
             {
@@ -68,13 +69,16 @@ namespace API.DAL.Entity.SecrurityClass
             {
                 AuthenticationType = "Basic",
                 IsAuthenticated = true,
-                Name = clientId
+                Name = nameIndentity
+
             };
 
             // Set the client ID as the name claim type.
             var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(client, new[]
             {
-                new Claim(ClaimTypes.Name, clientId)
+                new Claim(ClaimTypes.Name, nameIndentity),
+                new Claim( ClaimTypes.Role, user.role),
+                new Claim( ClaimTypes.Hash,clientSecret )
             }));
 
             // Return a success result.
