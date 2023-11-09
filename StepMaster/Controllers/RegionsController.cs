@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using StepMaster.Models.Entity;
+using StepMaster.Models.Entity.Response;
 using StepMaster.Services.Interfaces;
 
 namespace StepMaster.Controllers;
@@ -14,8 +15,12 @@ public class RegionsController:ControllerBase
     }
     [HttpGet]
     [Route("GetRegions")]    
-    public async Task<List<Region>> GetRegions ()
+    public async Task<ResponseList<Region>> GetRegions ()
     {
-        return await _regions.GetAllRegionsAsync();
+        var bodyResponse = await _regions.GetAllRegionsAsync();
+        
+        var regions = new ResponseList<Region>() ;
+        regions.Result = bodyResponse;
+        return regions;
     }
 }

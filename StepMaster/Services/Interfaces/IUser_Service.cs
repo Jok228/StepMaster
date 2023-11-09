@@ -7,6 +7,8 @@ namespace StepMaster.Services.Interfaces
         public Task<User> GetByLoginAsync(string login);
         public Task<User> RegUserAsync(User newUser);
 
+        public Task<User>RecoveryPasswordAsync(User userWithNewPassword);
+
         public Task<List<User>> GetAllUser();
        
 

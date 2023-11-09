@@ -5,6 +5,7 @@ using StepMaster.Services.Interfaces;
 using System.Security.Cryptography;
 using StepMaster.Models.APIDatebaseSet;
 using StepMaster.Models.HashSup;
+using MongoDB.Bson;
 
 namespace StepMaster.Services.Repositories
 {
@@ -59,10 +60,26 @@ namespace StepMaster.Services.Repositories
                 
                 newUser.password = HashCoder.GetHash(newUser.password);
                 newUser.role = "user";
-                newUser.region_id = "1";
+                
 
                 await _users.InsertOneAsync(newUser);
                 return newUser;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public async Task<User> RecoveryPasswordAsync(User userWithNewPassword)
+        {
+            try
+            {
+                userWithNewPassword.password = HashCoder.GetHash(userWithNewPassword.password);
+                var filter = Builders<User>.Filter.Eq("email",userWithNewPassword.email);
+                var update = Builders<User>.Update.Set("password", userWithNewPassword.password);    
+                
+                await _users.UpdateOneAsync(filter,update);
+                return userWithNewPassword;
             }
             catch
             {

@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace StepMaster.Models.Entity;
 
-public class Region
+public struct Region
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
