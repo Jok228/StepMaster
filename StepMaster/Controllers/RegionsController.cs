@@ -13,7 +13,7 @@ public class RegionsController:ControllerBase
         _regions = regions;
     }
     [HttpGet]
-    [Route("GetRegions")]
+    [Route("GetRegions")]    
     public async Task<List<Region>> GetRegions ()
     {
         return await _regions.GetAllRegionsAsync();

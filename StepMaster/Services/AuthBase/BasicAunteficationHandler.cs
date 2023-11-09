@@ -30,7 +30,7 @@ namespace API.DAL.Entity.SecrurityClass
             }
 
             var authorizationHeader = Request.Headers["Authorization"].ToString();
-            var contenttype = Request.Headers["Content-Type"].ToString();
+           
             
 
 
@@ -53,36 +53,41 @@ namespace API.DAL.Entity.SecrurityClass
             
             // Store the client ID and secret
             var clientId = authSplit[0];
-            var clientSecret = HashCoder.GetHash(authSplit[1]);
+            var clientSecret = authSplit[1];
 
             // Client ID and secret are incorrect
-            User user = await _userService.GetUser(clientId, clientSecret);
-            var nameIndentity = user.login;         
-            
+            User user = await _userService.GetByLoginAsync(clientId);
             if (user == null)
+            {
+                return await Task.FromResult(AuthenticateResult.Fail(string.Format("User not found '{0}'", clientId)));
+            }
+            if (HashCoder.Verify(passwordHash: user.password, clientSecret))
+            {
+                var nameIndentity = user.email; 
+                // Authenicate the client using basic authentication
+                var client = new BasicAuthenticationClient
+                {
+                    AuthenticationType = "Basic",
+                    IsAuthenticated = true,
+                    Name = nameIndentity
+
+                };
+
+                // Set the client ID as the name claim type.
+                var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(client, new[]
+                {
+                    new Claim(ClaimTypes.Name, nameIndentity),
+                    new Claim( ClaimTypes.Role, user.role),
+                    new Claim( ClaimTypes.Hash,clientSecret )
+                }));
+
+                // Return a success result.
+                return await Task.FromResult(AuthenticateResult.Success(new AuthenticationTicket(claimsPrincipal, Scheme.Name)));
+            }
+            else
             {
                 return await Task.FromResult(AuthenticateResult.Fail(string.Format("The secret is incorrect for the client '{0}'", clientId)));
             }
-
-            // Authenicate the client using basic authentication
-            var client = new BasicAuthenticationClient
-            {
-                AuthenticationType = "Basic",
-                IsAuthenticated = true,
-                Name = nameIndentity
-
-            };
-
-            // Set the client ID as the name claim type.
-            var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(client, new[]
-            {
-                new Claim(ClaimTypes.Name, nameIndentity),
-                new Claim( ClaimTypes.Role, user.role),
-                new Claim( ClaimTypes.Hash,clientSecret )
-            }));
-
-            // Return a success result.
-            return await Task.FromResult(AuthenticateResult.Success(new AuthenticationTicket(claimsPrincipal, Scheme.Name)));
         }
         
     }

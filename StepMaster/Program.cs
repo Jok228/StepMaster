@@ -1,11 +1,14 @@
 using API;
 using API.DAL.Entity.SecrurityClass;
+using DnsClient.Protocol;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using StepMaster.Models.APIDatebaseSet;
+using System.Security.Authentication;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StepMaster
 {
@@ -19,8 +22,29 @@ namespace StepMaster
             // Add services to the container.
             builder.Services.AddScoped<IAPIDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ApiDatabaseSettings>>().Value);
+            //var cert = new X509Certificate2("certificates/root.crt");
+
+            var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
+
+            clientSettings.UseTls = true;
+
+
+            clientSettings.SslSettings.CheckCertificateRevocation = false;
+
+            clientSettings.SslSettings = new SslSettings
+            {
+
+                CheckCertificateRevocation = true,
+                //ClientCertificates = new[] { cert },
+
+            };
+            clientSettings.VerifySslCertificate = false;
+
+
             builder.Services.AddScoped<IMongoClient>(sp =>
-                new MongoClient(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
+                new MongoClient(clientSettings));
+           
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -9,19 +9,23 @@ using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using DnsClient.Protocol;
+using StepMaster.Models.CodeGenerate;
+using StepMaster.Models.HashSup;
 using StepMaster.Services.AuthCookie;
 
 namespace StepMaster.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuntificationController : ControllerBase
+    public class AuthorizationController : ControllerBase
     {
         private readonly IUser_Service _user;
+        private readonly IPost_Service _post;
 
 
-        public AuntificationController(IUser_Service user)
+        public AuthorizationController(IUser_Service user, IPost_Service post)
         {
+            _post = post;
             _user = user;
         }
         [HttpGet]
@@ -30,11 +34,38 @@ namespace StepMaster.Controllers
         public async Task<User> Auth()
         {
             var role = User.Claims.First(x => x.Type == ClaimTypes.Role).Value;
-            var secret = User.Claims.First(x => x.Type == ClaimTypes.Hash).Value;
-            var response = await _user.GetUser(User.Identity.Name, secret);
+            
+            var response= await _user.GetByLoginAsync(User.Identity.Name);
+            
             await Authenticate(User.Identity.Name, role);
             return response;
             
+        }
+        [HttpPost]
+        [Route("CheckUser")]
+        public async Task<string> CheckUser ([FromForm] string email )
+        {
+            var checkUser = await _user.GetByLoginAsync(email);
+            if (checkUser == null)
+            {
+                var code = CodeGenerate.GeneratedCode();
+                var send = await _post.SendMessageAsync(email, code);
+                if (send)
+                {
+                    return code;
+                }
+                else
+                {
+                    Response.StatusCode = 400;
+                    return "failed send message code on email";
+                }
+                
+            }
+            else
+            {
+                Response.StatusCode = 409;
+                return "User with this email already have";
+            }
         }
         [HttpPost]
         [Route("Registration")]
@@ -42,7 +73,7 @@ namespace StepMaster.Controllers
         {
            var response = await _user.RegUserAsync(user);
            
-           await Authenticate(response.login, response.password);
+           await Authenticate(response.email, response.password);
 
            Response.StatusCode = 201;
 
@@ -68,7 +99,7 @@ namespace StepMaster.Controllers
         }        
         [HttpGet]        
         [Route("LogOut")]
-        [Authorize(Roles ="user")]
+        [CustomAuthorizeUser("admin")]
         public async Task Logout()
         {
             if (User.Identity.IsAuthenticated)

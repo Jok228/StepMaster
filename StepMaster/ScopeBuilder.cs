@@ -12,6 +12,7 @@ namespace API
         {
             service.AddScoped<IUser_Service, UserRep>();
             service.AddScoped<IRegion_Service, RegionRep>();
+            service.AddScoped<IPost_Service, PostRep>();
         }
         public static void InitializerRateLimiter(this IServiceCollection service)
         {

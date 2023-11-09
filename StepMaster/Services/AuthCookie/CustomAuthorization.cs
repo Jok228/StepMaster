@@ -36,18 +36,25 @@ namespace StepMaster.Services.AuthCookie
                     };
                     return;
                 }
-                
-                if (role == _option)
+
+                if (_option == "all")
                 {
                     return;
                 }
                 else
                 {
-                    context.Result = new ObjectResult("Not authorized")
+                    if (role == _option )
                     {
-                        StatusCode = (int)HttpStatusCode.Forbidden
+                        return;
+                    }
+                    else
+                    {
+                        context.Result = new ObjectResult("Not authorized")
+                        {
+                            StatusCode = (int)HttpStatusCode.Forbidden
 
-                    };
+                        };
+                    }
                 }
             }
         }

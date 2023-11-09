@@ -25,22 +25,31 @@ namespace StepMaster.Services.Repositories
             var list = new List<User>();
             list = await _users.FindAsync(_ => true).Result.ToListAsync();
             return list;
-        }
+        }     
 
-        public async Task<User> GetUser(string login, string password)
+
+        public async Task<User> GetByLoginAsync(string email)
         {
             try
             {
-                User user = await _users.FindAsync( user => user.login == login && user.password == password).Result.FirstAsync();
-                return user;
+                _cache.TryGetValue(email, out User? user);
+                if (user == null)
+                {
+                    user = await _users.FindAsync(user => user.email == email).Result.FirstAsync();
+                    _cache.Set(email, user, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
+                    return user;
+                }
+                else
+                {
+                    return user;
+                }
+                
             }
-            catch 
+            catch
             {
                 return null;
             }
         }
-
-       
 
         public async Task<User> RegUserAsync(User newUser)
         {
