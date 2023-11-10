@@ -25,7 +25,7 @@ namespace StepMaster
             //var cert = new X509Certificate2("certificates/root.crt");
 
             var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
-
+            Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
             clientSettings.UseTls = true;
 
 
