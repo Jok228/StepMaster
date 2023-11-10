@@ -20,12 +20,14 @@ namespace StepMaster
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
             // Add services to the container.
+            
             builder.Services.AddScoped<IAPIDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ApiDatabaseSettings>>().Value);
             //var cert = new X509Certificate2("certificates/root.crt");
+            
 
             var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
-
+            Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
             clientSettings.UseTls = true;
 
 

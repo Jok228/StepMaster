@@ -25,6 +25,4 @@ services:
     networks:
       - step-master-dev
     volumes: # optional to preserve database after container is deleted.
-      - database-data:/data/db
-volumes:
-  database-data:
+      - /dataMongo:/data/db
