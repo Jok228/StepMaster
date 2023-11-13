@@ -13,16 +13,19 @@ services:
     networks:
       - step-master-dev
     depends_on:
-      - mongodb
+      - mongodb 
   mongodb:
-    container_name: step-master-mongo
+    container_name: mongodb
     image: mongo:latest
+    networks:
+      - step-master-dev
     environment: # set required env variables to access mongo
        MONGO_INITDB_ROOT_USERNAME: root
        MONGO_INITDB_ROOT_PASSWORD: password
     ports:
       - "27017:27017"
-    networks:
-      - step-master-dev
-    volumes: # optional to preserve database after container is deleted.
-      - /dataMongo:/data/db
+    volumes:
+      - ./database-data:/data/db
+      - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js
+    
+    
