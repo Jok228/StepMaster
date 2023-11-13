@@ -17,8 +17,7 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo:latest
-    networks:
-      - step-master-dev
+    
     environment: # set required env variables to access mongo
        MONGO_INITDB_ROOT_USERNAME: root
        MONGO_INITDB_ROOT_PASSWORD: password
@@ -27,5 +26,7 @@ services:
     volumes:
       - ./database-data:/data/db
       - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js
+    networks:
+      - step-master-dev
     
     

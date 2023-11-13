@@ -28,19 +28,19 @@ namespace StepMaster
 
             var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
             Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
-            clientSettings.UseTls = true;
+            //clientSettings.UseTls = true;
 
 
-            clientSettings.SslSettings.CheckCertificateRevocation = false;
+            //clientSettings.SslSettings.CheckCertificateRevocation = false;
 
-            clientSettings.SslSettings = new SslSettings
-            {
+            //clientSettings.SslSettings = new SslSettings
+            //{
 
-                CheckCertificateRevocation = true,
-                //ClientCertificates = new[] { cert },
+            //    CheckCertificateRevocation = true,
+            //    //ClientCertificates = new[] { cert },
 
-            };
-            clientSettings.VerifySslCertificate = false;
+            //};
+            //clientSettings.VerifySslCertificate = false;
 
 
             builder.Services.AddScoped<IMongoClient>(sp =>
