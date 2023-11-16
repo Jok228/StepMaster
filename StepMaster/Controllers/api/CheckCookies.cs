@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using StepMaster.Services.AuthCookie;
 
-namespace StepMaster.Controllers;
+namespace StepMaster.Controllers.api;
 
 [Route("api/[controller]")]
 [ApiController]
-public class CheckCookies: ControllerBase
+public class CheckCookies : ControllerBase
 {
     [CustomAuthorizeUser("user")]
     [HttpGet]

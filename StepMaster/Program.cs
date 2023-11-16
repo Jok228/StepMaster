@@ -20,25 +20,27 @@ namespace StepMaster
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
             // Add services to the container.
+            
             builder.Services.AddScoped<IAPIDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ApiDatabaseSettings>>().Value);
             //var cert = new X509Certificate2("certificates/root.crt");
+            
 
             var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
             Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
-            clientSettings.UseTls = true;
+            //clientSettings.UseTls = true;
 
 
-            clientSettings.SslSettings.CheckCertificateRevocation = false;
+            //clientSettings.SslSettings.CheckCertificateRevocation = false;
 
-            clientSettings.SslSettings = new SslSettings
-            {
+            //clientSettings.SslSettings = new SslSettings
+            //{
 
-                CheckCertificateRevocation = true,
-                //ClientCertificates = new[] { cert },
+            //    CheckCertificateRevocation = true,
+            //    //ClientCertificates = new[] { cert },
 
-            };
-            clientSettings.VerifySslCertificate = false;
+            //};
+            //clientSettings.VerifySslCertificate = false;
 
 
             builder.Services.AddScoped<IMongoClient>(sp =>
@@ -65,11 +67,11 @@ namespace StepMaster
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
+            //if (app.Environment.IsDevelopment())
+            //{
                 app.UseSwagger();
                 app.UseSwaggerUI();
-            }
+            //}
 
             app.UseAuthorization();
 

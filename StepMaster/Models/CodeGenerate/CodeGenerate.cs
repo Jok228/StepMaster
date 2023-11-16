@@ -1,3 +1,4 @@
+using System;
 using System.CodeDom.Compiler;
 
 namespace StepMaster.Models.CodeGenerate;
@@ -16,5 +17,11 @@ public class CodeGenerate
 
         return code;
 
+    }
+    public static string RandomString(int length)
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        return new string(Enumerable.Repeat(chars, length)
+            .Select(s => s[_random.Next(s.Length)]).ToArray());
     }
 }

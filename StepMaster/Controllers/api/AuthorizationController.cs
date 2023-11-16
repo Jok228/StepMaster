@@ -12,8 +12,12 @@ using DnsClient.Protocol;
 using StepMaster.Models.CodeGenerate;
 using StepMaster.Models.HashSup;
 using StepMaster.Services.AuthCookie;
+using System.Text.Json;
+using Amazon.Runtime.Internal;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Http.Extensions;
 
-namespace StepMaster.Controllers
+namespace StepMaster.Controllers.api
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -21,12 +25,13 @@ namespace StepMaster.Controllers
     {
         private readonly IUser_Service _user;
         private readonly IPost_Service _post;
+        IMemoryCache _cache;
 
-
-        public AuthorizationController(IUser_Service user, IPost_Service post)
+        public AuthorizationController(IUser_Service user, IPost_Service post, IMemoryCache cache)
         {
             _post = post;
             _user = user;
+            _cache = cache;
         }
         [HttpGet]
         [Route("Auth")]
@@ -34,51 +39,80 @@ namespace StepMaster.Controllers
         public async Task<User> Auth()
         {
             var role = User.Claims.First(x => x.Type == ClaimTypes.Role).Value;
-            
-            var response= await _user.GetByLoginAsync(User.Identity.Name);
-            
+
+            var response = await _user.GetByLoginAsync(User.Identity.Name);
+
             await Authenticate(User.Identity.Name, role);
             return response;
-            
+
         }
         [HttpPost]
-        [Route("CheckUser")]
-        public async Task<string> CheckUser ([FromForm] string email )
+        [Route("SendCode")]
+        public async Task<Code> SendCode([FromForm] string email)
         {
+            var codeStr = new Code();
             var checkUser = await _user.GetByLoginAsync(email);
             if (checkUser == null)
             {
                 var code = CodeGenerate.GeneratedCode();
+
                 var send = await _post.SendMessageAsync(email, code);
                 if (send)
                 {
-                    return code;
+
+                    codeStr.code = code;
+                    return codeStr;
                 }
                 else
                 {
                     Response.StatusCode = 400;
-                    return "failed send message code on email";
+
+                    return codeStr;
+
+
                 }
-                
+
             }
             else
             {
                 Response.StatusCode = 409;
-                return "User with this email already have";
+
+                return codeStr;
             }
         }
         [HttpPost]
         [Route("Registration")]
-        public async Task<User> Registration ([FromForm] User user)
+        public async Task<User> Registration([FromForm] User user)
         {
-           var response = await _user.RegUserAsync(user);
-           
-           await Authenticate(response.email, response.password);
+            var response = await _user.RegUserAsync(user);
 
-           Response.StatusCode = 201;
+            await Authenticate(response.email, response.password);
 
-           return response;
+            Response.StatusCode = 201;
 
+            return response;
+
+
+        }
+        
+        [HttpGet]
+        [Route("SendNewPassword")]
+        public async Task SendNewPassword([FromForm] string email)
+        {
+
+            var newPassword = CodeGenerate.RandomString(12);
+            var host = Request.GetEncodedUrl().Split("/api/")[0];
+            var send = await _post.SendPasswordOnMail(email, newPassword, host);
+
+            _cache.Set(newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
+            if (send)
+            {
+                Response.StatusCode = 200;
+            }
+            else
+            {
+                Response.StatusCode = 400;
+            }
 
         }
 
@@ -90,14 +124,16 @@ namespace StepMaster.Controllers
             new Claim(ClaimTypes.Name, userName),
             new Claim(ClaimsIdentity.DefaultRoleClaimType, userRole)
         };
+            var cookies = new Cookie("name", "value");
             // создаем объект ClaimsIdentity
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
             // установка аутентификационных куки
+
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
 
-        }        
-        [HttpGet]        
+        }
+        [HttpGet]
         [Route("LogOut")]
         [CustomAuthorizeUser("admin")]
         public async Task Logout()
@@ -111,6 +147,6 @@ namespace StepMaster.Controllers
                 HttpContext.Response.StatusCode = 419;
             }
         }
-       
+
     }
 }

@@ -1,0 +1,32 @@
+version: "3.9"
+networks:
+  step-master-dev:
+      driver: bridge
+services:
+  app: 
+    container_name: step-master
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5500:80"
+    networks:
+      - step-master-dev
+    depends_on:
+      - mongodb 
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    
+    environment: # set required env variables to access mongo
+       MONGO_INITDB_ROOT_USERNAME: root
+       MONGO_INITDB_ROOT_PASSWORD: password
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./database-data:/data/db
+      - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js
+    networks:
+      - step-master-dev
+    
+    
