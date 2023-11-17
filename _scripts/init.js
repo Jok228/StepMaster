@@ -2,10 +2,33 @@
 db = db.getSiblingDB('admin');
 
 db.auth("root","password")
-db = db.getSiblingDB('stepmaster');
+db = db.getSiblingDB('StepMaster');
 
 db.createCollection('Regions');
+db.createCollection('Days');
 db.createCollection('User')
+db.Days.insertMany(
+  [
+    {"calories": 100.1,
+  "distance": 10.1,
+  "steps": 10000,
+  "plancalories": 300.1,
+  "plandistance": 15.2,
+  "plansteps": 15000,
+  "date": "21/12/2023",
+  "email": "1234@gmail.com"
+},
+{"calories": 100.1,
+  "distance": 10.1,
+  "steps": 10000,
+  "plancalories": 300.1,
+  "plandistance": 15.2,
+  "plansteps": 15000,
+  "date": "21/12/2023",
+  "email": "1234@gmail.com"
+}
+  ]
+)
 db.User.insertMany(
   [{    
     "email": "example2@mail.ru",
@@ -27,7 +50,7 @@ db.User.insertMany(
   }
 ]);
   
-  db.Regions.insertMany([
+  db.Regions.insertMany([    
     {"fullName": "Республика Адыгея"},
     { "fullName": "Республика Карелия" },
     { "fullName": "Республика Коми" },
