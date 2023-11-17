@@ -9,22 +9,20 @@ namespace StepMaster.Models.Entity
         [BsonRepresentation(BsonType.ObjectId)]
         public string? _id { get; set; }
         [BsonElement("calories")]
-        public float calories { get; set; }
+        public double calories { get; set; }
         [BsonElement("distance")]
-        public float distance { get; set; }
+        public double distance { get; set; }
         [BsonElement("steps")]
         public int steps { get; set; }
         [BsonElement("plancalories")]
-        public float plancalories { get; set; }
+        public double plancalories { get; set; }
 
         [BsonElement("plandistance")]
-        public float plandistance { get; set; }
+        public double plandistance { get; set; }
 
         [BsonElement("plansteps")]
         public int plansteps { get; set; }
 
-        [BsonElement("userid")]
-        public string userid { get; set; }
         [BsonElement("date")]
         public string date { get; set; }
 

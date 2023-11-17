@@ -2,7 +2,9 @@
 using MongoDB.Driver;
 using StepMaster.Models.APIDatebaseSet;
 using StepMaster.Models.Entity;
+using StepMaster.Models.Entity.Response;
 using StepMaster.Services.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace StepMaster.Services.Repositories
 {
@@ -19,8 +21,9 @@ namespace StepMaster.Services.Repositories
             _cache = cache;
 
         }
-        public async Task<List<Day>> GetDaysUserByEmail(string email)
+        public async Task<BaseResponse<List<Day>>> GetDaysUserByEmail(string email)
         {
+            BaseResponse<List<Day>> response = new BaseResponse<List<Day>>();
             _cache.TryGetValue(_cacheName += email, out List<Day> list);
             if(list == null) 
             {
@@ -30,23 +33,29 @@ namespace StepMaster.Services.Repositories
                         .Result
                         .ToListAsync();
                     _cache.Set(_cacheName+email, list, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
-                    return list;
+                    response.Data = list;
+                    response.Status = MyStatus.Success;
+                    return response;
 
                 }
                 catch
                 {
-                    return null;
+                    response.Status = MyStatus.Except;
+                    return response;
                 }
             }
             else
             {
-                return list;
+                response.Data = list;
+                response.Status = MyStatus.Success;
+                return response;
             }
             
         }
 
-        public async Task<Day> SetDayAsync(Day day)
+        public async Task<BaseResponse<Day>> SetDayAsync(Day day, string email)
         {
+            BaseResponse<Day> response = new BaseResponse<Day>();
             _cache.TryGetValue(_cacheName += day.email, out Day checkday);
             if(checkday != null)
             {
@@ -54,14 +63,54 @@ namespace StepMaster.Services.Repositories
             }
             try
             {
+                var count =  _days.FindAsync(d=>d.email == email && d.date == day.date)
+                    .Result
+                    .Any();
+                if (count)
+                {
+                    
+                    response.Status = MyStatus.Exists;
+                    return response;
+                }
                 await _days.InsertOneAsync(day);
-                return day;
+                response.Data = day;
+                response.Status = MyStatus.SuccessCreate;
+                return response;
             }
             catch
             {
-                return null;
+                response.Status = MyStatus.Except;
+                return response;
             }
 
+        }
+
+        public async  Task<BaseResponse<Day>> UploadDayAsync(Day uploadday)
+        {
+            BaseResponse<Day> response = new BaseResponse<Day>();
+            _cache.TryGetValue(_cacheName += uploadday.email, out Day checkday);
+            try
+            {
+                var filter = Builders<Day>.Filter.Eq("email", uploadday.email);
+                var options = new FindOneAndReplaceOptions<Day>
+                {
+                    ReturnDocument = ReturnDocument.After
+                };                
+                uploadday._id = _days.FindAsync(filter)
+                    .Result
+                    .FirstAsync()
+                    .Result
+                    ._id;        
+                await _days.ReplaceOneAsync(filter, uploadday);
+                response.Data = uploadday;
+                response.Status = MyStatus.Success;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.Status= MyStatus.Except;
+                return response;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace API
         public static void InitializerServices(this IServiceCollection service)
         {
             service.AddScoped<IUser_Service, UserRep>();
-            service.AddScoped<IBodies_Service, BodiesRep>();
+            //service.AddScoped<IBodies_Service, BodiesRep>();
             service.AddScoped<IDays_Service, DaysRep>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IPost_Service, PostRep>();
