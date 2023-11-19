@@ -59,17 +59,27 @@ namespace StepMaster.Controllers.api
         [Route("UploadDay")]
         public async Task<Day> UploadDay([FromForm] Day day)
         {
-            var email = User.Identity.Name;
-            day.email = email;
-            var response = await _days.UploadDayAsync(day);
-            switch (response.Status)
+            if(day._id == null)
             {
-                case MyStatus.Success: Response.StatusCode = (int)response.Status; return response.Data; break;
-                case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
-                case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
-
+                Response.StatusCode = 400;
+                return null;
             }
-            return null;
+            else
+            {
+                var email = User.Identity.Name;
+                day.email = email;
+                var response = await _days.UploadDayAsync(day);
+                switch (response.Status)
+                {
+                    case MyStatus.Success: Response.StatusCode = (int)response.Status; return response.Data; break;
+                    case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
+                    case MyStatus.NotFound: Response.StatusCode = (int)response.Status; return null; break;
+                    case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
+
+                }
+                return null;
+            }
+            
 
         }
     }

@@ -91,25 +91,32 @@ namespace StepMaster.Services.Repositories
             _cache.TryGetValue(_cacheName += uploadday.email, out Day checkday);
             try
             {
-                var filter = Builders<Day>.Filter.Eq("email", uploadday.email);
-                var options = new FindOneAndReplaceOptions<Day>
-                {
-                    ReturnDocument = ReturnDocument.After
-                };                
-                uploadday._id = _days.FindAsync(filter)
+                var filter = Builders<Day>.Filter.Eq("_id", uploadday._id);
+                
+                var day =  _days.FindAsync(a => a._id == uploadday._id)
                     .Result
                     .FirstAsync()
-                    .Result
-                    ._id;        
-                await _days.ReplaceOneAsync(filter, uploadday);
-                response.Data = uploadday;
-                response.Status = MyStatus.Success;
-                return response;
+                    .Result;
+                
+                    await _days.ReplaceOneAsync(filter, uploadday);
+                    response.Data = uploadday;
+                    response.Status = MyStatus.Success;
+                    return response;
+                          
+               
+                
+               
             }
             catch (Exception ex)
             {
-                response.Status= MyStatus.Except;
+                if(ex.Message == "One or more errors occurred. (Sequence contains no elements)")
+                {
+                    response.Status = MyStatus.NotFound;
+                    return response;
+                }
+                response.Status = MyStatus.Except;
                 return response;
+
             }
         }
     }
