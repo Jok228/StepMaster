@@ -42,6 +42,7 @@ namespace StepMaster.Controllers.api
         {
 
             var email = User.Identity.Name;
+            day.email = email;
             var response = await _days.SetDayAsync(day, email);
             switch (response.Status)
             {
@@ -58,6 +59,8 @@ namespace StepMaster.Controllers.api
         [Route("UploadDay")]
         public async Task<Day> UploadDay([FromForm] Day day)
         {
+            var email = User.Identity.Name;
+            day.email = email;
             var response = await _days.UploadDayAsync(day);
             switch (response.Status)
             {

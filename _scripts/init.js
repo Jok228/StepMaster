@@ -31,14 +31,14 @@ db.Days.insertMany(
 )
 db.User.insertMany(
   [{    
-    "email": "example2@mail.ru",
-    "nickname": "ABCDFemale",
-    "fullname": "E-Girl",
-    "role": "user",
-    "password": "NydKk0ZwLPpHpe5nRuoKnA==;qY6JMOyNXV1oNue/UZ3gP/RLXiAOl1/IkICw/P8QByI=",
-    "region_id": "6546398a763aafa125652860",
-    "gender": "female"
-  },
+    "email": "dante_aligieri@rambler.ru",
+  "nickname": "Ubivator_Zaharov_User",
+  "fullname": "Ubivator_Zaharov_User",
+  "role": "user",
+  "password": "aTSGpg2xROw8VO/Tt59Kzw==;0JR1oF+6qkIhx9sF3QyRIpTaKnIfRGlw/pXVwEYvU0c=",
+  "region_id": "6556f0976a52487eb15f61e2",
+  "gender": "male"
+},
   {   
     "email": "example@mail.ru",
     "nickname": "ABCDMale",

@@ -16,6 +16,7 @@ using System.Text.Json;
 using Amazon.Runtime.Internal;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.Extensions.Hosting;
 
 namespace StepMaster.Controllers.api
 {
@@ -99,20 +100,30 @@ namespace StepMaster.Controllers.api
         [Route("SendNewPassword")]
         public async Task SendNewPassword([FromForm] string email)
         {
-
+            var user = await _user.GetByLoginAsync(email);
             var newPassword = CodeGenerate.RandomString(12);
             var host = Request.GetEncodedUrl().Split("/api/")[0];
-            var send = await _post.SendPasswordOnMail(email, newPassword, host);
-
-            _cache.Set(newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
-            if (send)
+            bool send = false;
+            if (user != null)
             {
-                Response.StatusCode = 200;
+                
+               send  = await _post.SendPasswordOnMail(email, newPassword, host);
+
+                _cache.Set(newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
+                if (send)
+                {
+                    Response.StatusCode = 200;
+                }
+                else
+                {
+                    Response.StatusCode = 400;
+                }
             }
             else
             {
-                Response.StatusCode = 400;
+                Response.StatusCode = 404;
             }
+           
 
         }
 

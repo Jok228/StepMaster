@@ -27,6 +27,6 @@ namespace StepMaster.Models.Entity
         public string date { get; set; }
 
         [BsonElement("email")]
-        public string email { get; set; }
+        public string? email { get; set; }
     }
 }
