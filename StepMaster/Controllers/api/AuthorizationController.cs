@@ -17,6 +17,7 @@ using Amazon.Runtime.Internal;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.Hosting;
+using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace StepMaster.Controllers.api
 {
@@ -51,13 +52,15 @@ namespace StepMaster.Controllers.api
         [Route("SendCode")]
         public async Task<Code> SendCode([FromForm] string email)
         {
+            var code = CodeGenerate.GeneratedCode();
+            var send = await _post.SendMessageAsync(email, code);
             var codeStr = new Code();
             var checkUser = await _user.GetByLoginAsync(email);
             if (checkUser == null)
             {
-                var code = CodeGenerate.GeneratedCode();
+                 code = CodeGenerate.GeneratedCode();
 
-                var send = await _post.SendMessageAsync(email, code);
+                send = await _post.SendMessageAsync(email, code);
                 if (send)
                 {
 
