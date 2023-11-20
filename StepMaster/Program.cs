@@ -9,7 +9,7 @@ using MongoDB.Driver;
 using StepMaster.Models.APIDatebaseSet;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
-
+using Google.Apis.Auth.AspNetCore3;
 namespace StepMaster
 {
     public class Program
@@ -17,6 +17,26 @@ namespace StepMaster
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            var services = builder.Services;
+            services
+       .AddAuthentication(o =>
+       {
+           
+           o.DefaultChallengeScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+         
+           o.DefaultForbidScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+        
+           o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+       })
+       .AddCookie()
+       .AddGoogleOpenIdConnect(options =>
+       {
+           options.ClientId = "434328467243-1hb02jpg6131qdrfamll69a72ajsgt79.apps.googleusercontent.com";
+           options.ClientSecret = "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";
+           
+       });
+
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
             // Add services to the container.
@@ -28,19 +48,7 @@ namespace StepMaster
 
             var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
             Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
-            //clientSettings.UseTls = true;
-
-
-            //clientSettings.SslSettings.CheckCertificateRevocation = false;
-
-            //clientSettings.SslSettings = new SslSettings
-            //{
-
-            //    CheckCertificateRevocation = true,
-            //    //ClientCertificates = new[] { cert },
-
-            //};
-            //clientSettings.VerifySslCertificate = false;
+           
 
 
             builder.Services.AddScoped<IMongoClient>(sp =>
@@ -55,13 +63,7 @@ namespace StepMaster
 
             builder.Services.AddAuthentication()
                 .AddScheme<AuthenticationSchemeOptions, BasicAunteficationHandler>("Basic", null);
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-                    options.SlidingExpiration = true;
-                    options.AccessDeniedPath = "/Forbidden/";
-                });
+            
 
             ScopeBuilder.InitializerServices(builder.Services);
             var app = builder.Build();
@@ -73,6 +75,10 @@ namespace StepMaster
                 app.UseSwaggerUI();
             //}
 
+           
+            app.UseHttpsRedirection();     
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
 

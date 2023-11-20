@@ -4,6 +4,7 @@ networks:
       driver: bridge
 services:
   app: 
+    restart: always
     container_name: step-master
     build:
       context: .

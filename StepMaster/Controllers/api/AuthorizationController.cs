@@ -51,16 +51,14 @@ namespace StepMaster.Controllers.api
         [HttpPost]
         [Route("SendCode")]
         public async Task<Code> SendCode([FromForm] string email)
-        {
-            var code = CodeGenerate.GeneratedCode();
-            var send = await _post.SendMessageAsync(email, code);
+        {         
+            
             var codeStr = new Code();
             var checkUser = await _user.GetByLoginAsync(email);
             if (checkUser == null)
             {
-                 code = CodeGenerate.GeneratedCode();
-
-                send = await _post.SendMessageAsync(email, code);
+                var code = CodeGenerate.GeneratedCode();                
+                var  send = await _post.SendMessageAsync(email, code);
                 if (send)
                 {
 
@@ -112,7 +110,7 @@ namespace StepMaster.Controllers.api
                 
                send  = await _post.SendPasswordOnMail(email, newPassword, host);
 
-                _cache.Set(newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
+                _cache.Set(email+=newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
                 if (send)
                 {
                     Response.StatusCode = 200;

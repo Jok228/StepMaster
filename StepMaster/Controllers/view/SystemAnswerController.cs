@@ -22,7 +22,7 @@ namespace StepMaster.Controllers.view
         [Route("AcceptPassword")]
         public async Task<string> AcceptPassword([FromQuery] string email, string password)
         {
-            _cache.TryGetValue(password, out var result);
+            _cache.TryGetValue(email + password, out var result);
             string response = string.Empty;
             if (result != null)
             {
