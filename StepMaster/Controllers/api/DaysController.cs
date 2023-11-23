@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StepMaster.Models.Entity;
+using StepMaster.Models.Entity.Loger;
 using StepMaster.Models.Entity.Response;
 using StepMaster.Services.AuthCookie;
 using StepMaster.Services.Interfaces;
+using System.IO;
 
 namespace StepMaster.Controllers.api
 {
@@ -20,7 +22,7 @@ namespace StepMaster.Controllers.api
         [Route("GetAllDayUser")]
         public async Task<ResponseList<Day>> GetAllDayUser()
         {
-            
+
             var email = User.Identity.Name;
             var response = new ResponseList<Day>();
             var responseBody = await _days.GetDaysUserByEmail(email);
@@ -38,17 +40,18 @@ namespace StepMaster.Controllers.api
         [HttpPost]
         [CustomAuthorizeUser("user")]
         [Route("SetNewDay")]
-        public async Task<Day> SetNewDay([FromForm]Day day)
+        public async Task<Day> SetNewDay([FromForm] Day day)
         {
-
+            await Loger.WriterLoger(day, "Создан новый день");
+            
             var email = User.Identity.Name;
             day.email = email;
             var response = await _days.SetDayAsync(day, email);
             switch (response.Status)
             {
-               case MyStatus.SuccessCreate:Response.StatusCode = (int)response.Status; return response.Data; break;
-               case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
-               case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
+                case MyStatus.SuccessCreate: Response.StatusCode = (int)response.Status; return response.Data; break;
+                case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
+                case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
 
             }
             return null;
@@ -59,13 +62,15 @@ namespace StepMaster.Controllers.api
         [Route("UploadDay")]
         public async Task<Day> UploadDay([FromForm] Day day)
         {
-            if(day._id == null)
+            if (day._id == null)
             {
                 Response.StatusCode = 400;
                 return null;
             }
             else
             {
+                await Loger.WriterLoger(day, "День обновлён");
+
                 var email = User.Identity.Name;
                 day.email = email;
                 var response = await _days.UploadDayAsync(day);
@@ -79,8 +84,9 @@ namespace StepMaster.Controllers.api
                 }
                 return null;
             }
-            
+
 
         }
+       
     }
 }

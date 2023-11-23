@@ -15,6 +15,9 @@ services:
       - step-master-dev
     depends_on:
       - mongodb 
+    volumes:
+      - ./Loger:/app/LogerDay
+      
   mongodb:
     container_name: mongodb
     image: mongo:latest
@@ -23,11 +26,12 @@ services:
        MONGO_INITDB_ROOT_USERNAME: root
        MONGO_INITDB_ROOT_PASSWORD: password
     ports:
-      - "27017:27017"
-    volumes:
-      - ./database-data:/data/db
-      - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - "27017:27017"    
     networks:
       - step-master-dev
-    
+    volumes:     
+      - ./database-data:/data/db
+      - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js   
+volumes:
+  myapp:       
     
