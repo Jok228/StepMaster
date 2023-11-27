@@ -42,7 +42,7 @@ namespace StepMaster.Controllers.api
         [Route("SetNewDay")]
         public async Task<Day> SetNewDay([FromForm] Day day)
         {
-            await Loger.WriterLoger(day, "Создан новый день");
+            
             
             var email = User.Identity.Name;
             day.email = email;
@@ -69,7 +69,7 @@ namespace StepMaster.Controllers.api
             }
             else
             {
-                await Loger.WriterLoger(day, "День обновлён");
+                
 
                 var email = User.Identity.Name;
                 day.email = email;

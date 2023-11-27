@@ -21,10 +21,11 @@ services:
   mongodb:
     container_name: mongodb
     image: mongo:latest
-    
+    restart: always
     environment: # set required env variables to access mongo
        MONGO_INITDB_ROOT_USERNAME: root
        MONGO_INITDB_ROOT_PASSWORD: password
+    
     ports:
       - "27017:27017"    
     networks:

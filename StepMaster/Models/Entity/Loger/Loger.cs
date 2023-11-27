@@ -7,7 +7,7 @@
             string path = "LogerDay/Days.txt";
             using (StreamWriter writer = new StreamWriter(path, true))
             {
-                var date = DateTime.Now.Date;
+                var date = DateTime.Now;
                 await writer.WriteLineAsync(name);
                 await writer.WriteLineAsync("Дата: " + date.Date.ToString());
                 await writer.WriteLineAsync("Время: " + date.TimeOfDay.ToString());

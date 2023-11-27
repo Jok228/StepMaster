@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using StepMaster.Models.HashSup;
 using StepMaster.Services.Interfaces;
 
 namespace StepMaster.Controllers.view
@@ -26,11 +27,12 @@ namespace StepMaster.Controllers.view
             string response = string.Empty;
             if (result != null)
             {
-                var user = await _user.GetByLoginAsync(email);
-                user.password = password;
+                var user = await _user.GetByLoginAsync(email);                
+                user.password = HashCoder.GetHash(password);
                 if (user != null)
                 {
-                    var state = _user.RecoveryPasswordAsync(user);
+                    
+                    var state = _user.UpdateUser(user);
                     if (state != null)
                     {
                         response = $"Ok, password was edit. Your new password -> {password}";

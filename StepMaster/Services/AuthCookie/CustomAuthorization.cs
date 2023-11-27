@@ -31,7 +31,8 @@ namespace StepMaster.Services.AuthCookie
                 {
                     context.Result = new ObjectResult("Not authorized")
                     {
-                        StatusCode = (int)HttpStatusCode.Forbidden
+                        
+                    StatusCode = (int)HttpStatusCode.Forbidden
                         
                     };
                     return;

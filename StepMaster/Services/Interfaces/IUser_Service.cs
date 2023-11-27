@@ -7,10 +7,12 @@ namespace StepMaster.Services.Interfaces
         public Task<User> GetByLoginAsync(string login);
         public Task<User> RegUserAsync(User newUser);
 
-        public Task<User>RecoveryPasswordAsync(User userWithNewPassword);
+        public Task<User>UpdateUser(User userUpdate);
 
         public Task<List<User>> GetAllUser();
-       
+
+        public Task<User> GetUserbyCookie (string cookies);
+
 
     }
 }

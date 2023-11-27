@@ -30,24 +30,16 @@ db.Days.insertMany(
   ]
 )
 db.User.insertMany(
-  [{    
+  [{   
     "email": "dante_aligieri@rambler.ru",
-  "nickname": "Ubivator_Zaharov_User",
-  "fullname": "Ubivator_Zaharov_User",
-  "role": "user",
-  "password": "aTSGpg2xROw8VO/Tt59Kzw==;0JR1oF+6qkIhx9sF3QyRIpTaKnIfRGlw/pXVwEYvU0c=",
-  "region_id": "6556f0976a52487eb15f61e2",
-  "gender": "male"
-},
-  {   
-    "email": "example@mail.ru",
-    "nickname": "ABCDMale",
-    "fullname": "DeadInside",
-    "role": "admin",
-    "password": "NydKk0ZwLPpHpe5nRuoKnA==;qY6JMOyNXV1oNue/UZ3gP/RLXiAOl1/IkICw/P8QByI=",
-    "region_id": "6546398a763aafa125652862",
-    "gender": "male"
-  }
+    "nickname": "Ubivator_Zaharov_User",
+    "fullname": "Ubivator_Zaharov_User",
+    "role": "user",
+    "password": "it1Cb/tDsMqGegBO2BVaqQ==;LFabWZeNkstVRdFm1zcUQ1+CIh48WpRobeNdAjDfFPg=",
+    "region_id": "6556f0976a52487eb15f61e2",
+    "gender": "male",
+    "lastCookie": ".AspNetCore.Cookies=CfDJ8O7INixjpt9Ktfx8f-0_TdQDsyroOMtqPEFZg-Aqmm5vzxBnWuKLJeVbZRN39yfeILuxcH2TwXUbW2WC6rt7H7Q79IclRJiCvNJAq6sSDbjf4Bs5DCiulv56kpsDUFhQnwPc64iiO7nkM62-_eBJNet1CcWx4byyCv5b9x7w9HFJZ2A6noC3P4jvOxmr_cClPi0fpP8BVEWDwrVmLQ3qT55XXgyOGl98m8wiPiyH0yZex3GFr_VgO7ws8gvGiV8AIaGF0-XOM3s8704B7Rc5_fNrb6GwixGdyxvXagQFyu1riFEFWi-XnGdgG3D8SpAdJ0mdbNlHfqC625tVt6qzkg4RCIPUiYNBQr1wmQTS209DCLhWhYf8tmwleNQkFg1Ik6HzoOCHhbqI0KyUbJlHqo8QTm1VijGOvKgz0gqXfatILdIJByIFoYNSSw9QQha4Iw"
+}
 ]);
   
   db.Regions.insertMany([    

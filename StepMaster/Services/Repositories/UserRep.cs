@@ -55,8 +55,7 @@ namespace StepMaster.Services.Repositories
         public async Task<User> RegUserAsync(User newUser)
         {
             try
-            {
-                
+            {               
                 
                 newUser.password = HashCoder.GetHash(newUser.password);
                 newUser.role = "user";
@@ -70,16 +69,30 @@ namespace StepMaster.Services.Repositories
                 return null;
             }
         }
-        public async Task<User> RecoveryPasswordAsync(User userWithNewPassword)
+        public async Task<User> UpdateUser(User userUpdate)
         {
             try
-            {
-                userWithNewPassword.password = HashCoder.GetHash(userWithNewPassword.password);
-                var filter = Builders<User>.Filter.Eq("email",userWithNewPassword.email);
-                var update = Builders<User>.Update.Set("password", userWithNewPassword.password);    
+            {                
+                var filter = Builders<User>.Filter.Eq("email", userUpdate.email);                
                 
-                await _users.UpdateOneAsync(filter,update);
-                return userWithNewPassword;
+                await _users.ReplaceOneAsync(filter, userUpdate);
+                return userUpdate;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<User> GetUserbyCookie(string cookies)
+        {
+            
+            try
+            {
+                var user = await _users.FindAsync(user => user.lastCookie == cookies)
+                    .Result
+                    .FirstAsync();
+                return user;
             }
             catch
             {

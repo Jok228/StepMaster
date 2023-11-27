@@ -22,5 +22,7 @@ namespace StepMaster.Models.Entity
         public string region_id { get; set; }
         [BsonElement("gender")]
         public string gender { get; set; }
+        [BsonElement("lastCookie")]
+        public string? lastCookie { get; set; }
     }
 }

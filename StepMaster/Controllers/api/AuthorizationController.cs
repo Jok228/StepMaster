@@ -44,7 +44,7 @@ namespace StepMaster.Controllers.api
 
             var response = await _user.GetByLoginAsync(User.Identity.Name);
 
-            await Authenticate(User.Identity.Name, role);
+            await Authenticate(response,true);
             return response;
 
         }
@@ -86,14 +86,16 @@ namespace StepMaster.Controllers.api
         [Route("Registration")]
         public async Task<User> Registration([FromForm] User user)
         {
-            var response = await _user.RegUserAsync(user);
 
-            await Authenticate(response.email, response.password);
+            user.role = "user";            
+
+            await Authenticate(user, false);
+
+            var response = await _user.RegUserAsync(user);
 
             Response.StatusCode = 201;
 
             return response;
-
 
         }
         
@@ -128,22 +130,33 @@ namespace StepMaster.Controllers.api
 
         }
 
-        private async Task Authenticate(string userName, string userRole)
+        private async Task Authenticate(User user, bool firstReg)
         {
             // создаем один claim
             var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, userName),
-            new Claim(ClaimsIdentity.DefaultRoleClaimType, userRole)
+            new Claim(ClaimTypes.Name, user.email),
+            new Claim(ClaimsIdentity.DefaultRoleClaimType, user.role)
         };
-            var cookies = new Cookie("name", "value");
+           
             // создаем объект ClaimsIdentity
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
             // установка аутентификационных куки
-
+            // 
+            
+            
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+            HttpContext.Response.Headers.TryGetValue("Set-Cookie", out var newCookies);
+            var cookies = newCookies.ToString().Split(';')[0];
+            user.lastCookie = cookies;
+            if (firstReg)
+            {
+               var status =  await _user.UpdateUser(user);
 
+            }
+            
+            
         }
         [HttpGet]
         [Route("LogOut")]
@@ -157,6 +170,30 @@ namespace StepMaster.Controllers.api
             else
             {
                 HttpContext.Response.StatusCode = 419;
+            }
+        }
+        [HttpGet]
+        [Route("UpdateCookies")]        
+        public async Task UpdateCookies()
+        {
+            var cookies = Request.Headers.SingleOrDefault(header => header.Key == "Cookie").Value.ToString();
+            if (cookies == null)
+            {
+                Response.StatusCode = 401;
+            }
+            else
+            {
+               var user = await _user.GetUserbyCookie(cookies);
+                if (user == null)
+                {
+                    Response.StatusCode = 404;
+                }
+                else
+                {
+                    await Authenticate(user,true);                  
+                   Response.StatusCode=200;
+
+                }
             }
         }
 
