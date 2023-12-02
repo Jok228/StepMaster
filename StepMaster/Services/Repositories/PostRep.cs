@@ -17,19 +17,21 @@ namespace StepMaster.Services.Repositories;
 public class PostRep:IPost_Service
 {
     
-    private string MainMail = "TusAppCom@outlook.com";    
-    private string MainPassword = "tusxapps_psswrd";
+    private string MainMail = "tusxapps.company@gmail.com";    
+    private string MainPassword = "pnlwsgisrvcqvqho";
     public async Task<bool> SendMessageAsync(string email, string message)
     {
         try
         {
-            var client = new SmtpClient("smtp-mail.outlook.com")
+            var client = new SmtpClient("smtp.gmail.com")
             {
                 Credentials = new NetworkCredential(MainMail, MainPassword),
                 Port = 587,
                 EnableSsl = true,
+                UseDefaultCredentials = false,                
+                DeliveryMethod = SmtpDeliveryMethod.Network
 
-            };
+        };
             MailAddress from = new MailAddress(MainMail);
             MailAddress to = new MailAddress(email);
             MailMessage mailMessage = new MailMessage(from, to);
@@ -56,11 +58,13 @@ public class PostRep:IPost_Service
             try
             {
 
-            var client = new SmtpClient("smtp-mail.outlook.com")
+            var client = new SmtpClient("smtp.gmail.com")
             {
                 Credentials = new NetworkCredential(MainMail, MainPassword),
                 Port = 587,
                 EnableSsl = true,
+                UseDefaultCredentials = false,
+                DeliveryMethod = SmtpDeliveryMethod.Network
 
             };
             MailAddress from = new MailAddress(MainMail);
