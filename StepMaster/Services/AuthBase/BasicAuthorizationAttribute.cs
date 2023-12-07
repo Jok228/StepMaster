@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 
-namespace API.Entity.SecrurityClass
+namespace StepMaster.Services.AuthBase
 {
     public class BasicAuthorizationAttribute : AuthorizeAttribute
     {

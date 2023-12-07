@@ -6,18 +6,18 @@ using Google.Apis.Services;
 
 using MailKit.Security;
 using MimeKit;
-using StepMaster.Services.Interfaces;
 using Google.Apis.Util.Store;
 using System.Net.Mail;
 using System.Net;
 using StepMaster.Models.Entity;
-namespace StepMaster.Services.Repositories;
+using StepMaster.Services.ForDb.Interfaces;
+namespace StepMaster.Services.ForDb.Repositories;
 
 
-public class PostRep:IPost_Service
+public class PostRep : IPost_Service
 {
-    
-    private string MainMail = "tusxapps.company@gmail.com";    
+
+    private string MainMail = "tusxapps.company@gmail.com";
     private string MainPassword = "pnlwsgisrvcqvqho";
     public async Task<bool> SendMessageAsync(string email, string message)
     {
@@ -28,10 +28,10 @@ public class PostRep:IPost_Service
                 Credentials = new NetworkCredential(MainMail, MainPassword),
                 Port = 587,
                 EnableSsl = true,
-                UseDefaultCredentials = false,                
+                UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network
 
-        };
+            };
             MailAddress from = new MailAddress(MainMail);
             MailAddress to = new MailAddress(email);
             MailMessage mailMessage = new MailMessage(from, to);
@@ -47,16 +47,16 @@ public class PostRep:IPost_Service
         catch
         {
             return false;
-        }        
-       
-     }
-    
+        }
 
-    public async Task<bool> SendPasswordOnMail(string email, string message,string host)
+    }
+
+
+    public async Task<bool> SendPasswordOnMail(string email, string message, string host)
     {
 
-            try
-            {
+        try
+        {
 
             var client = new SmtpClient("smtp.gmail.com")
             {
@@ -78,19 +78,19 @@ public class PostRep:IPost_Service
 
             await client.SendMailAsync(mailMessage);
 
-            
-            return true;          
 
-            }
-            catch
-            {
-                return false;
-            }
+            return true;
+
         }
+        catch
+        {
+            return false;
+        }
+    }
     //private static UserCredential Login(string clientId, string clientSecret, string[] scopes)
     //{
-        
-        
+
+
     //    ClientSecrets secrets = new ClientSecrets()
     //    {
     //        ClientId = clientId,

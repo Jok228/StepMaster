@@ -1,10 +1,9 @@
-﻿using API.Entity.SecrurityClass;
+﻿
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 using StepMaster.Models.Entity;
-using StepMaster.Services.Interfaces;
 using System.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
@@ -18,6 +17,8 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.Hosting;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
+using StepMaster.Services.ForDb.Interfaces;
+using StepMaster.Services.AuthBase;
 
 namespace StepMaster.Controllers.api
 {

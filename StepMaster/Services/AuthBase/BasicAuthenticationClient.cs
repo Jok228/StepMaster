@@ -1,6 +1,6 @@
 ﻿using System.Security.Principal;
 
-namespace API.Entity.SecrurityClass
+namespace StepMaster.Services.AuthBase
 {
     public class BasicAuthenticationClient : IIdentity
     {

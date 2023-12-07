@@ -1,5 +1,4 @@
 using API;
-using API.DAL.Entity.SecrurityClass;
 using DnsClient.Protocol;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -10,6 +9,7 @@ using StepMaster.Models.APIDatebaseSet;
 using System.Security.Authentication;
 using System.Security.Cryptography.X509Certificates;
 using Google.Apis.Auth.AspNetCore3;
+using StepMaster.Services.AuthBase;
 namespace StepMaster
 {
     public class Program
@@ -21,21 +21,10 @@ namespace StepMaster
             var services = builder.Services;
             services
        .AddAuthentication(o =>
-       {
-           
-           o.DefaultChallengeScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
-         
-           o.DefaultForbidScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
-        
+       {    
            o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
        })
-       .AddCookie()
-       .AddGoogleOpenIdConnect(options =>
-       {
-           options.ClientId = "434328467243-1hb02jpg6131qdrfamll69a72ajsgt79.apps.googleusercontent.com";
-           options.ClientSecret = "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";
-           
-       });
+       .AddCookie();
 
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));

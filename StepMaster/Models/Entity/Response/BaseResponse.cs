@@ -16,6 +16,7 @@
         Except = 500,
         Exists = 409,
         NotFound =404,
+        Unauthorized = 418,
 
 
     }

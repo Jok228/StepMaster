@@ -10,14 +10,14 @@ using System.Security.Claims;
 
 namespace StepMaster.Services.AuthCookie
 {
-    public sealed class CustomAuthorizeUserAttribute: Attribute, IAuthorizationFilter 
-    {       
-       private string _option;
-       public CustomAuthorizeUserAttribute( string option) 
+    public sealed class CustomAuthorizeUserAttribute : Attribute, IAuthorizationFilter
+    {
+        private string _option;
+        public CustomAuthorizeUserAttribute(string option)
         {
-         _option = option;
-        }    
-        
+            _option = option;
+        }
+
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             if (context != null)
@@ -31,9 +31,9 @@ namespace StepMaster.Services.AuthCookie
                 {
                     context.Result = new ObjectResult("Not authorized")
                     {
-                        
-                    StatusCode = (int)HttpStatusCode.Forbidden
-                        
+
+                        StatusCode = (int)HttpStatusCode.Forbidden
+
                     };
                     return;
                 }
@@ -44,7 +44,7 @@ namespace StepMaster.Services.AuthCookie
                 }
                 else
                 {
-                    if (role == _option )
+                    if (role == _option)
                     {
                         return;
                     }
@@ -62,5 +62,5 @@ namespace StepMaster.Services.AuthCookie
     }
 
 
- 
+
 }

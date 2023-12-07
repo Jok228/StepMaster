@@ -3,7 +3,7 @@ using StepMaster.Models.Entity;
 using StepMaster.Models.Entity.Loger;
 using StepMaster.Models.Entity.Response;
 using StepMaster.Services.AuthCookie;
-using StepMaster.Services.Interfaces;
+using StepMaster.Services.ForDb.Interfaces;
 using System.IO;
 
 namespace StepMaster.Controllers.api

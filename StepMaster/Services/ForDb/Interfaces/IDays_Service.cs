@@ -1,7 +1,7 @@
 ﻿using StepMaster.Models.Entity;
 using StepMaster.Models.Entity.Response;
 
-namespace StepMaster.Services.Interfaces
+namespace StepMaster.Services.ForDb.Interfaces
 {
     public interface IDays_Service
     {
@@ -9,6 +9,6 @@ namespace StepMaster.Services.Interfaces
 
         Task<BaseResponse<Day>> SetDayAsync(Day day, string email);
 
-        Task<BaseResponse<Day>> UploadDayAsync (Day uploadday);
+        Task<BaseResponse<Day>> UploadDayAsync(Day uploadday);
     }
 }

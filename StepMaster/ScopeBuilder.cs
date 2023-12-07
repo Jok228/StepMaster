@@ -1,7 +1,10 @@
 ﻿
+using API.Services.ForS3.Configure;
+using API.Services.ForS3.Int;
+using API.Services.ForS3.Rep;
 using Microsoft.AspNetCore.RateLimiting;
-using StepMaster.Services.Interfaces;
-using StepMaster.Services.Repositories;
+using StepMaster.Services.ForDb.Interfaces;
+using StepMaster.Services.ForDb.Repositories;
 using System.Threading.RateLimiting;
 
 namespace API
@@ -11,7 +14,8 @@ namespace API
         public static void InitializerServices(this IServiceCollection service)
         {
             service.AddScoped<IUser_Service, UserRep>();
-            //service.AddScoped<IBodies_Service, BodiesRep>();
+            service.AddScoped<IAppConfiguration, AppConfiguration>();
+            //service.AddScoped<IAws3Services, Aws3Services>();
             service.AddScoped<IDays_Service, DaysRep>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IPost_Service, PostRep>();

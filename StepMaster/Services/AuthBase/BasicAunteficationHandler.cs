@@ -4,12 +4,13 @@ using Microsoft.Extensions.Options;
 using System.Security.Claims;
 using System.Text.Encodings.Web;
 using System.Text;
-using API.Entity.SecrurityClass;
-using StepMaster.Services.Interfaces;
+
 using StepMaster.Models.Entity;
 using StepMaster.Models.HashSup;
+using StepMaster.Services.ForDb.Interfaces;
 
-namespace API.DAL.Entity.SecrurityClass
+
+namespace StepMaster.Services.AuthBase
 {
     public class BasicAunteficationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {
@@ -20,8 +21,8 @@ namespace API.DAL.Entity.SecrurityClass
         }
 
         protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
-        {          
-            
+        {
+
             // No authorization header, so throw no result.
             if (!Request.Headers.ContainsKey("Authorization"))
             {
@@ -30,8 +31,8 @@ namespace API.DAL.Entity.SecrurityClass
             }
 
             var authorizationHeader = Request.Headers["Authorization"].ToString();
-           
-            
+
+
 
 
             // If authorization header doesn't start with basic, throw no result.
@@ -41,16 +42,16 @@ namespace API.DAL.Entity.SecrurityClass
             }
 
             // Decrypt the authorization header and split out the client id/secret which is separated by the first ':'
-            
+
             var authBase64Decoded = Encoding.UTF8.GetString(Convert.FromBase64String(authorizationHeader.Replace("Basic ", "", StringComparison.OrdinalIgnoreCase)));
             var authSplit = authBase64Decoded.Split(new[] { ':' }, 2);
-            
+
             // No username and password, so throw no result.
             if (authSplit.Length != 2)
             {
                 return await Task.FromResult(AuthenticateResult.Fail("Invalid Authorization header format"));
             }
-            
+
             // Store the client ID and secret
             var clientId = authSplit[0];
             var clientSecret = authSplit[1];
@@ -63,7 +64,7 @@ namespace API.DAL.Entity.SecrurityClass
             }
             if (HashCoder.Verify(passwordHash: user.password, clientSecret))
             {
-                var nameIndentity = user.email; 
+                var nameIndentity = user.email;
                 // Authenicate the client using basic authentication
                 var client = new BasicAuthenticationClient
                 {
@@ -89,6 +90,6 @@ namespace API.DAL.Entity.SecrurityClass
                 return await Task.FromResult(AuthenticateResult.Fail(string.Format("The secret is incorrect for the client '{0}'", clientId)));
             }
         }
-        
+
     }
 }
