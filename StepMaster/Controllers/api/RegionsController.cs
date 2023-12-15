@@ -1,10 +1,7 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using StepMaster.Models.Entity;
-using StepMaster.Models.Entity.Response;
-using System.Security.Claims;
 using StepMaster.Services.ForDb.Interfaces;
+using Domain.Entity.API;
+using Domain.Entity.Main;
 
 namespace StepMaster.Controllers.api;
 [Route("api/[controller]")]

@@ -2,7 +2,7 @@ version: "3.9"
 networks:
   step-master-dev:
       driver: bridge
-services:
+services:  
   app: 
     restart: always
     container_name: step-master
@@ -10,14 +10,22 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "5500:80"
+      - "6000:80"
     networks:
       - step-master-dev
     depends_on:
       - mongodb 
     volumes:
-      - ./Loger:/app/LogerDay
-      
+      - ./Update:/data/Update
+  updateapp: 
+    restart: always
+    container_name: updateapp
+    image: myimage
+    networks:
+      - step-master-dev
+    depends_on:
+      - mongodb 
+   
   mongodb:
     container_name: mongodb
     image: mongo:latest
@@ -33,6 +41,5 @@ services:
     volumes:     
       - ./database-data:/data/db
       - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js   
-volumes:
-  myapp:       
+    
     

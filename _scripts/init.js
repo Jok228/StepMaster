@@ -6,7 +6,19 @@ db = db.getSiblingDB('StepMaster');
 
 db.createCollection('Regions');
 db.createCollection('Days');
-db.createCollection('User')
+db.createCollection('Rating');
+db.createCollection('User');
+db.Rating.insertMany(
+  [
+    {
+      "date": {
+        "$date": "2023-12-12T09:18:09.309Z"
+      },
+      "regionId": "test",
+      "ratingUsers": []
+    }    
+  ]
+)
 db.Days.insertMany(
   [
     {"calories": 100.1,
@@ -17,28 +29,22 @@ db.Days.insertMany(
   "plansteps": 15000,
   "date": "21/12/2023",
   "email": "1234@gmail.com"
-},
-{"calories": 100.1,
-  "distance": 10.1,
-  "steps": 10000,
-  "plancalories": 300.1,
-  "plandistance": 15.2,
-  "plansteps": 15000,
-  "date": "21/12/2023",
-  "email": "1234@gmail.com"
-}
-  ]
+} ]
 )
 db.User.insertMany(
   [{   
-    "email": "dante_aligieri@rambler.ru",
-    "nickname": "Ubivator_Zaharov_User",
-    "fullname": "Ubivator_Zaharov_User",
-    "role": "user",
-    "password": "it1Cb/tDsMqGegBO2BVaqQ==;LFabWZeNkstVRdFm1zcUQ1+CIh48WpRobeNdAjDfFPg=",
-    "region_id": "6556f0976a52487eb15f61e2",
-    "gender": "male",
-    "lastCookie": ".AspNetCore.Cookies=CfDJ8O7INixjpt9Ktfx8f-0_TdQDsyroOMtqPEFZg-Aqmm5vzxBnWuKLJeVbZRN39yfeILuxcH2TwXUbW2WC6rt7H7Q79IclRJiCvNJAq6sSDbjf4Bs5DCiulv56kpsDUFhQnwPc64iiO7nkM62-_eBJNet1CcWx4byyCv5b9x7w9HFJZ2A6noC3P4jvOxmr_cClPi0fpP8BVEWDwrVmLQ3qT55XXgyOGl98m8wiPiyH0yZex3GFr_VgO7ws8gvGiV8AIaGF0-XOM3s8704B7Rc5_fNrb6GwixGdyxvXagQFyu1riFEFWi-XnGdgG3D8SpAdJ0mdbNlHfqC625tVt6qzkg4RCIPUiYNBQr1wmQTS209DCLhWhYf8tmwleNQkFg1Ik6HzoOCHhbqI0KyUbJlHqo8QTm1VijGOvKgz0gqXfatILdIJByIFoYNSSw9QQha4Iw"
+  "email": "paxar14705@notedns.com",
+  "nickname": "pashapashaифи",
+  "fullname": "Паша ятезник",
+  "role": "user",
+  "rating": {
+    "placeInRegion": "1/4",
+    "placeInCountry": "1/4"
+  },
+  "password": "d5KDX1satAqslCkx8k4tFw==;S069ToBh8HO0g93ZypHRT/65BC2AcFlioJKjffQjAL4=",
+  "region_id": "6546398a763aafa12565285e",
+  "gender": "male",
+  "lastCookie": ".AspNetCore.Cookies=CfDJ8O7INixjpt9Ktfx8f-0_TdSQNNyTcQ6EQWLOXMqRojhEOrA2VJd8QY51EZi_d3ST4_Wksgs1rhSGcMEUw11p1LHWrYKFuhi1MPTw3PHnrgxlU9-w2sJkFU6zHnWiy2PQUeNe8CkDaPivXQmsGI139fn-HqTOCXGn1vO1mVL4wjunLMjptuVTXVFXk74y5U0TS4m2H8KdfYp3hpt5ki0mVDA-kKlsIDiqpzwRJrINrKx87curQng4uEtEEgQXKaDVM1k4LVd9x2wcEfw3LL8HBiGYQLd0-6gwDaTbUzBLfm0dlFN1HM1wt3ICy68cPHecVUuwwcacct7A3etrSmeViAheiO1NE6-GVlUzaumFzW0-9oiXmVewzceXAFmF1W0UNvOT2W03wZWI-ab3LQquYyhLfuBIHJjshk3XAC85wYA27uJDqgNlwe4jpODABD8yNw"
 }
 ]);
   

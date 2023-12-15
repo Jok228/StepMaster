@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StepMaster.Models.Entity;
-using StepMaster.Models.Entity.Loger;
-using StepMaster.Models.Entity.Response;
-using StepMaster.Services.AuthCookie;
-using StepMaster.Services.ForDb.Interfaces;
 using System.IO;
+using StepMaster.Services.ForDb.Interfaces;
+using API.Auth.AuthCookie;
+using Domain.Entity.API;
+using Domain.Entity.Main;
+
 
 namespace StepMaster.Controllers.api
 {

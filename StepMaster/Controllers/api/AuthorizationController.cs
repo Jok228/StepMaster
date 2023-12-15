@@ -2,23 +2,19 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Net.Http.Headers;
 using StepMaster.Models.Entity;
-using System.Net;
-using System.Security.Claims;
-using Microsoft.AspNetCore.Authorization;
-using DnsClient.Protocol;
-using StepMaster.Models.CodeGenerate;
-using StepMaster.Models.HashSup;
-using StepMaster.Services.AuthCookie;
-using System.Text.Json;
-using Amazon.Runtime.Internal;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.Extensions.Hosting;
-using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 using StepMaster.Services.ForDb.Interfaces;
-using StepMaster.Services.AuthBase;
+
+using API.Controllers.CodeGenerate;
+using Domain.Entity.Main;
+using System.Security.Claims;
+using API.Auth.AuthBase;
+using API.Auth.AuthCookie;
+using Application.Services.Post.Repositories;
+using Domain.Entity.API;
+
 
 namespace StepMaster.Controllers.api
 {
@@ -39,40 +35,32 @@ namespace StepMaster.Controllers.api
         [HttpGet]
         [Route("Auth")]
         [BasicAuthorization]
-        public async Task<User> Auth()
+        public async Task Auth()
         {
-            var role = User.Claims.First(x => x.Type == ClaimTypes.Role).Value;
 
             var response = await _user.GetByLoginAsync(User.Identity.Name);
 
-            await Authenticate(response,true);
-            return response;
+            await Authenticate(response.Data,true);
+            
 
         }
         [HttpPost]
         [Route("SendCode")]
         public async Task<Code> SendCode([FromForm] string email)
-        {         
-            
-            var codeStr = new Code();
+        {   
             var checkUser = await _user.GetByLoginAsync(email);
-            if (checkUser == null)
+            if (checkUser.Data == null)
             {
-                var code = CodeGenerate.GeneratedCode();                
-                var  send = await _post.SendMessageAsync(email, code);
-                if (send)
+                var  send = await _post.SendCodeUser(email);
+                if (send != null)
                 {
-
-                    codeStr.code = code;
-                    return codeStr;
+                    return send.Data;
                 }
                 else
                 {
                     Response.StatusCode = 400;
 
-                    return codeStr;
-
-
+                    return send.Data;
                 }
 
             }
@@ -80,19 +68,21 @@ namespace StepMaster.Controllers.api
             {
                 Response.StatusCode = 409;
 
-                return codeStr;
+                return new Code();
             }
         }
         [HttpPost]
         [Route("Registration")]
-        public async Task<User> Registration([FromForm] User user)
+        public async Task<UserResponse> Registration([FromForm] User user)
         {
 
             user.role = "user";            
 
             await Authenticate(user, false);
 
-            var response = await _user.RegUserAsync(user);
+            var response = new UserResponse(await _user.RegUserAsync(user));
+
+            response.rating = null;
 
             Response.StatusCode = 201;
 
@@ -161,12 +151,15 @@ namespace StepMaster.Controllers.api
         }
         [HttpGet]
         [Route("LogOut")]
-        [CustomAuthorizeUser("admin")]
+        [CustomAuthorizeUser("all")]
         public async Task Logout()
         {
+            var userEmail = User.Identity.Name;
             if (User.Identity.IsAuthenticated)
             {
+                var response = await _user.DeleteCookie(userEmail);
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                Response.StatusCode = (int)response.Status;
             }
             else
             {
@@ -178,7 +171,7 @@ namespace StepMaster.Controllers.api
         public async Task UpdateCookies()
         {
             var cookies = Request.Headers.SingleOrDefault(header => header.Key == "Cookie").Value.ToString();
-            if (cookies == null)
+            if (cookies == string.Empty)
             {
                 Response.StatusCode = 401;
             }
