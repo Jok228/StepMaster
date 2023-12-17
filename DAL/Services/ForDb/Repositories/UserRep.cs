@@ -8,6 +8,7 @@ using StepMaster.Services.ForDb.Interfaces;
 
 using Application.Services.ForDb.APIDatebaseSet;
 using Domain.Entity.API;
+using Domain.Entity.Main;
 
 namespace StepMaster.Services.ForDb.Repositories
 {
@@ -31,6 +32,51 @@ namespace StepMaster.Services.ForDb.Repositories
             return list;
         }
 
+        public async Task<BaseResponse<UserResponse>> EditUser(string email, UserResponse userEdit)
+        {
+            
+            var response = new BaseResponse<UserResponse>();           
+            var filter = Builders<User>.Filter.Eq("email", email);
+            var type = typeof(UserResponse);
+            var properties = type.GetProperties();
+            if (!userEdit.CheckFild())
+            {
+                response.Data = null;
+                response.Status = MyStatus.BadRequest;
+                return response;
+            };
+            try
+            {
+                foreach(var item in properties)
+                {
+                    var meaning = item.GetValue(userEdit, null);
+                    if (meaning != null)
+                    {
+                        var updateDef = Builders<User>.Update.Set(item.Name,meaning);
+                        await _users.UpdateOneAsync(filter, updateDef);
+                    }
+                    
+                }
+               userEdit = new UserResponse(await _users.FindAsync(filter).Result.FirstAsync());
+               response.Data = userEdit;
+               response.Status = MyStatus.Success;
+               return response;
+
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message == "Sequence contains no elements")
+                {
+                    response.Data = null;
+                    response.Status = MyStatus.NotFound;
+                    return response;
+                }
+                Console.WriteLine($"{ex.Message} - - - {ex.StackTrace}");
+                response.Status = MyStatus.Except;
+                return response;
+
+            }
+        }
 
         public async Task<BaseResponse<User>> GetByLoginAsync(string email)
         {
@@ -226,6 +272,7 @@ namespace StepMaster.Services.ForDb.Repositories
                 return response;
             }
         }
+
 
         public async Task<BaseResponse<bool>> DeleteCookie(string userEmail)
         {

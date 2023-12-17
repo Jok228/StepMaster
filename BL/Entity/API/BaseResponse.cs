@@ -11,9 +11,11 @@
     }
     public enum MyStatus
     {
+
         Success = 200,
         SuccessCreate = 201,
         Except = 500,
+        BadRequest = 400,
         Exists = 409,
         NotFound = 404,
         Unauthorized = 418,

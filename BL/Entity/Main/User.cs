@@ -32,11 +32,11 @@ namespace StepMaster.Models.Entity
     public class UserResponse
     {       
         
-        public string email { get; set; }
+        public string? email { get; set; }
        
-        public string nickname { get; set; }
+        public string? nickname { get; set; }
      
-        public string fullname { get; set; }
+        public string? fullname { get; set; }
         
         public string? role { get; set; }
 
@@ -44,11 +44,15 @@ namespace StepMaster.Models.Entity
         public PlaceUserOnRating? rating { get; set; }
 
 
-        public string region_id { get; set; }
+        public string? region_id { get; set; }
         
-        public string gender { get; set; }
+        public string? gender { get; set; }
        
         public string? avatarLink { get; set; }
+        public UserResponse()
+        {
+            
+        }
         public UserResponse(User user)
         {
             this.rating = user.rating;
@@ -58,6 +62,30 @@ namespace StepMaster.Models.Entity
             this.role = user.role;  
             this.gender = user.gender;            
             this.region_id = user.region_id;
+        }
+        public bool CheckFild()
+        {
+            var type = typeof(UserResponse);
+            var properties = type.GetProperties();
+            int fildsNull = 0;
+            
+            foreach (var item in properties)
+            {
+                var meaning = item.GetValue(this, null);
+                if (meaning == null)
+                {
+                    fildsNull++;
+                }
+            }
+            if(fildsNull == properties.Length ) 
+            {
+             return false;
+            }
+            else
+            {
+                return true;
+            }
+            
         }
     }
 }

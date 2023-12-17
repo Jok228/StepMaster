@@ -10,6 +10,7 @@ namespace StepMaster.Services.ForDb.Interfaces
 
         public Task<BaseResponse<List<User>>> FindUserByParams(string region = "none");
 
+        public Task<BaseResponse<UserResponse>> EditUser(string email, UserResponse user);
 
         public Task<User> RegUserAsync(User newUser);
 

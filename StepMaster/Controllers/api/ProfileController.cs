@@ -40,6 +40,34 @@ namespace StepMaster.Controllers.api
             _rating = rating;
             _aws3Services = new Aws3Services( _appConfiguration.AwsAccessKey, _appConfiguration.AwsSecretAccessKey, _appConfiguration.BucketName, _appConfiguration.URL);
         }
+
+        [HttpPut]
+        [CustomAuthorizeUser("all")]
+        [Route("EditUser")]
+        public async Task<UserResponse> EditUser([FromForm]UserResponse user)
+        {
+            var email = User.Identity.Name;
+            var response = await _user.EditUser(email,user);
+            switch(response.Status)
+            {
+                case MyStatus.Success:
+                     Response.StatusCode = (int)response.Status;
+                    return response.Data;
+                        
+                case MyStatus.Except:  
+                    Response.StatusCode = (int)response.Status;
+                    return null;
+                case MyStatus.NotFound:
+                    Response.StatusCode = (int)response.Status;
+                    return null;
+                case MyStatus.BadRequest:
+                    Response.StatusCode = (int)response.Status;
+                    return null;
+            }
+            return null;
+
+
+        }
         [HttpPost]
         [CustomAuthorizeUser("all")]
         [Route("InsertAvatar")]
