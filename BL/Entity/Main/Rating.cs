@@ -1,5 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System;
 
 namespace StepMaster.Models.Entity
 {
@@ -10,11 +13,33 @@ namespace StepMaster.Models.Entity
         public string? _id { get; set; }
         [BsonElement("date")]
         public DateTime date { get; set; }
+        [BsonElement("lastUpdate")]
+        public DateTime lastUpdate { get; set; }
 
         [BsonElement("regionId")]
         public string regionId { get; set; }
         [BsonElement("ratingUsers")]
         public List<UserRating> ratingUsers { get; set; }
+        
+        public Rating(string regionId)
+        {
+            lastUpdate = DateTime.MinValue;
+            date = DateTime.Now.Date;
+            this.regionId = regionId;
+            ratingUsers = new List<UserRating>();
+        }
+        public Rating Sort()
+        {     
+            
+            
+                this.ratingUsers = this.ratingUsers // sort
+            .OrderBy(rating => rating.step)
+            .Reverse()
+            .ToList();//Create rating but for userDB,
+                this.lastUpdate = DateTime.UtcNow;
+            
+          return this;
+        }
 
     }
     public struct UserRating

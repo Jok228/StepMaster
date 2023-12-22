@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using StepMaster.Models.Entity;
 
 namespace Domain.Entity.Main
 {
@@ -28,5 +29,15 @@ namespace Domain.Entity.Main
 
         [BsonElement("email")]
         public string? email { get; set; }
+        public Day UpdateDay(Day newValue)
+        {
+            if (newValue.plansteps != null) this.plansteps = newValue.plansteps;
+            if(newValue.plandistance != null) this.plandistance = newValue.plandistance;
+            if(newValue.plancalories != null) this.plancalories = newValue.plancalories;
+            if(newValue.calories != null) this.calories = newValue.calories;
+            if(newValue.distance != null) this.distance = newValue.distance;
+            if (newValue.steps != null) this.steps = newValue.steps;
+            return this;
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 using Newtonsoft.Json;
+using System.Globalization;
+using MongoDB.Driver;
 
 namespace StepMaster.Models.Entity
 {
@@ -28,64 +30,17 @@ namespace StepMaster.Models.Entity
         public string gender { get; set; }
         [BsonElement("lastCookie")]
         public string? lastCookie { get; set; }
-    }
-    public class UserResponse
-    {       
-        
-        public string? email { get; set; }
-       
-        public string? nickname { get; set; }
-     
-        public string? fullname { get; set; }
-        
-        public string? role { get; set; }
 
-        
-        public PlaceUserOnRating? rating { get; set; }
+        [BsonIgnore]
+        public string? AvatarLink { get; set; }
 
-
-        public string? region_id { get; set; }
-        
-        public string? gender { get; set; }
-       
-        public string? avatarLink { get; set; }
-        public UserResponse()
+        public User UpdateUser( User newValue)
         {
-            
-        }
-        public UserResponse(User user)
-        {
-            this.rating = user.rating;
-            this.email = user.email;
-            this.nickname = user.nickname;
-            this.fullname = user.fullname;
-            this.role = user.role;  
-            this.gender = user.gender;            
-            this.region_id = user.region_id;
-        }
-        public bool CheckFild()
-        {
-            var type = typeof(UserResponse);
-            var properties = type.GetProperties();
-            int fildsNull = 0;
-            
-            foreach (var item in properties)
-            {
-                var meaning = item.GetValue(this, null);
-                if (meaning == null)
-                {
-                    fildsNull++;
-                }
-            }
-            if(fildsNull == properties.Length ) 
-            {
-             return false;
-            }
-            else
-            {
-                return true;
-            }
-            
+            if(newValue.fullname != null) this.fullname = newValue.fullname;
+            if(newValue.nickname != null) this.nickname = newValue.nickname;
+            if(newValue.region_id != null) this.region_id = newValue.region_id;
+            return this;
         }
     }
+    
 }
