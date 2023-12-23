@@ -97,7 +97,7 @@ namespace Infrastructure.MongoDb.Repositories
             }
             catch (Exception ex)
             {
-                if (ex.Message == DbExMessage.NotFound)
+                if (ex.Message == DbExMessage.NoElements)
                 {                    
                     return BaseResponse<User>.Create(null, MyStatus.NotFound);
                 }

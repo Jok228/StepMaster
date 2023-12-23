@@ -65,11 +65,10 @@ namespace StepMaster.Controllers.api
         public async Task<UserResponse> Registration([FromForm] UserRegModel user)
         {
             var response = await _user.RegUserAsync(UserRegModel.GetFullUser(user));
-
-            await Authenticate(response.Data, false);
-
-            Response.StatusCode = 201;
-
+            if(response.Status == MyStatus.Success)
+            {
+                await Authenticate(response.Data, false);
+            }
             return ResponseLogic<UserResponse>.Response(Response, response.Status, new UserResponse(response.Data));
 
         }

@@ -14,7 +14,7 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Ver 1.008 update EditUser");
+            Console.WriteLine("Ver 1.009 big refactor test 1.3");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;

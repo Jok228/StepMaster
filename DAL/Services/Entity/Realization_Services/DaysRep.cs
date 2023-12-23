@@ -1,13 +1,6 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using MongoDB.Driver;
-
-using StepMaster.Models.Entity;
-using Domain.Entity.API;
+﻿using Domain.Entity.API;
 using StepMaster.Services.ForDb.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using Domain.Entity.Main;
-using Application.Services.ForDb.APIDatebaseSet;
-using System.Collections.Generic;
 using Application.Repositories.Db.Interfaces_Repository;
 
 namespace StepMaster.Services.ForDb.Repositories
@@ -43,9 +36,8 @@ namespace StepMaster.Services.ForDb.Repositories
         public async Task<BaseResponse<Day>> UploadDayAsync(Day uploadday)
         {
             var oldDay = await _days.GetObjectBy(uploadday._id);
-            if (oldDay.Data != null)
-            {
-                
+            if (oldDay.Status == MyStatus.Success)
+            { 
                 var response = await _days.UpdateObject(oldDay.Data.UpdateDay(uploadday));
                 return response;
             }

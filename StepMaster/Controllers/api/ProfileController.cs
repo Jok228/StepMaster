@@ -9,6 +9,7 @@ using Domain.Entity.API;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using StepMaster.Auth.AuthRequest;
 using StepMaster.Auth.ResponseLogic;
 using StepMaster.Models.API.UserModel;
 using StepMaster.Models.Entity;
@@ -43,11 +44,12 @@ namespace StepMaster.Controllers.api
 
         [HttpPut]
         [CustomAuthorizeUser("all")]
+        [ModelValidateFilterAttribute]
         [Route("EditUser")]
-        public async Task<User> EditUser([FromForm]UserEditModel user)
+        public async Task<User> EditUser([FromForm]UserEditModel userEdit)
         {
             var email = User.Identity.Name;
-            var baseUser = user.ConvertToBase();
+            var baseUser = userEdit.ConvertToBase();
             var response = await _user.EditUser(email,baseUser);
             return  ResponseLogic<User>.Response(Response, response.Status,response.Data); 
         }

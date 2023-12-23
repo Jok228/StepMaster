@@ -7,6 +7,7 @@ using Domain.Entity.API;
 using Domain.Entity.Main;
 using StepMaster.Auth.ResponseLogic;
 using StepMaster.Models.API.Day;
+using StepMaster.Auth.AuthRequest;
 
 
 namespace StepMaster.Controllers.api
@@ -32,22 +33,23 @@ namespace StepMaster.Controllers.api
 
         }
         [HttpPost]
-        [CustomAuthorizeUser("user")]
+        [CustomAuthorizeUser("user")]        
         [Route("SetNewDay")]
-        public async Task<Day> SetNewDay([FromForm] DayCreate day)
+        public async Task<Day> SetNewDay([FromForm] DayCreate daySet)
         {
             var email = User.Identity.Name;            
-            var response = await _days.SetDayAsync(day.ConvertToBase(), email);
+            var response = await _days.SetDayAsync(daySet.ConvertToBase(), email);
 
             return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
 
         }
         [HttpPut]
         [CustomAuthorizeUser("user")]
+        [ModelValidateFilterAttribute]
         [Route("UploadDay")]
-        public async Task<Day> UploadDay([FromForm] DayResponse day)
+        public async Task<Day> UploadDay([FromForm] DayResponse dayUpd)
         {
-                var response = await _days.UploadDayAsync(DayResponse.ConvertToBase(day));
+                var response = await _days.UploadDayAsync(DayResponse.ConvertToBase(dayUpd));
                 return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
         }
        

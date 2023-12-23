@@ -10,19 +10,19 @@ namespace Domain.Entity.Main
         [BsonRepresentation(BsonType.ObjectId)]
         public string? _id { get; set; }
         [BsonElement("calories")]
-        public double calories { get; set; }
+        public double? calories { get; set; }
         [BsonElement("distance")]
-        public double distance { get; set; }
+        public double? distance { get; set; }
         [BsonElement("steps")]
-        public int steps { get; set; }
+        public int? steps { get; set; }
         [BsonElement("plancalories")]
-        public double plancalories { get; set; }
+        public double? plancalories { get; set; }
 
         [BsonElement("plandistance")]
-        public double plandistance { get; set; }
+        public double? plandistance { get; set; }
 
         [BsonElement("plansteps")]
-        public int plansteps { get; set; }
+        public int? plansteps { get; set; }
 
         [BsonElement("date")]
         public DateTime date { get; set; }

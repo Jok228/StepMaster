@@ -2,6 +2,8 @@
 using API.Services.ForS3.Rep;
 using Application.Repositories.Db.Interfaces_Repository;
 using Application.Repositories.S3.Interfaces;
+using Application.Services.Entity.Interfaces_Service;
+using Application.Services.Entity.Realization_Services;
 using Application.Services.ForDb.APIDatebaseSet;
 
 using Application.Services.Post.Repositories;
@@ -25,6 +27,7 @@ namespace StepMaster.Initialization.Scope
 
         public static void InitializerService(IServiceCollection service)
         {
+            service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IUser_Service, User_Service>();
             service.AddScoped<IDays_Service, DaysRep>();

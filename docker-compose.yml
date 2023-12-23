@@ -6,9 +6,7 @@ services:
   app: 
     restart: always
     container_name: step-master
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: chydick/stepmaster    
     ports:
       - "6000:80"
     networks:
@@ -16,16 +14,7 @@ services:
     depends_on:
       - mongodb 
     volumes:
-      - ./Update:/data/Update
-  updateapp: 
-    restart: always
-    container_name: updateapp
-    image: myimage
-    networks:
-      - step-master-dev
-    depends_on:
-      - mongodb 
-   
+      - ./Update:/data/Update   
   mongodb:
     container_name: mongodb
     image: mongo:latest
