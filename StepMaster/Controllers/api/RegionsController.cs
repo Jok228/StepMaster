@@ -1,7 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
+using StepMaster.Services.ForDb.Interfaces;
+using Domain.Entity.API;
+using Domain.Entity.Main;
+=======
 using StepMaster.Models.Entity;
 using StepMaster.Models.Entity.Response;
 using StepMaster.Services.Interfaces;
+>>>>>>> master
 
 namespace StepMaster.Controllers.api;
 [Route("api/[controller]")]
@@ -17,6 +23,10 @@ public class RegionsController : ControllerBase
     [Route("GetRegions")]
     public async Task<ResponseList<Region>> GetRegions()
     {
+<<<<<<< HEAD
+        
+=======
+>>>>>>> master
         var bodyResponse = await _regions.GetAllRegionsAsync();
 
         var regions = new ResponseList<Region>();

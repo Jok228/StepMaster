@@ -1,23 +1,38 @@
 using API;
-using API.DAL.Entity.SecrurityClass;
-using DnsClient.Protocol;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
-using MongoDB.Driver;
-using StepMaster.Models.APIDatebaseSet;
-using System.Security.Authentication;
-using System.Security.Cryptography.X509Certificates;
 
+using StepMaster.Services.ForDb.Interfaces;
+using API.Auth.AuthBase;
+using Application.Services.ForDb.APIDatebaseSet;
+using System.Runtime.CompilerServices;
 namespace StepMaster
 {
     public class Program
     {
-        public static void Main(string[] args)
+     
+
+        public async static Task Main(string[] args)
         {
+          
             var builder = WebApplication.CreateBuilder(args);
+            
+            var services = builder.Services;
+            services
+       .AddAuthentication(o =>
+       {    
+           o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+       })
+       .AddCookie();
+
             builder.Services.Configure<ApiDatabaseSettings>(
+<<<<<<< HEAD
+                builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));         
+
+            
+            Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
+=======
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
             // Add services to the container.
             
@@ -45,27 +60,34 @@ namespace StepMaster
 
             builder.Services.AddScoped<IMongoClient>(sp =>
                 new MongoClient(clientSettings));
+>>>>>>> master
            
             
-            builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            
+
+
+            var nameDataBase = builder.Configuration.GetValue<string>("APIDatabaseSettings:DatabaseName");
+            
+
+            builder.Services.AddControllers();           
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddMemoryCache();
-
             builder.Services.AddAuthentication()
                 .AddScheme<AuthenticationSchemeOptions, BasicAunteficationHandler>("Basic", null);
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-                    options.SlidingExpiration = true;
-                    options.AccessDeniedPath = "/Forbidden/";
-                });
+            
 
-            ScopeBuilder.InitializerServices(builder.Services);
+            var mongoClient = ScopeBuilder.InitializerServices(builder.Services, builder);
+
             var app = builder.Build();
 
+<<<<<<< HEAD
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            app.UseHttpsRedirection();
+            app.UseAuthentication();
+=======
             // Configure the HTTP request pipeline.
             //if (app.Environment.IsDevelopment())
             //{
@@ -73,12 +95,16 @@ namespace StepMaster
                 app.UseSwaggerUI();
             //}
 
+>>>>>>> master
             app.UseAuthorization();
-
-
             app.MapControllers();
 
+            var myAppStart = new StartinItialisation(app);
+            await myAppStart.Start();
+
             app.Run();
+            
         }
+ 
     }
 }
