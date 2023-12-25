@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
@@ -15,6 +16,26 @@ using API.Auth.AuthCookie;
 using Application.Services.Post.Repositories;
 using Domain.Entity.API;
 
+=======
+﻿using API.Entity.SecrurityClass;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Net.Http.Headers;
+using StepMaster.Models.Entity;
+using StepMaster.Services.Interfaces;
+using System.Net;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using DnsClient.Protocol;
+using StepMaster.Models.CodeGenerate;
+using StepMaster.Models.HashSup;
+using StepMaster.Services.AuthCookie;
+using System.Text.Json;
+using Amazon.Runtime.Internal;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Http.Extensions;
+>>>>>>> master
 
 namespace StepMaster.Controllers.api
 {
@@ -35,6 +56,7 @@ namespace StepMaster.Controllers.api
         [HttpGet]
         [Route("Auth")]
         [BasicAuthorization]
+<<<<<<< HEAD
         public async Task Auth()
         {
 
@@ -42,11 +64,22 @@ namespace StepMaster.Controllers.api
 
             await Authenticate(response.Data,true);
             
+=======
+        public async Task<User> Auth()
+        {
+            var role = User.Claims.First(x => x.Type == ClaimTypes.Role).Value;
+
+            var response = await _user.GetByLoginAsync(User.Identity.Name);
+
+            await Authenticate(User.Identity.Name, role);
+            return response;
+>>>>>>> master
 
         }
         [HttpPost]
         [Route("SendCode")]
         public async Task<Code> SendCode([FromForm] string email)
+<<<<<<< HEAD
         {   
             var checkUser = await _user.GetByLoginAsync(email);
             if (checkUser.Data == null)
@@ -55,12 +88,33 @@ namespace StepMaster.Controllers.api
                 if (send != null)
                 {
                     return send.Data;
+=======
+        {
+            var codeStr = new Code();
+            var checkUser = await _user.GetByLoginAsync(email);
+            if (checkUser == null)
+            {
+                var code = CodeGenerate.GeneratedCode();
+
+                var send = await _post.SendMessageAsync(email, code);
+                if (send)
+                {
+
+                    codeStr.code = code;
+                    return codeStr;
+>>>>>>> master
                 }
                 else
                 {
                     Response.StatusCode = 400;
 
+<<<<<<< HEAD
                     return send.Data;
+=======
+                    return codeStr;
+
+
+>>>>>>> master
                 }
 
             }
@@ -68,11 +122,16 @@ namespace StepMaster.Controllers.api
             {
                 Response.StatusCode = 409;
 
+<<<<<<< HEAD
                 return new Code();
+=======
+                return codeStr;
+>>>>>>> master
             }
         }
         [HttpPost]
         [Route("Registration")]
+<<<<<<< HEAD
         public async Task<UserResponse> Registration([FromForm] User user)
         {
 
@@ -83,17 +142,29 @@ namespace StepMaster.Controllers.api
             var response = new UserResponse(await _user.RegUserAsync(user));
 
             response.rating = null;
+=======
+        public async Task<User> Registration([FromForm] User user)
+        {
+            var response = await _user.RegUserAsync(user);
+
+            await Authenticate(response.email, response.password);
+>>>>>>> master
 
             Response.StatusCode = 201;
 
             return response;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         }
         
         [HttpGet]
         [Route("SendNewPassword")]
         public async Task SendNewPassword([FromForm] string email)
         {
+<<<<<<< HEAD
             var user = await _user.GetByLoginAsync(email);
             var newPassword = CodeGenerate.RandomString(12);
             var host = Request.GetEncodedUrl().Split("/api/")[0];
@@ -122,18 +193,46 @@ namespace StepMaster.Controllers.api
         }
 
         private async Task Authenticate(User user, bool firstReg)
+=======
+
+            var newPassword = CodeGenerate.RandomString(12);
+            var host = Request.GetEncodedUrl().Split("/api/")[0];
+            var send = await _post.SendPasswordOnMail(email, newPassword, host);
+
+            _cache.Set(newPassword, newPassword, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromMinutes(5)));
+            if (send)
+            {
+                Response.StatusCode = 200;
+            }
+            else
+            {
+                Response.StatusCode = 400;
+            }
+
+        }
+
+        private async Task Authenticate(string userName, string userRole)
+>>>>>>> master
         {
             // создаем один claim
             var claims = new List<Claim>
         {
+<<<<<<< HEAD
             new Claim(ClaimTypes.Name, user.email),
             new Claim(ClaimsIdentity.DefaultRoleClaimType, user.role)
         };
            
+=======
+            new Claim(ClaimTypes.Name, userName),
+            new Claim(ClaimsIdentity.DefaultRoleClaimType, userRole)
+        };
+            var cookies = new Cookie("name", "value");
+>>>>>>> master
             // создаем объект ClaimsIdentity
             ClaimsIdentity id = new ClaimsIdentity(claims, "ApplicationCookie", ClaimsIdentity.DefaultNameClaimType,
                 ClaimsIdentity.DefaultRoleClaimType);
             // установка аутентификационных куки
+<<<<<<< HEAD
             // 
             
             
@@ -160,12 +259,27 @@ namespace StepMaster.Controllers.api
                 var response = await _user.DeleteCookie(userEmail);
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
                 Response.StatusCode = (int)response.Status;
+=======
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
+
+        }
+        [HttpGet]
+        [Route("LogOut")]
+        [CustomAuthorizeUser("admin")]
+        public async Task Logout()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+>>>>>>> master
             }
             else
             {
                 HttpContext.Response.StatusCode = 419;
             }
         }
+<<<<<<< HEAD
         [HttpGet]
         [Route("UpdateCookies")]        
         public async Task UpdateCookies()
@@ -190,6 +304,8 @@ namespace StepMaster.Controllers.api
                 }
             }
         }
+=======
+>>>>>>> master
 
     }
 }

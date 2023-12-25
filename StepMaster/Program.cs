@@ -27,10 +27,40 @@ namespace StepMaster
        .AddCookie();
 
             builder.Services.Configure<ApiDatabaseSettings>(
+<<<<<<< HEAD
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));         
 
             
             Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
+=======
+                builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
+            // Add services to the container.
+            
+            builder.Services.AddScoped<IAPIDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<ApiDatabaseSettings>>().Value);
+            //var cert = new X509Certificate2("certificates/root.crt");
+            
+
+            var clientSettings = MongoClientSettings.FromUrl(new MongoUrl(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString")));
+            Console.Write(builder.Configuration.GetValue<string>("APIDatabaseSettings:ConnectionString"));
+            //clientSettings.UseTls = true;
+
+
+            //clientSettings.SslSettings.CheckCertificateRevocation = false;
+
+            //clientSettings.SslSettings = new SslSettings
+            //{
+
+            //    CheckCertificateRevocation = true,
+            //    //ClientCertificates = new[] { cert },
+
+            //};
+            //clientSettings.VerifySslCertificate = false;
+
+
+            builder.Services.AddScoped<IMongoClient>(sp =>
+                new MongoClient(clientSettings));
+>>>>>>> master
            
             
 
@@ -52,10 +82,20 @@ namespace StepMaster
 
             var app = builder.Build();
 
+<<<<<<< HEAD
             app.UseSwagger();
             app.UseSwaggerUI();
             app.UseHttpsRedirection();
             app.UseAuthentication();
+=======
+            // Configure the HTTP request pipeline.
+            //if (app.Environment.IsDevelopment())
+            //{
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            //}
+
+>>>>>>> master
             app.UseAuthorization();
             app.MapControllers();
 
