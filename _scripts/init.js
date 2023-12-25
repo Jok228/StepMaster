@@ -2,6 +2,7 @@
 db = db.getSiblingDB('admin');
 
 db.auth("root","password")
+<<<<<<< HEAD
 db = db.getSiblingDB('StepMaster');
 
 db.createCollection('Regions');
@@ -55,6 +56,34 @@ db.User.insertMany(
 ]);
   
   db.Regions.insertMany([    
+=======
+db = db.getSiblingDB('stepmaster');
+
+db.createCollection('Regions');
+db.createCollection('User')
+db.User.insertMany(
+  [{    
+    "email": "example2@mail.ru",
+    "nickname": "ABCDFemale",
+    "fullname": "E-Girl",
+    "role": "user",
+    "password": "NydKk0ZwLPpHpe5nRuoKnA==;qY6JMOyNXV1oNue/UZ3gP/RLXiAOl1/IkICw/P8QByI=",
+    "region_id": "6546398a763aafa125652860",
+    "gender": "female"
+  },
+  {   
+    "email": "example@mail.ru",
+    "nickname": "ABCDMale",
+    "fullname": "DeadInside",
+    "role": "admin",
+    "password": "NydKk0ZwLPpHpe5nRuoKnA==;qY6JMOyNXV1oNue/UZ3gP/RLXiAOl1/IkICw/P8QByI=",
+    "region_id": "6546398a763aafa125652862",
+    "gender": "male"
+  }
+]);
+  
+  db.Regions.insertMany([
+>>>>>>> master
     {"fullName": "Республика Адыгея"},
     { "fullName": "Республика Карелия" },
     { "fullName": "Республика Коми" },

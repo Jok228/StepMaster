@@ -1,7 +1,10 @@
 using API.Auth.AuthCookie;
 using Microsoft.AspNetCore.Mvc;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 namespace StepMaster.Controllers.api;
 
 [Route("api/[controller]")]
