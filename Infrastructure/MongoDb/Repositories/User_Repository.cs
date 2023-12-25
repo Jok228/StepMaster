@@ -140,5 +140,24 @@ namespace Infrastructure.MongoDb.Repositories
                 return BaseResponse<User>.Create(null, MyStatus.Except);
             }
         }
+
+        public async Task<bool> DeleteUser(string email)
+        {
+            try
+            {
+                _cache.DeleteObject(email);
+                var response = await _users.DeleteOneAsync(user => user.email == email);
+                if (response.DeletedCount == 0)
+                {
+                    return false;
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"{ex.Message} - - - {ex.StackTrace}");
+                return false;
+            }
+        }
     }
 }

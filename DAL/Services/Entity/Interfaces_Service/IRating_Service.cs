@@ -1,16 +1,15 @@
-﻿using StepMaster.Models.Entity;
+﻿using Domain.Entity.API;
+using StepMaster.Models.Entity;
+using System.Globalization;
 
 namespace Application.Services.Entity.Interfaces_Service
 {
     public interface IRating_Service
     {
+        Task SwapPosition(string oldRegionId, string newRegionId, string email);
 
-        Task<Rating> GetRating(string regionId);
+        Task<UserRanking> GetUserRanking( string email, string regionId);
 
-        Task<string> GetPlace(string regionId, string email);
-
-        Task UpdateRating(string region);
-
-        Task UpdateRatingsUser(User oldUser, User newUser);
+        Task  <UserRanking>AddNewPosition(string email, string regionId);
     }
 }

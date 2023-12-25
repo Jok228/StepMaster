@@ -7,11 +7,6 @@ namespace StepMaster.Services.ForDb.Interfaces
     public interface IUser_Service
     {
         public Task<BaseResponse<User>> GetByLoginAsync(string login);
-
-        public Task<BaseResponse<User>> GetFullUser(string email);       
-
-        public Task<BaseResponse<User>> EditUser(string email, User user);
-
         public Task<BaseResponse<User>> RegUserAsync(User newUser);
 
         public Task<BaseResponse<User>> EditPassword(string email, string newPassword,  string oldPassword );
@@ -20,6 +15,8 @@ namespace StepMaster.Services.ForDb.Interfaces
         public Task<BaseResponse<User>> GetUserbyCookie(string cookies);
 
         public Task<BaseResponse<bool>> DeleteCookie(string userEmail);
+
+        public Task<BaseResponse<string>> DeleteUser(string user);
 
 
     }

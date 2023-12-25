@@ -62,6 +62,13 @@
                         Status = MyStatus.Unauthorized,
                         Description = "Unauthorized"
                     };
+                case MyStatus.Iteapot:
+                    return new BaseResponse<T>()
+                    {
+                        Data = value,
+                        Status = MyStatus.Iteapot,
+                        Description = "Iteapot"
+                    };
             }
             return null;
 
@@ -79,6 +86,7 @@
         NotFound = 404,
         Iteapot = 418,
         Unauthorized = 403,
+        BadPassword = 453
 
     }
 }

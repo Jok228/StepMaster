@@ -28,7 +28,10 @@ namespace StepMaster.Auth.ResponseLogic
                     return answerData;
                 case MyStatus.NotFound:
                     response.StatusCode = (int)status;
-                    return answerData;                   
+                    return answerData;
+                case MyStatus.Iteapot:
+                    response.StatusCode= (int)status;
+                    return answerData;
 
             }
             return answerData;

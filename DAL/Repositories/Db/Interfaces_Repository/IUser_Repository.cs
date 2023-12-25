@@ -15,5 +15,7 @@ namespace Application.Repositories.Db.Interfaces_Repository
         Task<BaseResponse<User>> GetByCookie(string cookie);
 
         Task<BaseResponse<List<User>>> GetObjectsByRegion(string regionId);
+
+        Task<bool> DeleteUser(string email);
     }
 }

@@ -5,6 +5,8 @@ using API.Services.ForS3.Configure;
 
 using API.Services.ForS3.Rep;
 using Application.Repositories.S3.Interfaces;
+using Application.Services.Entity.Interfaces_Service;
+using DnsClient;
 using Domain.Entity.API;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +20,8 @@ using StepMaster.Models.HashSup;
 
 using StepMaster.Services.ForDb.Interfaces;
 using System.IO;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using ZstdSharp.Unsafe;
 
@@ -28,30 +32,40 @@ namespace StepMaster.Controllers.api
     [ApiController]
     public class ProfileController : ControllerBase
     {
-        private readonly IAws_Repository _aws;
-        private readonly IAppConfiguration _appConfiguration;
-        private readonly IUser_Service _user;      
-        
+        private readonly IAws_Repository _awsRepository;        
+        private readonly IUser_Service _usersService;
+        private readonly IRating_Service _ratingService;
 
 
-        public ProfileController(IAppConfiguration appConfiguration, IUser_Service users, IAws_Repository aws)
+
+        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService)
         {
-            _aws = aws;
-            _user = users;
-            _appConfiguration = appConfiguration;            
-            
+            _awsRepository = aws;
+            _usersService = users;
+            _ratingService = ratingService;
         }
 
         [HttpPut]
         [CustomAuthorizeUser("all")]
         [ModelValidateFilterAttribute]
         [Route("EditUser")]
-        public async Task<User> EditUser([FromForm]UserEditModel userEdit)
+        public async Task<UserResponse> EditUser([FromForm] UserEditModel newUser)
         {
             var email = User.Identity.Name;
-            var baseUser = userEdit.ConvertToBase();
-            var response = await _user.EditUser(email,baseUser);
-            return  ResponseLogic<User>.Response(Response, response.Status,response.Data); 
+            var oldUserResponse = await _usersService.GetByLoginAsync(email);
+            if(oldUserResponse.Status == MyStatus.Success)
+            {
+                if (oldUserResponse.Data.region_id != newUser.region_id && newUser.region_id != null)
+                {
+                    await _ratingService.SwapPosition(oldUserResponse.Data.region_id, newUser.region_id, email);
+                    
+                }
+                oldUserResponse.Data = newUser.ConvertToBase(oldUserResponse.Data);
+                var updResponse = await _usersService.UpdateUser(oldUserResponse.Data);
+                return  ResponseLogic<UserResponse>.Response(Response, updResponse.Status, new UserResponse(updResponse.Data,null,null));
+            }
+            return ResponseLogic<UserResponse>.Response(Response, MyStatus.NotFound, null);
+            
         }
         [HttpPost]
         [CustomAuthorizeUser("all")]
@@ -59,21 +73,23 @@ namespace StepMaster.Controllers.api
         public async Task InsertAvatar([FromForm] IFormFile image)
         {
             var userName = User.Identity.Name;
-            
-            var response = await _aws.InsertFile(userName, image);
-            Response.StatusCode = response?201:500;         
-                      
-            
+            var response = await _awsRepository.InsertFile(userName, image);
+            Response.StatusCode = response ? 201 : 500;
         }
         [HttpGet]
         [CustomAuthorizeUser("all")]
         [Route("GetUser")]
-        public async Task<UserResponse> GetUser ()
+        public async Task<UserResponse> GetUser()
         {
             var email = User.Identity.Name;
-            var response = await _user.GetFullUser(email);            
-            return ResponseLogic<UserResponse>.Response(Response, response.Status, new UserResponse(response.Data));
-         
+            var userResponse = await _usersService.GetByLoginAsync(email);
+            if ( userResponse.Status == MyStatus.Success)
+            {
+                var avatarLink = await _awsRepository.GetLink(email);
+                var rating = await _ratingService.GetUserRanking(email, userResponse.Data.region_id);
+                return ResponseLogic<UserResponse>.Response(Response, userResponse.Status, new UserResponse(userResponse.Data,rating,avatarLink));
+            }
+            return ResponseLogic<UserResponse>.Response(Response, userResponse.Status,null);
         }
         [HttpPut]
         [CustomAuthorizeUser("all")]
@@ -81,9 +97,14 @@ namespace StepMaster.Controllers.api
         public async Task<UserResponse> EditPassword([FromForm] string newPassword, [FromForm] string oldPassword)
         {
             var email = User.Identity.Name;
-            var response = await _user.EditPassword(email, newPassword, oldPassword);           
-            return ResponseLogic<UserResponse>.Response(Response, response.Status, new UserResponse(response.Data));
-
+            var response = await _usersService.EditPassword(email, newPassword, oldPassword);
+            if(response.Status == MyStatus.Success)
+            {
+                return ResponseLogic<UserResponse>.Response(Response, response.Status, new UserResponse(response.Data,null,null));
+            }
+           
+            return ResponseLogic<UserResponse>.Response(Response, response.Status, null);
+            
 
         }
     }

@@ -36,15 +36,21 @@ db.User.insertMany(
     "email": "paxar14705@notedns.com",
     "nickname": "Da?sdfsdf",
     "fullname": "Net?",
-    "role": "user",
-    "rating": {
-      "placeInRegion": "1/1",
-      "placeInCountry": "3/3"
-    },
+    "role": "user",    
     "password": "d5KDX1satAqslCkx8k4tFw==;S069ToBh8HO0g93ZypHRT/65BC2AcFlioJKjffQjAL4=",
     "region_id": "6546398a763aafa12565285e",
     "gender": "male",
     "lastCookie": null
+},
+{
+  "email": "dante_aligiri@rambler.ru",
+  "nickname": "Retro2333",
+  "fullname": "Bruh",
+  "role": "user",
+  "password": "J1KVEBXghKa2RGmE11MudQ==;PL3NSe6YTuQV55+EbqrlMLT07LvHiVyW2KEECT2MZAM=",
+  "region_id": "65866c8775b374d0753a79e1",
+  "gender": "male",
+  "lastCookie":null
 }
 ]);
   

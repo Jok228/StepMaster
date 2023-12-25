@@ -10,14 +10,12 @@ public class UserEditModel
 
     public string? region_id { get; set; }
 
-    public User ConvertToBase()
+    public User ConvertToBase(User oldUser)
     {
-        return new User()
-        {
-            fullname = fullname,
-            nickname = nickname,
-            region_id = region_id,
-        };
+       if(this.fullname != null)oldUser.fullname = this.fullname;
+       if(this.region_id != null)oldUser.region_id = this.region_id;
+       if(this.nickname != null)oldUser.nickname = this.nickname;
+       return oldUser;
     }
 
 }

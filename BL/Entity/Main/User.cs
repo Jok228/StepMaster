@@ -18,10 +18,7 @@ namespace StepMaster.Models.Entity
         [BsonElement("fullname")]
         public string fullname { get; set; }
         [BsonElement("role")]
-        public string? role { get; set; }
-        [BsonElement("rating")]
-       
-        public PlaceUserOnRating? rating { get; set; }
+        public string? role { get; set; }    
         [BsonElement("password")]
         public string password { get; set; }
         [BsonElement("region_id")]
@@ -30,10 +27,6 @@ namespace StepMaster.Models.Entity
         public string gender { get; set; }
         [BsonElement("lastCookie")]
         public string? lastCookie { get; set; }
-
-        [BsonIgnore]
-        public string? AvatarLink { get; set; }
-
         public User UpdateUser( User newValue)
         {
             if(newValue.fullname != null) this.fullname = newValue.fullname;

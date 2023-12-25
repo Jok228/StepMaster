@@ -37,7 +37,7 @@ namespace StepMaster.Services.ForDb.Repositories
         {
             var oldDay = await _days.GetObjectBy(uploadday._id);
             if (oldDay.Status == MyStatus.Success)
-            { 
+            {
                 var response = await _days.UpdateObject(oldDay.Data.UpdateDay(uploadday));
                 return response;
             }

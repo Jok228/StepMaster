@@ -14,6 +14,7 @@ public class RegionsController : ControllerBase
     {
         _regions = regions;
     }
+    
     [HttpGet]
     [Route("GetRegions")]
     public async Task<ResponseList<Region>> GetRegions()

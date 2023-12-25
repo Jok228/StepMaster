@@ -15,7 +15,7 @@ namespace StepMaster.Models.API.UserModel
         public string? role { get; set; }
 
 
-        public PlaceUserOnRating? rating { get; set; }
+        public UserRanking? rating { get; set; }
 
 
         public string? region_id { get; set; }
@@ -24,18 +24,18 @@ namespace StepMaster.Models.API.UserModel
 
         public string? avatarLink { get; set; }
 
-        public UserResponse(User user)
+        public UserResponse(User user, UserRanking? ranking, string? avatar)
         {
             if (user != null)
             {
-                rating = user.rating;
+                rating = ranking;
                 email = user.email;
                 nickname = user.nickname;
                 fullname = user.fullname;
                 role = user.role;
                 gender = user.gender;
                 region_id = user.region_id;
-                avatarLink = user.AvatarLink;
+                avatarLink = avatar;
             }
 
         }
