@@ -7,5 +7,6 @@
     public struct Code
     {
         public string code { get; set; }
+
     }
 }
