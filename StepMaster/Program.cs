@@ -11,7 +11,7 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Ver 1.010 postman test and update rating services debug 1.0");
+            Console.WriteLine("Relise 1.010");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;
