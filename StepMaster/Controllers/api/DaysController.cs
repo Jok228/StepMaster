@@ -5,6 +5,9 @@ using StepMaster.Services.ForDb.Interfaces;
 using API.Auth.AuthCookie;
 using Domain.Entity.API;
 using Domain.Entity.Main;
+using StepMaster.Auth.ResponseLogic;
+using StepMaster.Models.API.Day;
+using StepMaster.Auth.AuthRequest;
 
 
 namespace StepMaster.Controllers.api
@@ -23,70 +26,31 @@ namespace StepMaster.Controllers.api
         [Route("GetAllDayUser")]
         public async Task<ResponseList<Day>> GetAllDayUser()
         {
-
-            var email = User.Identity.Name;
-            var response = new ResponseList<Day>();
+            var email = User.Identity.Name;            
             var responseBody = await _days.GetDaysUserByEmail(email);
-
-            switch (responseBody.Status)
-            {
-                case MyStatus.Success: Response.StatusCode = (int)responseBody.Status; response.Result = responseBody.Data; return response; ; break;
-                case MyStatus.Except: Response.StatusCode = (int)responseBody.Status; return null; break;
-                case MyStatus.Exists: Response.StatusCode = (int)responseBody.Status; return null; break;
-
-            }
-            return null;
+            return ResponseLogic<ResponseList<Day>>.Response(Response, responseBody.Status, new ResponseList<Day>(responseBody.Data));
+           
 
         }
         [HttpPost]
-        [CustomAuthorizeUser("user")]
+        [CustomAuthorizeUser("user")]        
         [Route("SetNewDay")]
-        public async Task<Day> SetNewDay([FromForm] Day day)
+        public async Task<Day> SetNewDay([FromForm] DayCreate daySet)
         {
-            
-            
-            var email = User.Identity.Name;
-            day.email = email;
-            var response = await _days.SetDayAsync(day, email);
-            switch (response.Status)
-            {
-                case MyStatus.SuccessCreate: Response.StatusCode = (int)response.Status; return response.Data; break;
-                case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
-                case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
+            var email = User.Identity.Name;            
+            var response = await _days.SetDayAsync(daySet.ConvertToBase(), email);
 
-            }
-            return null;
+            return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
 
         }
         [HttpPut]
         [CustomAuthorizeUser("user")]
+        [ModelValidateFilterAttribute]
         [Route("UploadDay")]
-        public async Task<Day> UploadDay([FromForm] Day day)
+        public async Task<Day> UploadDay([FromForm] DayResponse dayUpd)
         {
-            if (day._id == null)
-            {
-                Response.StatusCode = 400;
-                return null;
-            }
-            else
-            {
-                
-
-                var email = User.Identity.Name;
-                day.email = email;
-                var response = await _days.UploadDayAsync(day);
-                switch (response.Status)
-                {
-                    case MyStatus.Success: Response.StatusCode = (int)response.Status; return response.Data; break;
-                    case MyStatus.Except: Response.StatusCode = (int)response.Status; return null; break;
-                    case MyStatus.NotFound: Response.StatusCode = (int)response.Status; return null; break;
-                    case MyStatus.Exists: Response.StatusCode = (int)response.Status; return null; break;
-
-                }
-                return null;
-            }
-
-
+                var response = await _days.UploadDayAsync(DayResponse.ConvertToBase(dayUpd));
+                return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
         }
        
     }

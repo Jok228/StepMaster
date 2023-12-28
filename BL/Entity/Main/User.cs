@@ -1,6 +1,8 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 using Newtonsoft.Json;
+using System.Globalization;
+using MongoDB.Driver;
 
 namespace StepMaster.Models.Entity
 {
@@ -16,10 +18,7 @@ namespace StepMaster.Models.Entity
         [BsonElement("fullname")]
         public string fullname { get; set; }
         [BsonElement("role")]
-        public string? role { get; set; }
-        [BsonElement("rating")]
-       
-        public PlaceUserOnRating? rating { get; set; }
+        public string? role { get; set; }    
         [BsonElement("password")]
         public string password { get; set; }
         [BsonElement("region_id")]
@@ -28,36 +27,13 @@ namespace StepMaster.Models.Entity
         public string gender { get; set; }
         [BsonElement("lastCookie")]
         public string? lastCookie { get; set; }
-    }
-    public class UserResponse
-    {       
-        
-        public string email { get; set; }
-       
-        public string nickname { get; set; }
-     
-        public string fullname { get; set; }
-        
-        public string? role { get; set; }
-
-        
-        public PlaceUserOnRating? rating { get; set; }
-
-
-        public string region_id { get; set; }
-        
-        public string gender { get; set; }
-       
-        public string? avatarLink { get; set; }
-        public UserResponse(User user)
+        public User UpdateUser( User newValue)
         {
-            this.rating = user.rating;
-            this.email = user.email;
-            this.nickname = user.nickname;
-            this.fullname = user.fullname;
-            this.role = user.role;  
-            this.gender = user.gender;            
-            this.region_id = user.region_id;
+            if(newValue.fullname != null) this.fullname = newValue.fullname;
+            if(newValue.nickname != null) this.nickname = newValue.nickname;
+            if(newValue.region_id != null) this.region_id = newValue.region_id;
+            return this;
         }
     }
+    
 }

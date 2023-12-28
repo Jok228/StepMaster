@@ -34,18 +34,24 @@ db.Days.insertMany(
 )
 db.User.insertMany(
   [{   
-  "email": "paxar14705@notedns.com",
-  "nickname": "pashapashaифи",
-  "fullname": "Паша ятезник",
+    "email": "paxar14705@notedns.com",
+    "nickname": "Da?sdfsdf",
+    "fullname": "Net?",
+    "role": "user",    
+    "password": "d5KDX1satAqslCkx8k4tFw==;S069ToBh8HO0g93ZypHRT/65BC2AcFlioJKjffQjAL4=",
+    "region_id": "6546398a763aafa12565285e",
+    "gender": "male",
+    "lastCookie": null
+},
+{
+  "email": "dante_aligiri@rambler.ru",
+  "nickname": "Retro2333",
+  "fullname": "Bruh",
   "role": "user",
-  "rating": {
-    "placeInRegion": "1/4",
-    "placeInCountry": "1/4"
-  },
-  "password": "d5KDX1satAqslCkx8k4tFw==;S069ToBh8HO0g93ZypHRT/65BC2AcFlioJKjffQjAL4=",
-  "region_id": "6546398a763aafa12565285e",
+  "password": "J1KVEBXghKa2RGmE11MudQ==;PL3NSe6YTuQV55+EbqrlMLT07LvHiVyW2KEECT2MZAM=",
+  "region_id": "65866c8775b374d0753a79e1",
   "gender": "male",
-  "lastCookie": ".AspNetCore.Cookies=CfDJ8O7INixjpt9Ktfx8f-0_TdSQNNyTcQ6EQWLOXMqRojhEOrA2VJd8QY51EZi_d3ST4_Wksgs1rhSGcMEUw11p1LHWrYKFuhi1MPTw3PHnrgxlU9-w2sJkFU6zHnWiy2PQUeNe8CkDaPivXQmsGI139fn-HqTOCXGn1vO1mVL4wjunLMjptuVTXVFXk74y5U0TS4m2H8KdfYp3hpt5ki0mVDA-kKlsIDiqpzwRJrINrKx87curQng4uEtEEgQXKaDVM1k4LVd9x2wcEfw3LL8HBiGYQLd0-6gwDaTbUzBLfm0dlFN1HM1wt3ICy68cPHecVUuwwcacct7A3etrSmeViAheiO1NE6-GVlUzaumFzW0-9oiXmVewzceXAFmF1W0UNvOT2W03wZWI-ab3LQquYyhLfuBIHJjshk3XAC85wYA27uJDqgNlwe4jpODABD8yNw"
+  "lastCookie":null
 }
 ]);
   

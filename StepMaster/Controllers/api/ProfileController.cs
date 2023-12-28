@@ -2,20 +2,26 @@
 using Amazon.S3.Transfer;
 using API.Auth.AuthCookie;
 using API.Services.ForS3.Configure;
-using API.Services.ForS3.Int;
+
 using API.Services.ForS3.Rep;
-using Application.Services.ForDb.Interfaces;
+using Application.Repositories.S3.Interfaces;
+using Application.Services.Entity.Interfaces_Service;
+using DnsClient;
 using Domain.Entity.API;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-
+using StepMaster.Auth.AuthRequest;
+using StepMaster.Auth.ResponseLogic;
+using StepMaster.Models.API.UserModel;
 using StepMaster.Models.Entity;
 
 using StepMaster.Models.HashSup;
 
 using StepMaster.Services.ForDb.Interfaces;
 using System.IO;
+using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using ZstdSharp.Unsafe;
 
@@ -26,19 +32,40 @@ namespace StepMaster.Controllers.api
     [ApiController]
     public class ProfileController : ControllerBase
     {
-        private readonly IAws3Services _aws3Services;
-        private readonly IAppConfiguration _appConfiguration;
-        private readonly IUser_Service _user;
-        private readonly IRating_Service _rating;
-        private string _pathUserAwatar = "/Icons/Avatar";
+        private readonly IAws_Repository _awsRepository;        
+        private readonly IUser_Service _usersService;
+        private readonly IRating_Service _ratingService;
 
 
-        public ProfileController(IAppConfiguration appConfiguration, IUser_Service users, IRating_Service rating)
+
+        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService)
         {
-            _user = users;
-            _appConfiguration = appConfiguration;
-            _rating = rating;
-            _aws3Services = new Aws3Services( _appConfiguration.AwsAccessKey, _appConfiguration.AwsSecretAccessKey, _appConfiguration.BucketName, _appConfiguration.URL);
+            _awsRepository = aws;
+            _usersService = users;
+            _ratingService = ratingService;
+        }
+
+        [HttpPut]
+        [CustomAuthorizeUser("all")]
+        [ModelValidateFilterAttribute]
+        [Route("EditUser")]
+        public async Task<UserResponse> EditUser([FromForm] UserEditModel newUser)
+        {
+            var email = User.Identity.Name;
+            var oldUserResponse = await _usersService.GetByLoginAsync(email);
+            if(oldUserResponse.Status == MyStatus.Success)
+            {
+                if (oldUserResponse.Data.region_id != newUser.region_id && newUser.region_id != null)
+                {
+                    await _ratingService.SwapPosition(oldUserResponse.Data.region_id, newUser.region_id, email);
+                    
+                }
+                oldUserResponse.Data = newUser.ConvertToBase(oldUserResponse.Data);
+                var updResponse = await _usersService.UpdateUser(oldUserResponse.Data);
+                return  ResponseLogic<UserResponse>.Response(Response, updResponse.Status, new UserResponse(updResponse.Data,null,null));
+            }
+            return ResponseLogic<UserResponse>.Response(Response, MyStatus.NotFound, null);
+            
         }
         [HttpPost]
         [CustomAuthorizeUser("all")]
@@ -46,77 +73,38 @@ namespace StepMaster.Controllers.api
         public async Task InsertAvatar([FromForm] IFormFile image)
         {
             var userName = User.Identity.Name;
-            var fullPath = userName + _pathUserAwatar;
-            var response = await _aws3Services.InsertFile(fullPath, image);
-            switch(response.Status)             
-            {
-                case MyStatus.Success:
-                    Response.StatusCode = (int)response.Status;
-                    break;
-                case MyStatus.Except:
-                    Response.StatusCode = (int)response.Status;
-                    break;
-
-            }
-            
-            
+            var response = await _awsRepository.InsertFile(userName, image);
+            Response.StatusCode = response ? 201 : 500;
         }
         [HttpGet]
         [CustomAuthorizeUser("all")]
         [Route("GetUser")]
-        public async Task<UserResponse> GetUser ()
+        public async Task<UserResponse> GetUser()
         {
-            var userName = User.Identity.Name;
-            var path = userName + _pathUserAwatar;
-            var user = new UserResponse(_user.GetByLoginAsync(userName).Result.Data);
-            var link = await _aws3Services.GetLink(path);
-            var ratingUser = await _rating.GetRatingUser(user.email,user.region_id);
-            if(user != null)
+            var email = User.Identity.Name;
+            var userResponse = await _usersService.GetByLoginAsync(email);
+            if ( userResponse.Status == MyStatus.Success)
             {
-                user.rating = ratingUser;
-                user.avatarLink = link.Data;
-                return user;
+                var avatarLink = await _awsRepository.GetLink(email);
+                var rating = await _ratingService.GetUserRanking(email, userResponse.Data.region_id);
+                return ResponseLogic<UserResponse>.Response(Response, userResponse.Status, new UserResponse(userResponse.Data,rating,avatarLink));
             }
-            else
-            {
-                Response.StatusCode = 500;
-                return null;
-            }
-
+            return ResponseLogic<UserResponse>.Response(Response, userResponse.Status,null);
         }
         [HttpPut]
         [CustomAuthorizeUser("all")]
         [Route("EditPassword")]
         public async Task<UserResponse> EditPassword([FromForm] string newPassword, [FromForm] string oldPassword)
         {
-            var name = User.Identity.Name;
-            var checkPassword = await _user.CheckPassword(name, oldPassword);
-            switch (checkPassword.Status)
+            var email = User.Identity.Name;
+            var response = await _usersService.EditPassword(email, newPassword, oldPassword);
+            if(response.Status == MyStatus.Success)
             {
-                case MyStatus.Except:
-                    Response.StatusCode = (int)checkPassword.Status;
-                    break;
-                case MyStatus.Unauthorized: 
-                    Response.StatusCode = (int)checkPassword.Status;
-                    break;
-                case MyStatus.Success:
-                    newPassword = HashCoder.GetHash(newPassword);
-                    var user = await _user.GetByLoginAsync(name);
-                    user.Data.password = newPassword;
-                    var result = new UserResponse(await _user.UpdateUser(user.Data));
-                    if (result != null)
-                    {
-                        Response.StatusCode = 200;
-                        return result;
-                    }
-                    else
-                    {
-                        Response.StatusCode = 500;
-                        return null;
-                    }
-                    break;
+                return ResponseLogic<UserResponse>.Response(Response, response.Status, new UserResponse(response.Data,null,null));
             }
-            return null;
+           
+            return ResponseLogic<UserResponse>.Response(Response, response.Status, null);
+            
 
         }
     }
