@@ -1,10 +1,7 @@
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-
-using StepMaster.Services.ForDb.Interfaces;
 using API.Auth.AuthBase;
 using Application.Services.ForDb.APIDatebaseSet;
-using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using StepMaster.Initialization.Scope;
 namespace StepMaster
 {
