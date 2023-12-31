@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fjMziMXHaiqaf66jFJM467y9GcUEf81o3vfUitjeQhgzF0XYDZANQsoPVc/1/h0ARqSr32ZE5jIs2inPnU9obg==",
+  "dgSpecHash": "nJv713T5MJCAMpAigjxl3qFL5fWSPKO6b450mht+6dMfBgQ1bVrK+vg/ZdiNeklQXC9sfsFUsEwmlyAuF1osbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\StepMaster.csproj",
+  "projectFilePath": "D:\\StepMaster\\StepMaster\\StepMaster.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.core\\3.7.300.16\\awssdk.core.3.7.300.16.nupkg.sha512",
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.s3\\3.7.304.5\\awssdk.s3.3.7.304.5.nupkg.sha512",

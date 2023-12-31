@@ -85,7 +85,7 @@ namespace StepMaster.Controllers.api
             var userResponse = await _usersService.GetByLoginAsync(email);
             if ( userResponse.Status == MyStatus.Success)
             {
-                var avatarLink = await _awsRepository.GetLink(email);
+                var avatarLink = await _awsRepository.GetUserAvatarLink(email);
                 var rating = await _ratingService.GetUserRanking(email, userResponse.Data.region_id);
                 return ResponseLogic<UserResponse>.Response(Response, userResponse.Status, new UserResponse(userResponse.Data,rating,avatarLink));
             }

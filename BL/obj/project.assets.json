@@ -829,11 +829,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+      "projectUniqueName": "D:\\StepMaster\\BL\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+      "projectPath": "D:\\StepMaster\\BL\\Domain.csproj",
       "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\obj\\",
+      "outputPath": "D:\\StepMaster\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

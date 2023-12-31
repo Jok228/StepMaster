@@ -8,6 +8,8 @@ using Application.Services.ForDb.APIDatebaseSet;
 
 using Application.Services.Post.Repositories;
 using Application.Services.Post.Services;
+using Application.Services.S3.Interfaces_Services;
+using Application.Services.S3.Realization_Services;
 using Infrastructure.MongoDb.Cache.Implementation;
 using Infrastructure.MongoDb.Cache.Interfaces;
 using Infrastructure.MongoDb.Repositories;
@@ -27,6 +29,7 @@ namespace StepMaster.Initialization.Scope
 
         public static void InitializerService(IServiceCollection service)
         {
+            service.AddScoped<ITitles_Services, Titles_Service>();
             service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IUser_Service, User_Service>();
