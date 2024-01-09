@@ -150,8 +150,6 @@ C:\Users\sosis\Source\Repos\StepMaster\StepMaster\obj\Debug\net7.0\StepMaster.ge
 C:\Users\sosis\Source\Repos\StepMaster\StepMaster\obj\Debug\net7.0\ref\StepMaster.dll
 D:\StepMaster\StepMaster\bin\Debug\net7.0\appsettings.Development.json
 D:\StepMaster\StepMaster\bin\Debug\net7.0\appsettings.json
-D:\StepMaster\StepMaster\bin\Debug\net7.0\Update\UpdateDateBase.deps.json
-D:\StepMaster\StepMaster\bin\Debug\net7.0\Update\UpdateDateBase.runtimeconfig.json
 D:\StepMaster\StepMaster\bin\Debug\net7.0\libman.json
 D:\StepMaster\StepMaster\bin\Debug\net7.0\StepMaster.exe
 D:\StepMaster\StepMaster\bin\Debug\net7.0\StepMaster.deps.json
@@ -224,3 +222,7 @@ D:\StepMaster\StepMaster\obj\Debug\net7.0\refint\StepMaster.dll
 D:\StepMaster\StepMaster\obj\Debug\net7.0\StepMaster.pdb
 D:\StepMaster\StepMaster\obj\Debug\net7.0\StepMaster.genruntimeconfig.cache
 D:\StepMaster\StepMaster\obj\Debug\net7.0\ref\StepMaster.dll
+D:\StepMaster\StepMaster\bin\Debug\net7.0\nlog.config
+D:\StepMaster\StepMaster\bin\Debug\net7.0\NLog.dll
+D:\StepMaster\StepMaster\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+D:\StepMaster\StepMaster\bin\Debug\net7.0\NLog.Web.AspNetCore.dll

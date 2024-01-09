@@ -18,7 +18,7 @@ namespace API.Services.ForS3.Rep
         private readonly int _bufferSize = 10 * 1024 * 1024;
         private readonly string _bucketName;
         private readonly AmazonS3Config _config;
-        const double timeoutDuration = 1;
+        const double timeoutDuration = 5;
         private readonly string _beginPath = "StepMaster/";
         private string _pathUserAwatar = "/Icons/Avatar";
 

@@ -8,11 +8,14 @@ using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
 using DnsClient;
 using Domain.Entity.API;
+using Domain.Entity.Main.Titles;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using StepMaster.Auth.AuthRequest;
 using StepMaster.Auth.ResponseLogic;
+using StepMaster.Models.API.Title;
 using StepMaster.Models.API.UserModel;
 using StepMaster.Models.Entity;
 
@@ -35,14 +38,15 @@ namespace StepMaster.Controllers.api
         private readonly IAws_Repository _awsRepository;        
         private readonly IUser_Service _usersService;
         private readonly IRating_Service _ratingService;
+        private readonly ITitles_Services _titleService;
 
 
-
-        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService)
+        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService, ITitles_Services titleService)
         {
             _awsRepository = aws;
             _usersService = users;
             _ratingService = ratingService;
+            _titleService = titleService;
         }
 
         [HttpPut]
@@ -87,6 +91,7 @@ namespace StepMaster.Controllers.api
             {
                 var avatarLink = await _awsRepository.GetUserAvatarLink(email);
                 var rating = await _ratingService.GetUserRanking(email, userResponse.Data.region_id);
+                await _titleService.UpdateTitlesList(email);
                 return ResponseLogic<UserResponse>.Response(Response, userResponse.Status, new UserResponse(userResponse.Data,rating,avatarLink));
             }
             return ResponseLogic<UserResponse>.Response(Response, userResponse.Status,null);
@@ -107,5 +112,25 @@ namespace StepMaster.Controllers.api
             
 
         }
+        [HttpPut]
+        [CustomAuthorizeUser("all")]
+        [Route("SetSelectedTitle")]
+        public async Task<List<TitleDb>> SetSelectedTitles([FromForm] TitleDb newTitle)
+        {
+            if (newTitle.type != "achievement") throw new HttpRequestException("The selected title must be only type - achievement!",null,HttpStatusCode.BadRequest);
+            var email = User.Identity.Name;
+            var result = await _titleService.UpdateSelectUserTitles(email, newTitle);
+            return result.Data;
+        }
+        [HttpGet]
+        [CustomAuthorizeUser("all")]
+        [Route("GetTitleProgress")]
+        public async Task<TitleProgress> GetTitleProgress()
+        {
+            var email = User.Identity.Name;
+            return await _titleService.GetActualProgress(email);
+        }
+
+
     }
 }

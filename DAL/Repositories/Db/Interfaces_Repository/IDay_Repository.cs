@@ -16,6 +16,12 @@ namespace Application.Repositories.Db.Interfaces_Repository
 
         Task<BaseResponse<List<Day>>> GetActualDay(string email);
 
+        Task<int> GetStepRangeForAchievements(string email, int? dayCount);
 
+        Task<int> GetStepRangeForGrades(string email, int? dayCount);
+
+        Task<int> GetCountDayMoreMax(string email, int? dayCount);
+
+        Task<List<Day>>GetRangDay(string email, int dayCount);
     }
 }

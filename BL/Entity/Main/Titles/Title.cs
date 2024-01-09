@@ -7,25 +7,49 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Entity.Main.Titles
-{
-    public class Title
+{   
+    public class TitleDb
     {
+
+        [BsonElement("idAchievemen")]
         public int id { get; set; }
+        [BsonElement("idGroup")]
+        public int groupId { get; set; }
+
+        [BsonElement("type")]
+        public string type { get; set; }
+
+        [BsonElement("name")]
         public string name { get; set; }
 
-        public string link { get; set; }
-
-      
+    }
+    public class Title
+    {     
+        public int id { get; set; }      
+        public string name { get; set; }
+        public int groupId { get; set; }
+        public string link { get; set; }   
+        
+        TitleDb GetTitleDb()
+        {
+            return new TitleDb
+            {               
+                name = this.name,
+            };
+        }
 
     }
     public class GroupTitle
     {
         public int id { get; set; }
+
+        
         public string name { get; set; }
         
         public List<Title> data { get; set; }
-        public GroupTitle(string? name = "none", int id = 0)
+        public GroupTitle(string? name = "none", int id = 0,int groupId = 0)
         {
+           
             this.name = name;
             this.id = id;
             data = new List<Title>();

@@ -11,3 +11,16 @@ C:\Users\sosis\source\repos\telegram\StepMaster\BL\obj\Release\net7.0\Domain.dll
 C:\Users\sosis\source\repos\telegram\StepMaster\BL\obj\Release\net7.0\refint\Domain.dll
 C:\Users\sosis\source\repos\telegram\StepMaster\BL\obj\Release\net7.0\Domain.pdb
 C:\Users\sosis\source\repos\telegram\StepMaster\BL\obj\Release\net7.0\ref\Domain.dll
+D:\StepMaster\BL\bin\Release\net7.0\Domain.deps.json
+D:\StepMaster\BL\bin\Release\net7.0\Domain.dll
+D:\StepMaster\BL\bin\Release\net7.0\Domain.pdb
+D:\StepMaster\BL\obj\Release\net7.0\Domain.csproj.AssemblyReference.cache
+D:\StepMaster\BL\obj\Release\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\StepMaster\BL\obj\Release\net7.0\Domain.AssemblyInfoInputs.cache
+D:\StepMaster\BL\obj\Release\net7.0\Domain.AssemblyInfo.cs
+D:\StepMaster\BL\obj\Release\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\StepMaster\BL\obj\Release\net7.0\Domain.sourcelink.json
+D:\StepMaster\BL\obj\Release\net7.0\Domain.dll
+D:\StepMaster\BL\obj\Release\net7.0\refint\Domain.dll
+D:\StepMaster\BL\obj\Release\net7.0\Domain.pdb
+D:\StepMaster\BL\obj\Release\net7.0\ref\Domain.dll

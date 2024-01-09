@@ -18,6 +18,8 @@ namespace StepMaster.Models.API.UserModel
 
         public string gender { get; set; }
 
+        
+
         static public User GetFullUser(UserRegModel regModel)
         {
             return new User()
@@ -28,7 +30,10 @@ namespace StepMaster.Models.API.UserModel
                 password = HashCoder.GetHash(regModel.password),
                 region_id = regModel.region_id,
                 gender = regModel.gender,
-                role = "user"
+                role = "user",
+                vipStatus = true
+                
+
             };
         }
 

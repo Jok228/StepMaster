@@ -1,4 +1,5 @@
-﻿using StepMaster.Models.Entity;
+﻿using Domain.Entity.Main.Titles;
+using StepMaster.Models.Entity;
 using StepMaster.Models.HashSup;
 
 namespace StepMaster.Models.API.UserModel
@@ -23,6 +24,11 @@ namespace StepMaster.Models.API.UserModel
         public string? gender { get; set; }
 
         public string? avatarLink { get; set; }
+        public bool vipStatus { get; set; }
+
+        public List<TitleDb> titles { get; set; }
+        public List<TitleDb> selectedTitles { get; set; }
+
 
         public UserResponse(User user, UserRanking? ranking, string? avatar)
         {
@@ -36,6 +42,9 @@ namespace StepMaster.Models.API.UserModel
                 gender = user.gender;
                 region_id = user.region_id;
                 avatarLink = avatar;
+                titles = user.titles;
+                selectedTitles = user.selectedTitles;
+                vipStatus = user.vipStatus;
             }
 
         }

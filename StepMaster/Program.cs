@@ -2,7 +2,11 @@ using API.Auth.AuthBase;
 using Application.Services.ForDb.APIDatebaseSet;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using NLog;
+using NLog.Web;
+using StepMaster.HandlerException;
 using StepMaster.Initialization.Scope;
+using System.Text;
 namespace StepMaster
 {
     public class Program
@@ -11,7 +15,7 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Relise 1.010");
+            Console.WriteLine("Debug 1.013 Aws update 1.1");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;
@@ -21,7 +25,9 @@ namespace StepMaster
            o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
        })
        .AddCookie();
-
+            builder.Host.UseNLog();
+            var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+            logger.Error("init main");
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
 
@@ -53,6 +59,7 @@ namespace StepMaster
             var app = builder.Build();
 
             app.UseSwagger();
+            app.UseMiddleware<FactoryMiddleware>();
             app.UseSwaggerUI();
             app.UseHttpsRedirection();
             app.UseAuthentication();

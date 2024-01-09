@@ -6,6 +6,6 @@ namespace StepMaster.Models.API.TitlesModel
     {
         public List<GroupTitle> achievements { get; set; }
 
-        public List<GroupTitle> grade { get; set; }
+        public List<GroupTitle> grades { get; set; }
     }
 }

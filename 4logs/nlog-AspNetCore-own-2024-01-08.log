@@ -1,0 +1,41 @@
+2024-01-08 05:52:46.5149|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:52:46.8033|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 05:52:46.8208|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {8f832116-2ca5-4957-af3b-a087b3d0d84a} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 05:52:46.8687|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 05:52:46.8744|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 05:52:46.8744|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 05:52:46.8744|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 05:56:42.8771|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-08 05:59:02.6762|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:59:03.0476|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 05:59:03.0736|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {bb35f8f9-508e-4d53-aa9b-6b4cbe73887c} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 05:59:03.1317|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 05:59:03.1317|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 05:59:03.1317|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 05:59:03.1425|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 06:02:49.2464|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-08 06:15:03.7616|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 06:15:04.1288|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 06:15:04.1981|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 06:15:04.1981|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 06:15:04.2077|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 06:15:04.2077|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 06:19:06.4698|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-08 07:18:20.5795|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 07:18:21.0303|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 07:18:21.0540|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {a049c224-2c5a-439d-8eb9-696b8da62d92} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 07:18:21.1258|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 07:18:21.1258|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 07:18:21.1330|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 07:18:21.1330|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 07:22:06.6038|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-08 07:22:06.8033|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-08 07:22:31.6531|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-08 07:22:34.2887|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-08 07:22:35.4928|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-08 11:12:53.3974|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 11:12:53.8413|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 11:12:53.9529|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 11:12:53.9529|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 11:12:53.9582|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 11:12:53.9582|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
