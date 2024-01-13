@@ -94,9 +94,9 @@ namespace API.Services.ForS3.Rep
                     urlString = await _client.GetPreSignedURLAsync(request);
                 }
             }
-            catch (AmazonS3Exception ex)
+            catch
             {
-                Console.WriteLine($"Error:'{ex.Message}'");
+                throw new HttpRequestException("Shit happens", null, System.Net.HttpStatusCode.InternalServerError);
             }
 
             return urlString;

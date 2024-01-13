@@ -11,5 +11,7 @@ namespace Application.Repositories.Db.Interfaces_Repository
     public interface ICondition_Repository
     {
         Task<List<Condition>> GetConditionsAsync();
+
+        Task<Condition> GetOneAsync(string mongoId);
     }
 }

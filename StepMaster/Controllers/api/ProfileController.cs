@@ -27,6 +27,8 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using ZstdSharp.Unsafe;
+using static Domain.Entity.Main.Titles.Condition;
+using static StepMaster.Models.Entity.User;
 
 
 namespace StepMaster.Controllers.api
@@ -115,22 +117,11 @@ namespace StepMaster.Controllers.api
         [HttpPut]
         [CustomAuthorizeUser("all")]
         [Route("SetSelectedTitle")]
-        public async Task<List<TitleDb>> SetSelectedTitles([FromForm] TitleDb newTitle)
-        {
-            if (newTitle.type != "achievement") throw new HttpRequestException("The selected title must be only type - achievement!",null,HttpStatusCode.BadRequest);
+        public async Task<List<string>> SetSelectedTitles([FromForm] string conditionMongoId)
+        {            
             var email = User.Identity.Name;
-            var result = await _titleService.UpdateSelectUserTitles(email, newTitle);
-            return result.Data;
+            var result = await _titleService.UpdateSelectUserTitles(email, conditionMongoId);
+            return result;
         }
-        [HttpGet]
-        [CustomAuthorizeUser("all")]
-        [Route("GetTitleProgress")]
-        public async Task<TitleProgress> GetTitleProgress()
-        {
-            var email = User.Identity.Name;
-            return await _titleService.GetActualProgress(email);
-        }
-
-
     }
 }

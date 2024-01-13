@@ -26,9 +26,9 @@ namespace StepMaster.Services.ForDb.Repositories
         {
             day.email = email;
             day.date = DateTime.UtcNow.Date;
-            if (_days.ChechDayDateNow(email).Result.Data)
+            if (await _days.ChechDayDateNow(email))
             {
-                return BaseResponse<Day>.Create(null, MyStatus.Exists);
+                throw new HttpRequestException("Day is exist in Data base", null, System.Net.HttpStatusCode.Conflict);
             }
             var response = await _days.SetObject(day);
             

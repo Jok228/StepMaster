@@ -3,8 +3,8 @@ using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
 using Domain.Entity.API;
 using Domain.Entity.Main.Titles;
-using StepMaster.Models.API.Title;
-using StepMaster.Services.ForDb.Interfaces;
+using static Domain.Entity.Main.Titles.Condition;
+using static StepMaster.Models.Entity.User;
 
 namespace Application.Services.Entity.Realization_Services
 {
@@ -15,7 +15,7 @@ namespace Application.Services.Entity.Realization_Services
         private readonly IDay_Repository _days_repository;
         private readonly IUser_Repository _userRepository;
         
-        private readonly int maxStepGrades = 30000;
+        private readonly int _maxStepGrades = 30000;
         public Titles_Service(IAws_Repository aws_repository, IDay_Repository days_repository, IUser_Repository user_repository, ICondition_Repository condition_repository)
         {
             _aws_repository = aws_repository;
@@ -24,38 +24,26 @@ namespace Application.Services.Entity.Realization_Services
             _conditionRepository = condition_repository;
         }
 
-        public async Task<List<GroupTitle>> GetAllTitles(List<string> list)
+        public async Task<List<Condition>> GetLinksTitles(List<Condition> listPath)
         {
-           
-
-        }
-        
-        private string GetFileName(string path)
-        {
-            return path.TrimEnd('/').Split('/').Last().Split('@').Last();
-        }
-        private int GetFileId(string path, bool folder)
-        {
-            if (folder)
+            
+           foreach (var title in listPath)
             {
-                return int.Parse(path.Split('@').First().Split('/').Last());
+                string url = await _aws_repository.GetLink(title.AwsPath);
+                title.awsLink = url;
             }
-            else
-            {
-                return int.Parse(path.Split('/').Last().Split('@').First().Split('/').Last());
-            }
-
-
+            return listPath;
         }
+
 
         public async Task UpdateTitlesList(string email)
         {
             var conditions = await _conditionRepository.GetConditionsAsync();
-            foreach (var ach in conditions.Where(condition => condition.type == "achievement").ToList())
+            foreach (var ach in conditions.Where(condition => condition.Type == "achievement").ToList())
             {
-                if (ach.groupId == 2)
+                if (ach.GroupId == 2)
                 {
-                    var days = await _days_repository.GetRangDay(email, (int)ach.timeDay);
+                    var days = await _days_repository.GetRangDay(email, (int)ach.TimeDay);
                     int i = 0;
                     foreach (var day in days)
                     {
@@ -64,24 +52,24 @@ namespace Application.Services.Entity.Realization_Services
                             i++;
                         }
                     }
-                    if(i >= ach.timeDay)
+                    if(i >= ach.TimeDay)
                     {
                         await UpdateTitleUser(email, ach);
                     }
                     continue;
                 }
-                var steps = await _days_repository.GetStepRangeForAchievements(email, ach.timeDay);
-                if (steps >= ach.distance)
+                var steps = await _days_repository.GetStepRangeForAchievements(email, ach.TimeDay);
+                if (steps >= ach.Distance)
                 {
                     await UpdateTitleUser(email, ach);
                 }
 
             }
-            foreach (var gra in conditions.Where(condition => condition.type == "grade").ToList())
+            foreach (var gra in conditions.Where(condition => condition.Type == "grade").ToList())
             {
-                var steps = await _days_repository.GetStepRangeForGrades(email, gra.timeDay);
-                steps += await _days_repository.GetCountDayMoreMax(email, gra.timeDay) * maxStepGrades;                
-                if (steps >= gra.distance)
+                var steps = await _days_repository.GetStepRangeForGrades(email);
+                steps += await _days_repository.GetCountDayMoreMax(email) * _maxStepGrades;                
+                if (steps >= gra.Distance)
                 {
                     await UpdateTitleUser(email, gra);
                 }
@@ -96,47 +84,59 @@ namespace Application.Services.Entity.Realization_Services
         private async Task UpdateTitleUser(string email, Condition ach)
         {
             var user = await _userRepository.GetObjectBy(email);
-            user.Data.UpdateTitles(new TitleDb
-            {
-                type = ach.type,
-                id = ach.localId,
-                groupId = ach.groupId,
-                name = ach.name,
-            });
+            user.Data.UpdateTitles(ach);
             await _userRepository.UpdateObject(user.Data);
         }
-        public async Task<BaseResponse<List<TitleDb>>> UpdateSelectUserTitles(string email, TitleDb newTitle)
+        public async Task<List<string>> UpdateSelectUserTitles(string email, string conditionMongoId)
         {
             var user = await _userRepository.GetObjectBy(email);
-            user.Data.UpdateSelectedTitles(newTitle);
-            var selectedList = user.Data.selectedTitles;
+            user.Data.UpdateSelectedTitles(conditionMongoId);
+            var response = user.Data.selectedTitles;
             await _userRepository.UpdateObject(user.Data);
-            return BaseResponse<List<TitleDb>>.Create(selectedList, MyStatus.Success);
+            return response;
         }
-
-        public async Task<TitleProgress> GetActualProgress(string email)
+        public async Task<List<Condition>> GetActualAllProgress(string email, List<Condition> list)
         {
-            var user = await _userRepository.GetObjectBy(email);
-            var conditions = await _conditionRepository.GetConditionsAsync();            
-            var stepsUser = await _days_repository.GetStepRangeForAchievements(email, null);
-            var lastAchievement = conditions.FirstOrDefault(condition => condition.distance >= stepsUser & condition.groupId == 3 & condition.type == "achievement");
-            if(lastAchievement == null)
+            foreach (var item in list)
             {
-                lastAchievement = conditions.Last(condition => condition.groupId == 3 & condition.type == "achievement");
-                return new TitleProgress()
+                if(item.Type == "grade"& item.GroupId == 5 | item.GroupId == 6 | item.GroupId ==7 | item.GroupId == 8)
                 {
-                    title = new TitleDb { groupId = lastAchievement.groupId, name = lastAchievement.name, id = lastAchievement.localId, type = lastAchievement.type},
-                    km_dealt = conditions.Find(condition => condition.localId == lastAchievement.localId & condition.groupId == lastAchievement.groupId).distance,
-                    km_needed = conditions.Find(condition => condition.localId == lastAchievement.localId & condition.groupId == lastAchievement.groupId).distance
-                };
+                    item.Dealt_Progress = null;
+                    item.Needed_Progress = null;
+                    
+                }
+                else if (item.Type == "grade")
+                {
+                    item.Needed_Progress = item.Distance.ToString();
+                    item.Dealt_Progress = (_days_repository.GetStepRangeForGrades(email).Result
+                        + _days_repository.GetCountDayMoreMax(email).Result * _maxStepGrades).ToString();
+                    
+                }
+                else if(item.Type == "achievement" & item.GroupId == 1 | item.GroupId == 3 | item.GroupId == 4)
+                {
+                    item.Needed_Progress = item.Distance.ToString();
+                    item.Dealt_Progress = _days_repository.GetStepRangeForAchievements(email, item.TimeDay).Result.ToString();
+                    
+                }
+                else if (item.Type == "achievement" & item.GroupId == 2)
+                {
+                    item.Needed_Progress = item.TimeDay.ToString();
+                    var days = await _days_repository.GetRangDay(email, (int)item.TimeDay);
+                    int i = 0;
+                    foreach (var day in days)
+                    {
+                        if (day.steps >= day.plansteps)
+                        {
+                            i++;
+                        }
+                                             
+                    }
+                    item.Dealt_Progress = i.ToString();
+                   
+                }
+
             }
-         
-            return new TitleProgress()
-            {
-                title = new TitleDb { groupId = lastAchievement.groupId, name = lastAchievement.name, id = lastAchievement.localId, type = lastAchievement.type },
-                km_dealt = stepsUser,
-                km_needed = conditions.Find(condition => condition.localId == lastAchievement.localId & condition.groupId == lastAchievement.groupId).distance
-            };
+            return list;
         }
     }
 }

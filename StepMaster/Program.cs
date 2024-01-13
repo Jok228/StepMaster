@@ -15,7 +15,7 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Debug 1.013 Aws update 1.1");
+            Console.WriteLine("Relise 1.014 New logic achievements-grades");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;
@@ -27,7 +27,7 @@ namespace StepMaster
        .AddCookie();
             builder.Host.UseNLog();
             var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
-            logger.Error("init main");
+            logger.Info("Process start");
             builder.Services.Configure<ApiDatabaseSettings>(
                 builder.Configuration.GetSection(nameof(ApiDatabaseSettings)));
 

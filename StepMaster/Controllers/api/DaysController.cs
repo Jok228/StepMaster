@@ -44,7 +44,11 @@ namespace StepMaster.Controllers.api
             var email = User.Identity.Name;            
             var response = await _days.SetDayAsync(daySet.ConvertToBase(), email);
             await _titlesService.UpdateTitlesList(email);
-            return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
+            if(response.Data != null)
+            {
+                Response.StatusCode = 201;
+            }
+            return response.Data;
 
         }
         [HttpPut]

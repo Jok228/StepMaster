@@ -31,22 +31,40 @@ namespace StepMaster.Models.Entity
         [BsonElement("vipStatus")]
         public bool vipStatus{ get; set; }
         [BsonElement("titles")]
-        public List<TitleDb> titles { get; set; }
+        public List<string> titles { get; set; }
         [BsonElement("selectedTitles")]
-        public List<TitleDb> selectedTitles { get; set; }
+        public List<string> selectedTitles { get; set; }
+
         public User()
         {
-            titles = new List<TitleDb>();
-            selectedTitles = new List<TitleDb>();   
+            titles = new List<string>();
+            selectedTitles = new List<string>();   
         }
-        public void UpdateTitles(TitleDb newTitle)
+
+        //public class TitleUser
+        //{
+
+        //    [BsonElement("idAchievemen")]
+        //    public int id { get; set; }
+        //    [BsonElement("idGroup")]
+        //    public int groupId { get; set; }
+
+        //    [BsonElement("type")]
+        //    public string type { get; set; }
+
+        //    [BsonElement("name")]
+        //    public string name { get; set; }
+
+        //}
+
+
+        public void UpdateTitles(Condition newTitle)
         {
-           var filter =  this.titles.Find(titleDb => titleDb.id == newTitle.id & titleDb.groupId == newTitle.groupId & titleDb.type == newTitle.type);
-           if(filter != null)
+            if (this.titles.Contains(newTitle._id.ToString()))
             {
-                return;                
+                return;
             }
-           this.titles.Add(newTitle);
+            this.titles.Add(newTitle._id.ToString());
         }
 
         public User UpdateUser( User newValue)
@@ -57,48 +75,22 @@ namespace StepMaster.Models.Entity
             return this;
         }
 
-        public void UpdateSelectedTitles(TitleDb newTtitles)
+        public void UpdateSelectedTitles(string conditionMongoId)
         {
-            var checkedTitles = this.titles.FirstOrDefault(achievement => achievement.id == newTtitles.id & achievement.groupId == newTtitles.groupId & achievement.type == newTtitles.type);
-            if(checkedTitles == null)
+            if (this.titles.Contains(conditionMongoId))
             {
-                throw new HttpRequestException("The Titles not exists in User.Titles", null, System.Net.HttpStatusCode.BadRequest);
-            }
-            if(this.selectedTitles.Count == 3)
-            {
-                this.selectedTitles.Remove(selectedTitles[0]);
-                this.selectedTitles.Add(checkedTitles);
+                if(this.selectedTitles.Count >= 3)
+                {
+                    this.selectedTitles.RemoveAt(0);
+                }
+                this.selectedTitles.Add(conditionMongoId);
             }
             else
             {
-                this.selectedTitles.Add(checkedTitles);
+                throw new HttpRequestException("The Titles not exists in User.Titles", null, System.Net.HttpStatusCode.BadRequest);
             }
-          
         }
 
-        public TitleDb GetLastAchievemtn(List<Condition> listConditions)
-        {
-
-            var result = this.titles.LastOrDefault(ach => ach.groupId == 3 & ach.type == "achievement");
-            if (result != null)
-            {
-                var condition = listConditions.Find(con => con.localId == result.id+1 & con.type == "achievement" & con.groupId == result.groupId);
-                return new TitleDb
-                {
-                    id = condition.localId,
-                    groupId = result.groupId,
-                    name = result.name,
-                    type = result.type,
-                };
-            }
-            return new TitleDb
-            {
-                name = "10 км",
-                id = 1,
-                groupId = 3,
-                type = "achievement"
-            };
-        }
     }
     
 }
