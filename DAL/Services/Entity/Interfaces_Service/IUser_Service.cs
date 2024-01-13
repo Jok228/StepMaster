@@ -1,6 +1,7 @@
 ﻿using StepMaster.Models.Entity;
 using Domain.Entity.API;
 using System.Globalization;
+using Domain.Entity.Main.Titles;
 
 namespace StepMaster.Services.ForDb.Interfaces
 {
@@ -17,7 +18,5 @@ namespace StepMaster.Services.ForDb.Interfaces
         public Task<BaseResponse<bool>> DeleteCookie(string userEmail);
 
         public Task<BaseResponse<string>> DeleteUser(string user);
-
-
     }
 }

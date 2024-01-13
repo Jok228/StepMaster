@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AxTjgdEKlO99YpZOS6/p6AHeAMAQlwB71hhRPKBvFB2Wmzl6sTz9GZrkr0YEgE5LyhfnA4udAz5oKDN/5Pn9Zg==",
+  "dgSpecHash": "ogTO8i/Q+3DOxW9eACOoRYiQjYn6dgu0Dewbp9mUmbrhr/jwRemKSx40rsF8USCfRk2pAOqVBdHllnw+vjFsuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+  "projectFilePath": "D:\\StepMaster\\BL\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

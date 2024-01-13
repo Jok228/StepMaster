@@ -1,17 +1,25 @@
-﻿using Application.Repositories.Db.Interfaces_Repository;
+﻿using Amazon.S3.Model;
+using Application.Repositories.Db.Interfaces_Repository;
 using Application.Services.ForDb.APIDatebaseSet;
 using Domain.Entity.API;
 using Domain.Entity.Main;
 using Infrastructure.MongoDb.Cache.Interfaces;
 using Infrastructure.MongoDb.DbHelper;
 using Infrastructure.MongoDb.Settings;
+using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Core.Misc;
+using MongoDB.Driver.Linq;
 using StepMaster.Models.Entity;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Infrastructure.MongoDb.Repositories
 {
@@ -19,40 +27,45 @@ namespace Infrastructure.MongoDb.Repositories
 
     {
         private readonly IMongoCollection<Day> _days;
+        private ILogger<Day_Repository> _logger;
         private IMy_Cache _cache;
-        public Day_Repository(IMy_Cache cache, IAPIDatabaseSettings settings, IMongoClient mongoClient)
+        public Day_Repository(IMy_Cache cache, IAPIDatabaseSettings settings, IMongoClient mongoClient, ILogger<Day_Repository> logger)
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
             _days = database.GetCollection<Day>(TableName.Day);
             _cache = cache;
-
+            _logger = logger;
+            _logger.LogDebug("NLog is integrate to Day_Controler ");
         }
-
-        public async Task<BaseResponse<bool>> ChechDayDateNow(string email)
+        #region Проверка есть ли день с такой же датой
+        public async Task<bool> ChechDayDateNow(string email)
         {
             try
             {
-                 var day = await _days.FindAsync(day => day.email == email 
-                 && day.date.Date == DateTime.UtcNow.Date)
-                    .Result
-                    .FirstAsync();
-                return BaseResponse<bool>.Create(true, MyStatus.Success);
+                var day = await _days.FindAsync(day => day.email == email
+                && day.date.Date == DateTime.UtcNow.Date)
+                   .Result
+                   .FirstAsync();
+                return true;
             }
             catch (Exception ex)
             {
                 if (ex.Message == DbExMessage.NoElements)
                 {
-                    return BaseResponse<bool>.Create(false, MyStatus.Success);
+                    return false;
                 }
-                return BaseResponse<bool>.Create(true, MyStatus.Except);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
 
+        #endregion
+
+        #region Получить актуальный день
         public async Task<BaseResponse<List<Day>>> GetActualDay(string email)
         {
             try
             {
-                var days = await _days.FindAsync (day => day.email == email
+                var days = await _days.FindAsync(day => day.email == email
                 && day.date.Month == DateTime.UtcNow.Month
                 && day.date.Year == DateTime.UtcNow.Year)
                     .Result
@@ -66,10 +79,13 @@ namespace Infrastructure.MongoDb.Repositories
                 {
                     return BaseResponse<List<Day>>.Create(new List<Day>(), MyStatus.Success);
                 }
-                return BaseResponse<List<Day>>.Create(null, MyStatus.Except);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+
             }
         }
+        #endregion
 
+        #region Получить дни юзера
         public async Task<BaseResponse<List<Day>>> GetDaysByEmail(string email)
         {
             try
@@ -85,10 +101,12 @@ namespace Infrastructure.MongoDb.Repositories
                 {
                     return BaseResponse<List<Day>>.Create(new List<Day>(), MyStatus.Success);
                 }
-                return BaseResponse<List<Day>>.Create(null, MyStatus.Except);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
+        #endregion
 
+        #region Получить объект
         public async Task<BaseResponse<Day>> GetObjectBy(string idOrEmail)
         {
             try
@@ -108,14 +126,149 @@ namespace Infrastructure.MongoDb.Repositories
             }
             catch (Exception ex)
             {
-                if(ex.Message == DbExMessage.NoElements)
+                if (ex.Message == DbExMessage.NoElements)
                 {
-                    return BaseResponse<Day>.Create(null, MyStatus.NotFound);
+                    throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
-                return BaseResponse<Day>.Create(null, MyStatus.Except);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
+        #endregion
 
+        #region Взять количество шагов пользователя в диапозоне
+        public async Task<int> GetStepRangeForAchievements(string email, int? dayCount)
+        {
+            try
+            {
+                var dateNow = new BsonDateTime(DateTime.UtcNow.Date);
+                var aggregateStage1 = new BsonDocument()
+           {
+               {
+                   "$match",new BsonDocument() {
+                       {"email",email}
+                   }
+               }
+           };
+                var aggregateStage3 = new BsonDocument()
+            {
+                {
+                    "$group",new BsonDocument()
+                    {
+                        {
+                            "_id","null"
+                        },
+                        {
+                            "totalSteps", new BsonDocument()
+                            {
+                                {
+                                    "$sum","$steps"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            
+                if (dayCount != null)
+                {
+                    var dateRange = new BsonDateTime(DateTime.UtcNow.AddDays(-(int)dayCount).Date);
+                    var aggregateStage2 = new BsonDocument() { { "$match", new BsonDocument() { { "date", new BsonDocument() { { "$gte", dateRange }, { "$lte", dateNow } } } } } };
+                    var pipeline = new BsonDocument[] { aggregateStage1, aggregateStage2, aggregateStage3 };
+                    var result = await _days.Aggregate<BsonDocument>(pipeline).FirstAsync();
+                    return (int)result["totalSteps"];
+                }
+                else
+                {
+                    var dateRange = new BsonDateTime(DateTime.MinValue.Date);
+                    var pipeline = new BsonDocument[] { aggregateStage1, aggregateStage3 };
+                    var result = await _days.Aggregate<BsonDocument>(pipeline).FirstAsync();
+                    return (int)result["totalSteps"];
+                }
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == DbExMessage.NoElements)
+                {
+                    
+                    return 0;
+                }
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.InternalServerError);
+            }
+
+        }
+        #endregion
+
+        #region Взять количество шагов пользователя в дня у которых меньше 30к шагов, в диапозоне
+        public async Task<int> GetStepRangeForGrades(string email)
+        {
+            
+            
+            var aggregateStage1 = new BsonDocument()
+           {
+               {
+                   "$match",new BsonDocument() {
+                       {"email",email}
+                   }
+               }
+           };           
+            var aggregateStage3 = new BsonDocument()
+            {
+                {
+                    "$match",new BsonDocument()
+                    {
+                        {
+                            "steps",new BsonDocument()
+                            {
+                                {
+                                    "$lte",30000
+                                }
+                            }
+                        },
+
+                    }
+                }
+            };
+            var aggregateStage4 = new BsonDocument()
+            {
+                {
+                    "$group",new BsonDocument()
+                    {
+                        {
+                            "_id","null"
+                        },
+                        {
+                            "totalSteps", new BsonDocument()
+                            {
+                                {
+                                    "$sum","$steps"
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+            var pipeline = new BsonDocument[] { aggregateStage1, aggregateStage3, aggregateStage4 };
+            try
+            {
+                var result = await _days.Aggregate<BsonDocument>(pipeline).FirstAsync();
+                return (int)result["totalSteps"];
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == DbExMessage.NoElements)
+                {
+                    return 0;
+
+                }
+                _logger.LogError("GetStepRangeForGrades");
+                _logger.LogError($"{ex.Message}");
+                return 0;
+            }
+        }
+        #endregion
+
+        #region Добавить объект
         public async Task<BaseResponse<Day>> SetObject(Day value)
         {
             try
@@ -124,13 +277,16 @@ namespace Infrastructure.MongoDb.Repositories
                 _cache.SetObject(value._id, value, 10);
                 return BaseResponse<Day>.Create(value, MyStatus.SuccessCreate);
             }
-            catch
+            catch (Exception ex)
             {
-                return BaseResponse<Day>.Create(null, MyStatus.Except);
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
-            
-        }
 
+        }
+        #endregion
+
+        #region Обновить объект
         public async Task<BaseResponse<Day>> UpdateObject(Day newValue)
         {
             try
@@ -141,12 +297,113 @@ namespace Infrastructure.MongoDb.Repositories
                 _cache.SetObject(newValue._id, newValue, 10);
                 return BaseResponse<Day>.Create(newValue, MyStatus.Success);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BaseResponse<Day>.Create(null, MyStatus.Except);
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
-            
+
         }
+        #endregion
+
+        #region Взять количество дней которые больше 30к, в диапозоне
+        public async Task<int> GetCountDayMoreMax(string email)
+        {
+            var aggregateStage1 = new BsonDocument()
+           {
+               {
+                   "$match",new BsonDocument() {
+                       {"email",email}
+                   }
+               }
+           };
+            var aggregateStage3 = new BsonDocument()
+            {
+                {
+                    "$match",new BsonDocument()
+                    {
+                        {
+                            "steps",new BsonDocument()
+                            {
+                                {
+                                    "$gte",30000
+                                }
+                            }
+                        },
+
+                    }
+                }
+            };
+            var aggregateStage4 = new BsonDocument()
+            {
+                {
+                    "$count","passing_scores"
+                }
+            };
+            var pipeline = new BsonDocument[] { aggregateStage1, aggregateStage3, aggregateStage4 };
+            try
+            {
+                var result = await _days.Aggregate<BsonDocument>(pipeline).FirstAsync();
+                return (int)result["passing_scores"];
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("GetCountDayMoreMax");
+                _logger.LogError(ex.Message);
+
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+        }
+        #endregion
+
+        #region Взять диапозон дней
+        public async Task<List<Day>> GetRangDay(string email, int dayCount)
+        {
+            var dateRange = new BsonDateTime(DateTime.UtcNow.AddDays(-dayCount).Date);
+            var dateNow = new BsonDateTime(DateTime.UtcNow.Date);
+            var aggregateStage1 = new BsonDocument()
+           {
+               {
+                   "$match",new BsonDocument() {
+                       {"email",email}
+                   }
+               }
+           };
+            var aggregateStage2 = new BsonDocument()
+            {
+                {
+                    "$match",new BsonDocument()
+                    {
+                        {
+                              "date",new BsonDocument()
+                              {
+                                  {
+                                      "$gte", dateRange
+                                  },
+                                  {
+                                       "$lte",dateNow
+                                  }
+
+                              }
+                        }
+                    }
+                }
+            };
+            var pipeline = new BsonDocument[] { aggregateStage1, aggregateStage2 };
+            try
+            {
+                List<Day> result = await _days.Aggregate<Day>(pipeline).ToListAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning("GetCountDayMoreMax");
+                _logger.LogError(ex.Message);
+                return new List<Day>();
+            }
+
+        }
+        #endregion
     }
 }

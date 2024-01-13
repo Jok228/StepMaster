@@ -8,11 +8,14 @@ using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
 using DnsClient;
 using Domain.Entity.API;
+using Domain.Entity.Main.Titles;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using StepMaster.Auth.AuthRequest;
 using StepMaster.Auth.ResponseLogic;
+using StepMaster.Models.API.Title;
 using StepMaster.Models.API.UserModel;
 using StepMaster.Models.Entity;
 
@@ -24,6 +27,8 @@ using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using ZstdSharp.Unsafe;
+using static Domain.Entity.Main.Titles.Condition;
+using static StepMaster.Models.Entity.User;
 
 
 namespace StepMaster.Controllers.api
@@ -35,14 +40,15 @@ namespace StepMaster.Controllers.api
         private readonly IAws_Repository _awsRepository;        
         private readonly IUser_Service _usersService;
         private readonly IRating_Service _ratingService;
+        private readonly ITitles_Services _titleService;
 
 
-
-        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService)
+        public ProfileController(IUser_Service users, IAws_Repository aws, IRating_Service ratingService, ITitles_Services titleService)
         {
             _awsRepository = aws;
             _usersService = users;
             _ratingService = ratingService;
+            _titleService = titleService;
         }
 
         [HttpPut]
@@ -85,8 +91,9 @@ namespace StepMaster.Controllers.api
             var userResponse = await _usersService.GetByLoginAsync(email);
             if ( userResponse.Status == MyStatus.Success)
             {
-                var avatarLink = await _awsRepository.GetLink(email);
+                var avatarLink = await _awsRepository.GetUserAvatarLink(email);
                 var rating = await _ratingService.GetUserRanking(email, userResponse.Data.region_id);
+                await _titleService.UpdateTitlesList(email);
                 return ResponseLogic<UserResponse>.Response(Response, userResponse.Status, new UserResponse(userResponse.Data,rating,avatarLink));
             }
             return ResponseLogic<UserResponse>.Response(Response, userResponse.Status,null);
@@ -106,6 +113,15 @@ namespace StepMaster.Controllers.api
             return ResponseLogic<UserResponse>.Response(Response, response.Status, null);
             
 
+        }
+        [HttpPut]
+        [CustomAuthorizeUser("all")]
+        [Route("SetSelectedTitle")]
+        public async Task<List<string>> SetSelectedTitles([FromForm] string conditionMongoId)
+        {            
+            var email = User.Identity.Name;
+            var result = await _titleService.UpdateSelectUserTitles(email, conditionMongoId);
+            return result;
         }
     }
 }

@@ -7,6 +7,7 @@ using Application.Repositories.S3.Interfaces;
 using Application.Repositories.Db.Interfaces_Repository;
 using Application.Services.Entity.Interfaces_Service;
 using Application.Services.Entity.Realization_Services;
+using Domain.Entity.Main.Titles;
 
 namespace StepMaster.Services.ForDb.Repositories
 {
@@ -15,7 +16,7 @@ namespace StepMaster.Services.ForDb.Repositories
        
         private readonly IUser_Repository _usersRepository;
 
-        public User_Service(IUser_Repository users, IRating_Repository rating, IAws_Repository aws, IDay_Repository day, IRating_Service ratingervice)
+        public User_Service(IUser_Repository users)
         {
             _usersRepository = users;
         }
@@ -78,5 +79,7 @@ namespace StepMaster.Services.ForDb.Repositories
             return  await _usersRepository.DeleteUser(email)? BaseResponse<string>.Create(email, MyStatus.Success): BaseResponse<string>.Create(email, MyStatus.NotFound);            
             
         }
+
+       
     }
 }

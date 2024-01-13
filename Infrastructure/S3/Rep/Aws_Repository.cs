@@ -5,9 +5,7 @@ using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using API.Services.ForS3.Configure;
 using Application.Repositories.S3.Interfaces;
-using Domain.Entity.API;
 using Microsoft.AspNetCore.Http;
-using static Amazon.Internal.RegionEndpointProviderV2;
 
 namespace API.Services.ForS3.Rep
 {
@@ -20,7 +18,7 @@ namespace API.Services.ForS3.Rep
         private readonly int _bufferSize = 10 * 1024 * 1024;
         private readonly string _bucketName;
         private readonly AmazonS3Config _config;
-        const double timeoutDuration = 1;
+        const double timeoutDuration = 5;
         private readonly string _beginPath = "StepMaster/";
         private string _pathUserAwatar = "/Icons/Avatar";
 
@@ -36,7 +34,7 @@ namespace API.Services.ForS3.Rep
             };  
         }
 
-        public async Task<string> GetLink(string userName)
+        public async Task<string> GetUserAvatarLink(string userName)
         {
             var path = userName + _pathUserAwatar;
             var fullPathFile = string.Empty;          
@@ -66,7 +64,7 @@ namespace API.Services.ForS3.Rep
                     }       
                     if(fullPathFile != string.Empty)
                     {
-                        var response = GeneratePresignedURL(_client, _bucketName, fullPathFile, timeoutDuration);
+                        var response = await GetLink( fullPathFile);
                         return response;
                     }                    
                     return null;
@@ -79,22 +77,26 @@ namespace API.Services.ForS3.Rep
                 return null;
             }
         }
-        public static string GeneratePresignedURL(IAmazonS3 client, string bucketName, string objectKey, double duration)
+        public async Task<string> GetLink(string path)
         {
+
             string urlString = string.Empty;
             try
             {
-                var request = new GetPreSignedUrlRequest()
+                using (var _client = new AmazonS3Client(_amazonAccessKeyId, _amazonSecretAccessKey, _config))
                 {
-                    BucketName = bucketName,
-                    Key = objectKey,
-                    Expires = DateTime.UtcNow.AddHours(duration),
-                };
-                urlString = client.GetPreSignedURL(request);
+                    var request = new GetPreSignedUrlRequest()
+                    {
+                        BucketName = _bucketName,
+                        Key = path,
+                        Expires = DateTime.UtcNow.AddHours(timeoutDuration),
+                    };
+                    urlString = await _client.GetPreSignedURLAsync(request);
+                }
             }
-            catch (AmazonS3Exception ex)
+            catch
             {
-                Console.WriteLine($"Error:'{ex.Message}'");
+                throw new HttpRequestException("Shit happens", null, System.Net.HttpStatusCode.InternalServerError);
             }
 
             return urlString;
@@ -164,6 +166,42 @@ namespace API.Services.ForS3.Rep
             }
            
             
+        }
+
+        public async Task<ListObjectsResponse> GetListFiles(string path)
+        {
+            try
+            {
+                using (var _client = new AmazonS3Client(_amazonAccessKeyId, _amazonSecretAccessKey, _config))
+                {
+                    var files = await _client.ListObjectsAsync(_bucketName, path);
+                    files.S3Objects.Remove(files.S3Objects.Find(f => f.Key == path));
+                    return files;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return new ListObjectsResponse();
+            }
+        }
+
+        public async Task<IEnumerable<string>> GetFolders(string path)
+        {
+            try
+            {
+                var list = await GetListFiles(path);
+                var folders = list.S3Objects.Select(x => x.Key).Where(x => x.EndsWith(@"/")).ToList();
+                var mainPath = folders.Find(x => x == path+'/');
+                folders.Remove(mainPath);
+                return folders;
+                
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return new List<string>();
+            }
         }
     }
 }

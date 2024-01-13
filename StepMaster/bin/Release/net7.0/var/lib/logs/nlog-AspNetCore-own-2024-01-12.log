@@ -1,0 +1,15 @@
+2024-01-12 10:10:17.8566|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-12 10:10:18.4528|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-01-12 10:10:18.4528|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-12 10:10:18.4528|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-12 10:10:18.4528|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-01-12 10:11:56.0805|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-12 10:11:56.6100|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-01-12 10:11:56.6100|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-12 10:11:56.6100|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-12 10:11:56.6100|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-01-12 10:12:33.2150|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-12 10:12:33.4674|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: 
+2024-01-12 10:12:33.4674|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-12 10:12:33.4674|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production |url: |action: 
+2024-01-12 10:12:33.4674|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster\bin\Release\net7.0 |url: |action: 

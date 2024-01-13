@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zh36lZKHJ/Pb01oB3tFo81/pFx5y7ywh/UUJfbnSR+O9ETUO/8YyfhsDJD60dtCkhCAJNZ115xmcHVwOzWl5IQ==",
+  "dgSpecHash": "ThZkm/jY9wctTYHz7tgJEtAX50fupRlixf0h4uQwooIzsMA7/3gszUkY/ZxhS5rkvg5nPksiCTS3aRoentPJpw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.core\\3.7.300.16\\awssdk.core.3.7.300.16.nupkg.sha512",
     "C:\\Users\\sosis\\.nuget\\packages\\awssdk.s3\\3.7.304.5\\awssdk.s3.3.7.304.5.nupkg.sha512",

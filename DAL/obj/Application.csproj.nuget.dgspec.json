@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj": {}
+    "D:\\StepMaster\\DAL\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj": {
+    "D:\\StepMaster\\BL\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+        "projectUniqueName": "D:\\StepMaster\\BL\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+        "projectPath": "D:\\StepMaster\\BL\\Domain.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\obj\\",
+        "outputPath": "D:\\StepMaster\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj": {
+    "D:\\StepMaster\\DAL\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj",
+        "projectUniqueName": "D:\\StepMaster\\DAL\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj",
+        "projectPath": "D:\\StepMaster\\DAL\\Application.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\obj\\",
+        "outputPath": "D:\\StepMaster\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,8 +101,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj"
+              "D:\\StepMaster\\BL\\Domain.csproj": {
+                "projectPath": "D:\\StepMaster\\BL\\Domain.csproj"
               }
             }
           }

@@ -1,0 +1,27 @@
+2024-01-08 12:35:53.2807|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 12:35:53.8167|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-01-08 12:35:53.8286|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 12:35:53.8286|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 12:35:53.8286|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-01-08 05:38:10.7112|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:38:11.3413|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 05:38:11.3649|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {15cd446f-ef64-4661-87c2-f9db644f3133} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 05:38:11.4379|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 05:38:11.4453|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 05:38:11.4453|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 05:38:11.4453|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 05:38:35.3032|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:38:35.8575|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 05:38:35.8791|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {c25c6188-c8b3-4c1f-b2b6-21fa3ef4703c} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 05:38:35.9410|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 05:38:35.9473|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 05:38:35.9473|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 05:38:35.9473|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-08 05:40:52.4827|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:43:22.6106|0|ERROR|StepMaster.Program|init main |url: |action: 
+2024-01-08 05:43:23.2274|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-08 05:43:23.2501|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {3be9458e-6eba-4c22-a02c-1b82b4bf5392} may be persisted to storage in unencrypted form. |url: |action: 
+2024-01-08 05:43:23.3128|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-08 05:43:23.3199|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-08 05:43:23.3199|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-08 05:43:23.3242|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 

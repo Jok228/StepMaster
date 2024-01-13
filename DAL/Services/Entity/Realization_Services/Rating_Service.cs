@@ -83,12 +83,10 @@ namespace Application.Services.Entity.Realization_Services
         {
             var newRating = new Position(email);//Create new user rating for top list in DB
 
-            var listRatRegion = await  GetRating(regionId);
-            listRatRegion.ratingUsers.Add(newRating);
+            var listRatRegion = await  GetRating(regionId);            
             listRatRegion.Sort();
 
-            var listRatCountry = await GetRating(null);
-            listRatCountry.ratingUsers.Add(newRating);
+            var listRatCountry = await GetRating(null);            
             listRatCountry.Sort();
 
 

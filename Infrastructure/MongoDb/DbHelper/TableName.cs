@@ -12,5 +12,6 @@ namespace Infrastructure.MongoDb.Settings
         public static string Rating = "Rating";
         public static string Day = "Days";
         public static string Region = "Regions";
+        public static string Condition = "Conditions";
     }
 }

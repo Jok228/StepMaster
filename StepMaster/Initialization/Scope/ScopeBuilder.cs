@@ -15,6 +15,7 @@ using Infrastructure.MongoDb.Repositories;
 
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using StepMaster.HandlerException;
 using StepMaster.Models.Entity;
 using StepMaster.Services.ForDb.Interfaces;
 using StepMaster.Services.ForDb.Repositories;
@@ -27,14 +28,17 @@ namespace StepMaster.Initialization.Scope
 
         public static void InitializerService(IServiceCollection service)
         {
+            service.AddTransient<FactoryMiddleware>();         
+            service.AddScoped<ITitles_Services, Titles_Service>();
             service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IUser_Service, User_Service>();
-            service.AddScoped<IDays_Service, DaysRep>();
+            service.AddScoped<IDays_Service, DaysService>();
             service.AddScoped<IPost_Service, Post_Service>();
         }
         public static void InitializerRepsitories(IServiceCollection service)
         {
+            service.AddScoped<ICondition_Repository, Condition_Repository>();
             service.AddScoped<IDay_Repository, Day_Repository>();
             service.AddScoped<IRegion_Repository, Region_Repository>();
             service.AddScoped<IUser_Repository, User_Repository>();

@@ -2,29 +2,27 @@ version: "3.9"
 networks:
   step-master-dev:
       driver: bridge
-<<<<<<< HEAD
 services:  
   app: 
     restart: always
-=======
-services:
-  app: 
->>>>>>> master
     container_name: step-master
     image: chydick/stepmaster    
     ports:
-<<<<<<< HEAD
-      - "6000:80"
-=======
-      - "5500:80"
->>>>>>> master
+      - "6001:80"
+    networks:
+      - step-master-dev
+    depends_on:
+      - mongodb
+    volumes:
+      - ./logs:/app/var/lib/logs  
+  udatetitlessm:
+    restart: always  
+    container_name: update-service
+    image: chydick/updatetitlessm
     networks:
       - step-master-dev
     depends_on:
       - mongodb 
-<<<<<<< HEAD
-    volumes:
-      - ./Update:/data/Update   
   mongodb:
     container_name: mongodb
     image: mongo:latest
@@ -32,29 +30,16 @@ services:
     environment: # set required env variables to access mongo
        MONGO_INITDB_ROOT_USERNAME: root
        MONGO_INITDB_ROOT_PASSWORD: password
-    
-    ports:
-      - "27017:27017"    
-    networks:
-      - step-master-dev
-    volumes:     
-      - ./database-data:/data/db
-      - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js   
-=======
-  mongodb:
-    container_name: mongodb
-    image: mongo:latest
-    
-    environment: # set required env variables to access mongo
-       MONGO_INITDB_ROOT_USERNAME: root
-       MONGO_INITDB_ROOT_PASSWORD: password
+
     ports:
       - "27017:27017"
+    networks:
+      - step-master-dev
     volumes:
       - ./database-data:/data/db
       - ./_scripts/init.js:/docker-entrypoint-initdb.d/mongo-init.js
-    networks:
-      - step-master-dev
->>>>>>> master
+ 
+
+
     
     

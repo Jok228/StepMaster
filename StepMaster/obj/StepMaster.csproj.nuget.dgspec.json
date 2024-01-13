@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\StepMaster.csproj": {}
+    "D:\\StepMaster\\StepMaster\\StepMaster.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj": {
+    "D:\\StepMaster\\BL\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+        "projectUniqueName": "D:\\StepMaster\\BL\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj",
+        "projectPath": "D:\\StepMaster\\BL\\Domain.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\obj\\",
+        "outputPath": "D:\\StepMaster\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj": {
+    "D:\\StepMaster\\DAL\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj",
+        "projectUniqueName": "D:\\StepMaster\\DAL\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj",
+        "projectPath": "D:\\StepMaster\\DAL\\Application.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\obj\\",
+        "outputPath": "D:\\StepMaster\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -101,8 +101,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj": {
-                "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\BL\\Domain.csproj"
+              "D:\\StepMaster\\BL\\Domain.csproj": {
+                "projectPath": "D:\\StepMaster\\BL\\Domain.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\obj\\",
+        "outputPath": "D:\\StepMaster\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +178,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj": {
-                "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\DAL\\Application.csproj"
+              "D:\\StepMaster\\DAL\\Application.csproj": {
+                "projectPath": "D:\\StepMaster\\DAL\\Application.csproj"
               }
             }
           }
@@ -219,14 +219,14 @@
         }
       }
     },
-    "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\StepMaster.csproj": {
+    "D:\\StepMaster\\StepMaster\\StepMaster.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\StepMaster.csproj",
+        "projectUniqueName": "D:\\StepMaster\\StepMaster\\StepMaster.csproj",
         "projectName": "StepMaster",
-        "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\StepMaster.csproj",
+        "projectPath": "D:\\StepMaster\\StepMaster\\StepMaster.csproj",
         "packagesPath": "C:\\Users\\sosis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\StepMaster\\obj\\",
+        "outputPath": "D:\\StepMaster\\StepMaster\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -247,8 +247,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\sosis\\Source\\Repos\\StepMaster\\Infrastructure\\Infrastructure.csproj"
+              "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\StepMaster\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -282,6 +282,14 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.23.1, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.2.8, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.3.8, )"
             },
             "Quartz": {
               "target": "Package",

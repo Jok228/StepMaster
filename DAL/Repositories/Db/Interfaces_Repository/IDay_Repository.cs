@@ -12,10 +12,16 @@ namespace Application.Repositories.Db.Interfaces_Repository
     {
         Task<BaseResponse<List<Day>>> GetDaysByEmail(string email);
 
-        Task<BaseResponse<bool>> ChechDayDateNow(string email);
+        Task<bool> ChechDayDateNow(string email);
 
         Task<BaseResponse<List<Day>>> GetActualDay(string email);
 
+        Task<int> GetStepRangeForAchievements(string email, int? dayCount);
 
+        Task<int> GetStepRangeForGrades(string email);
+
+        Task<int> GetCountDayMoreMax(string email);
+
+        Task<List<Day>>GetRangDay(string email, int dayCount);
     }
 }
