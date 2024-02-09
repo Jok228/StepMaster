@@ -1,0 +1,448 @@
+2024-02-07 11:55:18.9977|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 11:55:20.3081|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 11:55:20.3130|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 11:55:20.3130|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 11:55:20.3130|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 11:55:52.8604|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 11:56:23.2423|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 11:56:33.1286|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 11:56:59.2001|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 11:56:59.2158|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:00:09.1896|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:00:09.9591|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:00:09.9680|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:00:09.9680|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:00:09.9824|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:00:16.8732|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:00:16.9243|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:00:17.0799|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:00:34.0446|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:00:34.0446|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:12:45.0621|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:12:45.8297|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:12:45.8297|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:12:45.8297|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:12:45.8410|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:12:51.1552|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:12:51.1925|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:12:51.3553|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:14:15.6597|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:14:16.4330|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:14:16.4371|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:14:16.4371|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:14:16.4371|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:14:26.2461|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:14:26.2916|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:14:26.4545|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 12:14:34.6522|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:25.5910|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:18:26.3638|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:18:26.3724|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:18:26.3724|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:18:26.3724|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:18:32.2631|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:32.3257|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:33.1335|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:33.1335|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:33.2728|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:33.2728|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:46.9203|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:18:47.8292|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:18:47.8292|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:18:47.8292|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:18:47.8412|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:18:51.5745|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:18:51.6448|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:27.7559|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:22:28.6989|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:22:28.7029|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:22:28.7029|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:22:28.7029|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:22:33.8730|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:33.9898|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:57.1534|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:57.1534|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:57.2862|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:22:57.2862|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-07 12:23:14.8001|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:23:15.6357|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:23:15.6393|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:23:15.6393|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:23:15.6393|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:23:22.3721|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:23:22.4463|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:31:28.8598|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:31:29.7293|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:31:29.7361|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:31:29.7361|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:31:29.7361|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:31:32.7833|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 12:31:59.0760|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:34:11.6072|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:34:12.4356|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:34:12.4356|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:34:12.4356|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:34:12.4356|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:34:15.5086|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 12:34:21.6228|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 12:34:28.7970|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:38:07.6074|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:38:07.6373|13|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN17JPL9PQOI", Request id "0HN17JPL9PQOI:00000003": An unhandled exception was thrown by the application. System.Net.Sockets.SocketException (10054): Удаленный хост принудительно разорвал существующее подключение.
+   at Microsoft.WebTools.BrowserLink.Net.TaskHelpers.WaitWithCancellationAsync[ResultType](Task`1 task, CancellationToken cancellationToken, ResultType resultIfCancelled)
+   at Microsoft.WebTools.BrowserLink.Net.SocketReader.ReceiveMoreBytesAsync(CancellationToken cancellationToken)
+   at Microsoft.WebTools.BrowserLink.Net.SocketReader.ReadBytesIntoResponseHandlerAsync(Int64 totalBytesToRead, ResponseHandler handler, CancellationToken cancellationToken)
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadBytesIntoResponseAsync(Int64 bytesToRead)
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadChunkedContentAsync()
+   at Microsoft.WebTools.BrowserLink.Net.HttpSocketAdapter.ResponseReader.ReadResponseAsync()
+   at Microsoft.WebTools.BrowserLink.Net.VsContentMiddleware.GetVsContentAsync(HttpContext context, String contentPath)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)|url: http://localhost/_vs/browserLink|action: 
+2024-02-07 12:38:08.5166|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 12:38:12.0354|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 12:38:12.8241|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 12:38:12.8291|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 12:38:12.8291|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 12:38:12.8291|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 12:38:15.9543|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 12:38:42.0294|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:40:32.7800|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 12:41:04.3291|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 13:12:57.4982|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 13:12:59.4344|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 13:12:59.4344|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 13:12:59.5060|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 13:12:59.5060|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 13:13:34.7033|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.4854|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.4854|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.5282|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.5282|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.5701|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.5701|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.6132|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.6132|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.6814|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.6814|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.7276|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.7276|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.7809|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.7809|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.8330|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.8330|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.8800|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.8800|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.9274|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.9274|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.9729|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:36.9729|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.0203|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.0203|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.0696|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.0696|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.1168|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.1168|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.1648|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.1648|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.2121|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.2121|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.2609|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.2628|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.3082|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.3099|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.3550|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.3570|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4027|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4048|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4499|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4517|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4988|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:13:37.4988|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:13.9997|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5101|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5101|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5532|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5532|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5960|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.5960|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.6380|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.6380|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.6798|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.6798|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.7225|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.7225|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.7659|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.7659|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8088|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8088|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8500|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8500|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8917|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.8917|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.9329|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.9345|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.9756|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:14.9756|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.0187|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.0187|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.0611|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.0611|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1037|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1037|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1452|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1452|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1889|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.1889|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.2327|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.2327|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.2750|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.2750|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.3169|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.3169|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.3587|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.3587|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.4009|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:15.4030|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:16.8069|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.3274|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.3274|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.3703|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.3721|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.4147|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.4147|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.4578|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.4578|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.5013|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.5013|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.5505|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.5505|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.6013|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.6013|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.6509|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.6529|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.6987|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.7004|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.7421|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.7421|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.7874|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.7874|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.8347|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.8347|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.8806|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.8806|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.9270|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.9270|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.9704|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:17.9704|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.0147|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.0147|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.0577|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.0593|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1001|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1001|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1412|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1412|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1883|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.1883|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.2393|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.2393|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.2910|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 13:15:18.2910|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-07 15:21:24.6531|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 15:21:25.3872|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 15:21:25.3917|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 15:21:25.3917|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 15:21:25.3917|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 15:21:26.3151|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 15:21:42.8716|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:42.8890|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:49.5990|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 15:21:49.7687|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-07 15:21:52.9336|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:54.7661|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:54.7661|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:54.8544|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:21:54.8566|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:34:54.5727|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 15:34:54.6762|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. ('65b5195553de0d4b0bbbcf20
+' is not a valid 24 digit hex string.) |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 15:35:00.2371|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 15:35:35.5610|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:21.2992|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 15:37:22.4716|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 15:37:22.4716|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 15:37:22.4716|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 15:37:22.4827|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 15:37:25.9149|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 15:37:28.7781|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:28.7781|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:38.4893|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:40.1182|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:40.1182|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:40.1912|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:37:40.1912|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 15:38:00.3212|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:38:01.6140|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:38:01.6140|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:38:01.6962|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:38:01.6962|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:39:40.6219|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 15:45:01.5124|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:45:02.8747|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:45:02.8747|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:45:02.9424|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 15:45:02.9424|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:25.8881|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:29:26.7419|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:29:26.7488|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:29:26.7488|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:29:26.7488|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:29:27.4308|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:29:32.8871|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-07 16:29:32.8871|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-07 16:29:36.9268|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:38.5819|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:38.5819|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:38.6492|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:38.6492|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:29:48.3917|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:29.5601|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:30:30.3784|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:30:30.3878|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:30:30.3878|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:30:30.3878|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:30:33.7828|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:30:41.2325|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:41.2325|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:50.9651|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:50.9651|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:51.0336|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:30:51.0336|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-07 16:50:03.4211|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:50:04.3017|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:50:04.3017|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:50:04.3112|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:50:04.3112|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:50:07.5693|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:50:28.2470|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 16:50:28.4502|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-07 16:50:38.0137|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:38.0940|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. ('paxar14705@notedns.com' is not a valid 24 digit hex string.) |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:38.1882|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Net.Http.HttpRequestException: 500 Shit happens
+   at Infrastructure.MongoDb.Repositories.Clan_Repository.GetObjectBy(String idOrEmail) in D:\StepMaster\Infrastructure\MongoDb\Repositories\Clan_Repository.cs:line 61
+   at Application.Services.Entity.Realization_Services.Clan_Service.GetClan(String mongoId) in D:\StepMaster\DAL\Services\Entity\Realization_Services\Clan_Service.cs:line 153|url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:47.8831|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:56.3581|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. ('paxar14705@notedns.com' is not a valid 24 digit hex string.) |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:56.4909|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.Net.Http.HttpRequestException: 500 Shit happens
+   at Infrastructure.MongoDb.Repositories.Clan_Repository.GetObjectBy(String idOrEmail) in D:\StepMaster\Infrastructure\MongoDb\Repositories\Clan_Repository.cs:line 61
+   at Application.Services.Entity.Realization_Services.Clan_Service.GetClan(String mongoId) in D:\StepMaster\DAL\Services\Entity\Realization_Services\Clan_Service.cs:line 153|url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:50:58.6029|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:32.6414|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:51:33.2889|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:51:33.2962|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:51:33.2962|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:51:33.2962|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:51:34.1187|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:51:37.8608|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:37.8761|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:48.0208|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:48.0208|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:48.0926|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:51:48.0926|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:52:54.8563|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:52:55.7437|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:52:55.7479|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:52:55.7479|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:52:55.7479|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:52:59.0452|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:53:01.3086|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:01.3086|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:03.4761|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:03.4761|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:03.5450|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:03.5450|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:44.4927|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:53:45.1826|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:53:45.1867|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:53:45.1867|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:53:45.1867|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:53:48.5372|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:53:51.5771|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:51.5771|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:53.5279|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:53.5279|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:53.6291|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:53:53.6291|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:13.9435|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:14.9406|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:14.9406|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:15.0174|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:15.0174|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:16.1770|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:17.0887|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:17.0907|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:17.1573|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:54:17.1573|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:48.8674|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:58:49.7414|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:58:49.7502|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:58:49.7502|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:58:49.7502|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:58:53.0791|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:58:55.4504|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:55.4504|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:57.3642|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:57.3642|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:57.4389|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:58:57.4389|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:20.8912|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 16:59:21.6722|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 16:59:21.6722|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 16:59:21.6722|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 16:59:21.6722|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 16:59:22.4482|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 16:59:25.2785|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:25.2785|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:27.3093|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:27.3093|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:27.3789|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 16:59:27.3789|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:23.4665|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 18:39:24.3956|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 18:39:24.4046|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 18:39:24.4046|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 18:39:24.4046|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 18:39:24.9611|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 18:39:27.5143|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:27.5143|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:29.7279|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:29.7279|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:29.8008|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:29.8008|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 18:39:51.9201|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-07 19:28:47.1104|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 19:28:48.0035|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 19:28:48.0035|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 19:28:48.0035|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 19:28:48.0123|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 19:28:48.5303|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 19:29:43.7627|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:29:43.7784|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:30:02.7309|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 19:30:03.5354|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 19:30:03.5450|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 19:30:03.5450|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 19:30:03.5450|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 19:30:06.8875|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 19:30:07.6370|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:30:07.6566|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:30:27.2052|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-07 19:30:28.0969|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-07 19:30:28.1131|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-07 19:30:28.1131|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-07 19:30:28.1131|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-07 19:30:31.3155|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-07 19:30:33.4365|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:30:33.4365|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:30:56.5067|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:31:01.4140|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-07 19:31:02.6582|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends

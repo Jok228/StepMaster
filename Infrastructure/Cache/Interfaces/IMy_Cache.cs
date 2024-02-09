@@ -10,7 +10,7 @@ namespace Infrastructure.MongoDb.Cache.Interfaces
     {
         object GetObject(string key);
 
-        void SetObject(string key, object value,int timeMinute);
+        void SetObject(string key, object value,int timeMinute = 0);
 
         void DeleteObject(string key);
         

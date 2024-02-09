@@ -133,3 +133,79 @@
 2024-01-13 04:12:10.3364|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
 2024-01-13 04:12:10.4660|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/DeleteUser|action: DeleteUser
 2024-01-13 04:12:22.0532|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-13 12:58:39.3360|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-13 12:58:39.8289|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-13 12:58:39.9493|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-13 12:58:39.9564|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-13 12:58:39.9564|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-13 12:58:39.9564|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-13 12:59:10.0894|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-13 12:59:39.8049|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-13 12:59:40.1470|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-13 12:59:40.2207|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-13 12:59:40.2225|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-13 12:59:40.2225|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-13 12:59:40.2314|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-13 13:06:15.3333|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-13 13:06:38.0462|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-13 13:06:38.4085|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-13 13:06:38.4711|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-13 13:06:38.4742|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-13 13:06:38.4742|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-13 13:06:38.4742|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-13 13:07:39.5078|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-13 13:07:39.6992|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-13 13:07:39.7234|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-01-13 13:07:42.1731|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4024|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4024|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4024|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4024|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4142|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4142|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4142|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4142|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4268|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4268|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4326|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4326|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4326|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4326|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4447|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4447|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4447|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4520|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4520|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4520|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4643|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4643|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4643|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4643|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4770|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4770|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4832|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4832|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4832|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4832|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4956|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4956|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.4956|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5021|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5021|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5021|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5139|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5139|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5139|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5139|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5271|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5271|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5333|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:07:42.5333|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-01-13 13:45:02.0545|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 
+2024-01-13 14:51:31.8510|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-01-13 14:51:32.3513|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-01-13 14:51:32.4726|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-01-13 14:51:32.4757|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-01-13 14:51:32.4757|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-01-13 14:51:32.4757|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-01-13 14:51:39.9965|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 

@@ -1,0 +1,668 @@
+2024-02-09 17:47:22.6669|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 17:47:23.7159|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 17:47:23.7159|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 17:47:23.7159|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 17:47:23.7303|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 17:47:27.6335|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 11:39:27.2463|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 11:39:28.3964|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 11:39:28.4908|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {923b508e-9b07-4271-bb87-e903b6d831da} may be persisted to storage in unencrypted form. |url: |action: 
+2024-02-09 11:39:28.5925|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 11:39:28.6030|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 11:39:28.6030|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 11:39:28.6120|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 11:39:36.7792|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 12:15:35.5544|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 12:15:36.4238|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 12:15:36.4755|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {4ea4c051-f522-47da-be5e-7aee384fc9d1} may be persisted to storage in unencrypted form. |url: |action: 
+2024-02-09 12:15:36.6027|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 12:15:36.6168|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 12:15:36.6168|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 12:15:36.6287|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 12:15:37.4931|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 12:17:18.7487|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 12:17:19.4090|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 12:17:19.5172|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 12:17:19.5245|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 12:17:19.5368|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 12:17:19.5368|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 12:17:20.1861|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 12:17:38.7408|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 12:17:38.7515|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 12:18:16.6282|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 12:18:17.3699|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 12:18:17.4748|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 12:18:17.4828|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 12:18:17.4941|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 12:18:17.4941|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 12:18:18.1820|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 12:18:20.7844|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 12:18:20.8007|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 12:18:53.4706|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 12:18:54.2893|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 12:18:54.3515|35|WARN|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|No XML encryptor configured. Key {f72f5bb9-735f-4874-9eb1-cabf5ac5e50b} may be persisted to storage in unencrypted form. |url: |action: 
+2024-02-09 12:18:54.5164|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 12:18:54.5246|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 12:18:54.5379|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 12:18:54.5427|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 12:18:55.4165|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger|action: 
+2024-02-09 12:18:55.4647|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 12:18:55.6609|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2024-02-09 12:18:55.6609|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui.css|action: 
+2024-02-09 12:18:55.6711|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2024-02-09 12:18:56.0115|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/favicon-32x32.png|action: 
+2024-02-09 12:19:43.7023|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 12:19:43.7100|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:20:09.2674|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:20:10.2700|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:20:10.2818|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:20:10.2818|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:20:10.2818|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:20:13.1704|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:20:56.6687|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:20:56.6890|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:20:56.9875|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:20:57.2195|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:20:59.7417|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:21:00.1496|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:21:00.2357|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:21:00.3832|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 19:21:00.4900|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:21:00.6133|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 19:21:02.6607|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:21:03.2754|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:21:03.2754|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:21:03.3707|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:21:03.3725|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:21:03.4535|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:21:03.7339|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:21:03.8906|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:21:05.0037|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:21:05.5254|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 19:21:05.6018|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 19:21:05.7271|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:21:05.8221|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:21:05.9320|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:21:06.4359|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 19:21:06.5460|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 19:21:08.8711|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 19:21:08.9614|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:21:09.0568|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 19:21:09.1342|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 19:21:09.2428|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:21:09.3947|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 19:21:09.5493|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 19:21:09.6576|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 19:21:09.9662|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 19:21:10.4172|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 19:21:10.5702|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 19:21:10.6780|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 19:21:10.8024|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:21:10.9424|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:21:11.0504|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:21:11.1602|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:21:11.2536|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 19:21:11.4090|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 19:21:11.5809|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 19:21:11.6731|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 19:21:11.7659|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
+2024-02-09 19:23:46.5746|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost//api/Days/UploadDay|action: 
+2024-02-09 19:23:55.3306|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost//api/Days/SetNewDay|action: 
+2024-02-09 19:23:59.0409|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost//api/Days/SetNewDay|action: 
+2024-02-09 19:24:15.1354|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost//api/Days/GetAllDayUser|action: 
+2024-02-09 19:24:33.4138|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost//api/Days/SetNewDay|action: 
+2024-02-09 19:24:51.2803|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:24:58.4077|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:24:58.4354|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:25:00.6425|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:25:07.0516|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/UploadDay|action: UploadDay
+2024-02-09 19:25:17.5865|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/UploadDay|action: UploadDay
+2024-02-09 19:25:20.6667|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:25:27.2894|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:25:39.6751|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 19:26:13.3414|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:26:14.1499|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:26:14.1577|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:26:14.1577|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:26:14.1577|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:26:17.3382|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:26:30.8457|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:26:30.8616|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:26:42.4810|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:26:43.4321|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:26:43.4376|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:26:43.4376|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:26:43.4376|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:26:44.1809|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:26:48.7490|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:26:48.7643|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:26:55.3404|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:27:02.4552|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:27:02.6570|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:27:04.5609|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:27:05.0331|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:27:05.1591|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:27:05.3583|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 19:27:05.4680|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:27:05.5452|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 19:27:07.2537|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:27:07.9092|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:27:07.9092|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:27:07.9969|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:27:07.9969|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:27:08.1114|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:27:08.4276|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:27:08.5849|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:27:09.7000|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:27:10.2434|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 19:27:10.3071|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 19:27:10.3964|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:27:10.4595|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:27:10.5511|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:27:11.0376|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 19:27:11.1462|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 19:27:13.5822|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 19:27:13.6912|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:27:13.7564|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 19:27:13.8184|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 19:27:13.8967|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:27:14.0200|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 19:27:14.1608|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 19:27:14.2557|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 19:27:14.5005|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 19:27:14.9811|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 19:27:15.1237|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 19:27:15.2495|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 19:27:15.3743|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:27:15.4818|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:27:15.5756|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:27:15.6978|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:27:15.7910|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 19:27:15.9319|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 19:27:16.1030|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 19:27:16.2110|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 19:27:16.3205|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
+2024-02-09 19:27:26.0191|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:30:18.5612|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:34:57.2492|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:35:18.0243|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:39:06.1333|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:39:25.5606|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:39:36.6840|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:40:21.1858|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:40:40.0058|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:41:09.5454|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:41:10.4280|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:41:10.4374|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:41:10.4374|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:41:10.4374|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:41:12.9397|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:41:14.5917|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:41:14.5917|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:41:44.9533|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:41:45.7061|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:41:45.7061|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:41:45.7165|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:41:45.7165|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:41:48.5755|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:41:50.7965|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:41:50.8126|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:42:09.4699|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:42:20.5856|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:42:21.5134|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:42:21.5134|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:42:21.5134|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:42:21.5134|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:42:22.2044|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:42:29.5169|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:42:29.5337|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:42:50.0909|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:42:50.9662|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:42:50.9662|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:42:50.9662|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:42:50.9815|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:42:53.7465|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:42:59.5749|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:42:59.5914|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:43:58.8761|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:43:59.6952|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:43:59.7015|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:43:59.7015|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:43:59.7015|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:44:05.7449|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:44:05.7528|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:44:12.3666|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:44:39.2175|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:44:47.0793|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:44:47.9814|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:44:47.9814|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:44:47.9814|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:44:47.9814|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:44:56.3126|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:44:56.3439|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:44:57.3283|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:45:21.1410|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:45:21.9054|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:45:21.9054|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:45:21.9054|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:45:21.9054|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:45:28.6897|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:45:28.7035|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:45:32.8604|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:45:54.6931|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:46:07.4179|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at StepMaster.Controllers.api.ProfileController.GetFriendsHide(List`1 friends) in D:\StepMaster\StepMaster\Controllers\api\ProfileController.cs:line 383
+   at StepMaster.Controllers.api.ProfileController.GetUser() in D:\StepMaster\StepMaster\Controllers\api\ProfileController.cs:line 99
+   at lambda_method48(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 34
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:46:21.9368|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:50:50.1089|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:50:51.0263|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:50:51.0319|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:50:51.0319|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:50:51.0319|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:50:51.7208|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:51:18.0765|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:51:18.0765|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:51:26.9539|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:51:31.7196|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:51:31.7196|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:51:31.8136|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:51:31.8136|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:51:47.1618|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:51:48.3623|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:51:48.3623|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:51:48.4364|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:51:48.4364|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:52:09.9925|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:52:15.5704|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:52:15.5704|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:52:15.6478|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:52:15.6478|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:53:05.0493|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:53:05.8456|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:53:05.8608|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:53:05.8608|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:53:05.8608|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:53:15.3986|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:53:23.9513|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:53:23.9513|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:53:30.3097|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:53:54.1017|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> MongoDB.Driver.MongoConnectionException: An exception occurred while receiving a message from the server.
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at MongoDB.Driver.Core.Misc.StreamExtensionMethods.ReadBytes(Stream stream, Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveMessage(Int32 responseTo, IMessageEncoderSelector encoderSelector, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.HelloHelper.GetResult(IConnection connection, CommandWireProtocol`1 helloProtocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionInitializer.SendHello(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-02-09T12:53:53.5338158Z", LastUpdateTimestamp: "2024-02-09T12:53:53.5338159Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:54:00.2269|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:54:00.3506|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> MongoDB.Driver.MongoConnectionException: An exception occurred while receiving a message from the server.
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at MongoDB.Driver.Core.Misc.StreamExtensionMethods.ReadBytes(Stream stream, Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveMessage(Int32 responseTo, IMessageEncoderSelector encoderSelector, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.HelloHelper.GetResult(IConnection connection, CommandWireProtocol`1 helloProtocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionInitializer.SendHello(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-02-09T12:53:59.9231814Z", LastUpdateTimestamp: "2024-02-09T12:53:59.9231815Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:54:00.7355|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:54:00.9964|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:54:02.8543|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:54:03.2915|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:54:03.4006|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:54:03.5527|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 19:54:03.6290|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:54:03.7526|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 19:54:05.7106|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:54:06.3363|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:54:06.3363|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:54:06.4312|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:54:06.4312|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:54:06.5491|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:54:06.8748|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:54:07.0321|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:54:09.4257|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:54:10.5473|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:54:10.5473|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:54:10.6183|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:54:10.6183|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:54:10.6581|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 19:54:10.7343|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 19:54:10.8426|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:54:10.9386|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:54:11.0462|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:54:11.3583|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 19:54:11.4680|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 19:54:13.4980|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 19:54:13.5778|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:54:13.6552|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 19:54:13.7480|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 19:54:13.8586|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:54:14.0136|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 19:54:14.1686|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 19:54:14.2457|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 19:54:14.4940|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 19:54:14.9945|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 19:54:15.1368|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 19:54:15.2628|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 19:54:15.3685|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:54:15.4610|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:54:15.5435|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:54:15.6496|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:54:15.7440|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 19:54:15.8849|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 19:54:16.0429|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 19:54:16.1041|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 19:54:16.1794|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
+2024-02-09 19:54:32.3171|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:54:47.0814|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:54:47.0911|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:54:51.8630|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 19:54:54.5710|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:54:57.5806|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 19:55:00.8215|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 19:55:08.2200|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:56:05.1887|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 19:56:05.9683|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 19:56:05.9829|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 19:56:05.9829|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 19:56:05.9829|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 19:56:15.3607|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 19:56:29.0003|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:56:29.0200|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:56:34.0282|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:56:37.2956|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:56:40.6515|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:56:59.1601|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> MongoDB.Driver.MongoConnectionException: An exception occurred while receiving a message from the server.
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at MongoDB.Driver.Core.Misc.StreamExtensionMethods.ReadBytes(Stream stream, Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Dropbox.RemoveMessage(Int32 responseTo)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveMessage(Int32 responseTo, IMessageEncoderSelector encoderSelector, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.HelloHelper.GetResult(IConnection connection, CommandWireProtocol`1 helloProtocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionInitializer.SendHello(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-02-09T12:56:58.5868256Z", LastUpdateTimestamp: "2024-02-09T12:56:58.5868257Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:57:04.0626|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> MongoDB.Driver.MongoConnectionException: An exception occurred while receiving a message from the server.
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at MongoDB.Driver.Core.Misc.StreamExtensionMethods.ReadBytes(Stream stream, Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveMessage(Int32 responseTo, IMessageEncoderSelector encoderSelector, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.HelloHelper.GetResult(IConnection connection, CommandWireProtocol`1 helloProtocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionInitializer.SendHello(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-02-09T12:57:03.7271327Z", LastUpdateTimestamp: "2024-02-09T12:57:03.7271328Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:57:07.3344|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> MongoDB.Driver.MongoConnectionException: An exception occurred while receiving a message from the server.
+ ---> System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at MongoDB.Driver.Core.Misc.StreamExtensionMethods.ReadBytes(Stream stream, Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveBuffer(Int32 responseTo, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.ReceiveMessage(Int32 responseTo, IMessageEncoderSelector encoderSelector, MessageEncoderSettings messageEncoderSettings, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.WireProtocol.CommandUsingQueryMessageWireProtocol`1.Execute(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.HelloHelper.GetResult(IConnection connection, CommandWireProtocol`1 helloProtocol, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.ConnectionInitializer.SendHello(IConnection connection, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-02-09T12:57:07.0428074Z", LastUpdateTimestamp: "2024-02-09T12:57:07.0428075Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:57:18.9460|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 19:57:19.0473|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:57:19.2658|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 19:57:21.0753|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:57:21.4690|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:57:21.6042|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:57:21.7540|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 19:57:21.8462|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 19:57:21.9584|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 19:57:23.6598|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:57:24.2927|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:57:24.2947|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:57:24.3737|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:57:24.3737|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 19:57:24.4751|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:57:24.7548|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 19:57:24.8947|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:57:25.8827|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:57:27.0103|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:57:27.0125|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:57:27.0851|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:57:27.0851|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 19:57:27.1856|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 19:57:27.2804|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 19:57:27.3904|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:57:27.4847|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 19:57:27.5624|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 19:57:27.9224|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 19:57:28.0307|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 19:57:30.0986|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 19:57:30.1906|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 19:57:30.2839|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 19:57:30.3797|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 19:57:30.4752|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 19:57:30.5536|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 19:57:30.6477|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 19:57:30.7572|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 19:57:31.0988|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 19:57:31.5866|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 19:57:31.7421|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 19:57:31.8813|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 19:57:31.9921|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:57:32.1179|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:57:32.2249|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:57:32.3353|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:57:32.3962|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 19:57:32.5382|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 19:57:32.7249|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 19:57:32.8013|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 19:57:32.8937|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
+2024-02-09 19:57:48.6003|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:57:57.6656|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:57:57.6756|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 19:58:03.5159|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:59:06.8489|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:59:40.9468|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 19:59:57.4460|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:00:12.1687|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:01:30.4057|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:01:57.1205|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 20:02:34.6379|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:02:58.2674|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 20:03:19.8476|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 20:09:17.6173|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 20:09:18.7645|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 20:09:18.7645|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 20:09:18.7645|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 20:09:18.7787|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 20:09:22.3234|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 20:09:28.4881|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 20:09:28.5048|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 20:10:37.6908|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 20:10:37.8452|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 20:10:38.1414|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 20:10:40.1655|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 20:10:40.5205|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:10:40.6027|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:10:40.7391|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 20:10:40.8481|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 20:10:40.9748|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 20:10:42.7845|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:10:43.3552|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:10:43.3570|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:10:43.4344|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:10:43.4344|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:10:43.5306|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 20:10:43.7803|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 20:10:43.8898|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 20:10:44.8558|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:10:45.9181|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:10:45.9197|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:10:45.9938|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:10:45.9938|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:10:46.0618|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 20:10:46.1537|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 20:10:46.2321|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 20:10:46.3404|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 20:10:46.4518|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 20:10:46.9908|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 20:10:47.1012|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 20:10:49.1878|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 20:10:49.2811|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 20:10:49.3901|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 20:10:49.4675|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 20:10:49.5587|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 20:10:49.6374|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 20:10:49.7288|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 20:10:49.8369|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 20:10:50.1339|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 20:10:50.6142|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 20:10:50.7679|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 20:10:50.8925|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 20:10:51.0189|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:10:51.1163|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:10:51.1844|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:10:51.3011|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:10:51.4098|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 20:10:51.5168|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:10:53.3472|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 20:10:53.4422|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 20:10:53.6280|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout
+2024-02-09 20:11:52.0221|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:13:23.6162|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:13:47.1422|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:13:47.1422|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:13:59.4211|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 20:16:04.6238|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 20:17:23.1585|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 20:17:23.8517|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 20:17:23.8574|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 20:17:23.8574|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 20:17:23.8574|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 20:17:24.8924|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 20:25:22.5907|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 20:25:23.5252|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-09 20:25:23.5291|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 20:25:23.5291|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 20:25:23.5291|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-09 20:25:27.6724|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-09 20:25:33.9964|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 20:25:33.9964|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-02-09 20:25:34.3106|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 20:25:34.5171|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendCode|action: SendCode
+2024-02-09 20:25:36.6923|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 20:25:36.9673|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:25:37.0391|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-09 20:25:37.1674|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/UpdateCookies|action: UpdateCookies
+2024-02-09 20:25:37.2755|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-02-09 20:25:37.3989|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/SendNewPassword|action: SendNewPassword
+2024-02-09 20:25:39.3348|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:25:39.8632|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:25:39.8632|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:25:39.9446|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:25:39.9446|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Days/GetAllDayUser|action: GetAllDayUser
+2024-02-09 20:25:40.0441|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 20:25:40.3090|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Days/SetNewDay|action: SetNewDay
+2024-02-09 20:25:40.4506|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 20:25:41.8050|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:25:42.7633|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:25:42.7633|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:25:42.8334|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:25:42.8334|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUserByEmail|action: GetUserByEmail
+2024-02-09 20:25:42.9228|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/InsertAvatar|action: InsertAvatar
+2024-02-09 20:25:43.0025|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditUser|action: EditUser
+2024-02-09 20:25:43.0956|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 20:25:43.2043|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/EditPassword|action: EditPassword
+2024-02-09 20:25:43.3128|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-02-09 20:25:43.6103|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/SetSelectedTitle|action: SetSelectedTitles
+2024-02-09 20:25:43.7204|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Title/GetTitles|action: GetTitles
+2024-02-09 20:25:45.5695|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/CreateRequestInFriend|action: CreateRequestInFriend
+2024-02-09 20:25:45.6775|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveRequest|action: RemoveRequest
+2024-02-09 20:25:45.7570|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/DenyRequest|action: DenyRequest
+2024-02-09 20:25:45.8485|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AcceptRequest|action: AcceptRequest
+2024-02-09 20:25:45.9549|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/AddInBlockedList|action: AddInBlockedList
+2024-02-09 20:25:46.0483|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFromBlockedList|action: RemoveFromBlockedList
+2024-02-09 20:25:46.1382|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetRequestList|action: GetRequestList
+2024-02-09 20:25:46.2006|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetFriends|action: GetFriends
+2024-02-09 20:25:46.4342|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUsers|action: GetUsers
+2024-02-09 20:25:47.2626|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/RemoveFriend|action: RemoveFriend
+2024-02-09 20:25:47.3739|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/CreateClan|action: CreateNewClan
+2024-02-09 20:25:47.4831|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetClanById|action: GetClanById
+2024-02-09 20:25:47.5938|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:25:47.6397|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:25:47.7346|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:25:47.8450|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/GetAll|action: GetClans
+2024-02-09 20:25:47.9382|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/LeaveUser|action: LeaveUser
+2024-02-09 20:25:48.0491|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/JoinUser|action: JoinUser
+2024-02-09 20:25:49.7261|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/KickOutUser|action: KickOutUser
+2024-02-09 20:25:49.9139|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Clan/DeleteClan|action: DeleteClan
+2024-02-09 20:25:50.0249|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/LogOut|action: Logout

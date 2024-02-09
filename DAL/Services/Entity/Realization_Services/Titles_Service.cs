@@ -1,7 +1,7 @@
 ﻿using Application.Repositories.Db.Interfaces_Repository;
 using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
-using Domain.Entity.API;
+
 using Domain.Entity.Main.Titles;
 using static Domain.Entity.Main.Titles.Condition;
 using static StepMaster.Models.Entity.User;
@@ -58,7 +58,7 @@ namespace Application.Services.Entity.Realization_Services
                     }
                     continue;
                 }
-                var steps = await _days_repository.GetStepRangeForAchievements(email, ach.TimeDay);
+                var steps = await _days_repository.GetAllStepsUser(email, ach.TimeDay);
                 if (steps >= ach.Distance)
                 {
                     await UpdateTitleUser(email, ach);
@@ -84,15 +84,15 @@ namespace Application.Services.Entity.Realization_Services
         private async Task UpdateTitleUser(string email, Condition ach)
         {
             var user = await _userRepository.GetObjectBy(email);
-            user.Data.UpdateTitles(ach);
-            await _userRepository.UpdateObject(user.Data);
+            user.UpdateTitles(ach);
+            await _userRepository.UpdateObject(user);
         }
         public async Task<List<string>> UpdateSelectUserTitles(string email, string conditionMongoId)
         {
             var user = await _userRepository.GetObjectBy(email);
-            user.Data.UpdateSelectedTitles(conditionMongoId);
-            var response = user.Data.selectedTitles;
-            await _userRepository.UpdateObject(user.Data);
+            user.UpdateSelectedTitles(conditionMongoId);
+            var response = user.SelectedTitles;
+            await _userRepository.UpdateObject(user);
             return response;
         }
         public async Task<List<Condition>> GetActualAllProgress(string email, List<Condition> list)
@@ -115,7 +115,7 @@ namespace Application.Services.Entity.Realization_Services
                 else if(item.Type == "achievement" & item.GroupId == 1 | item.GroupId == 3 | item.GroupId == 4)
                 {
                     item.Needed_Progress = item.Distance.ToString();
-                    item.Dealt_Progress = _days_repository.GetStepRangeForAchievements(email, item.TimeDay).Result.ToString();
+                    item.Dealt_Progress = _days_repository.GetAllStepsUser(email, item.TimeDay).Result.ToString();
                     
                 }
                 else if (item.Type == "achievement" & item.GroupId == 2)
@@ -135,6 +135,16 @@ namespace Application.Services.Entity.Realization_Services
                    
                 }
 
+            }
+            foreach(var item in list)
+            {
+                if(item.Dealt_Progress != null && item.Needed_Progress != null)
+                {
+                    if(int.Parse(item.Dealt_Progress) > int.Parse(item.Needed_Progress))
+                    {
+                        item.Dealt_Progress = item.Needed_Progress;
+                    }
+                }
             }
             return list;
         }

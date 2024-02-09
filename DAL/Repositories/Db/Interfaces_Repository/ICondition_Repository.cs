@@ -12,6 +12,8 @@ namespace Application.Repositories.Db.Interfaces_Repository
     {
         Task<List<Condition>> GetConditionsAsync();
 
+        Task<List<Condition>> GetGroupConditionsAsync(string type,int groupId);
+
         Task<Condition> GetOneAsync(string mongoId);
     }
 }

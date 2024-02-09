@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using StepMaster.Services.ForDb.Interfaces;
 using Domain.Entity.API;
 using Domain.Entity.Main;
-using StepMaster.Auth.ResponseLogic;
 
 namespace StepMaster.Controllers.api;
 [Route("api/[controller]")]
@@ -21,6 +20,6 @@ public class RegionsController : ControllerBase
     {
         
         var bodyResponse = await _regions.GetAllRegionsAsync();
-        return ResponseLogic<ResponseList<Region>>.Response(Response, bodyResponse.Status, new ResponseList<Region>(bodyResponse.Data));
+        return new ResponseList<Region>(bodyResponse);
     }
 }

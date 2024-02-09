@@ -2,11 +2,11 @@ version: "3.9"
 networks:
   step-master-dev:
       driver: bridge
-services:  
+services: 
   app: 
     restart: always
     container_name: step-master
-    image: chydick/stepmaster    
+    image: chydick/stepmaster:latest    
     ports:
       - "6001:80"
     networks:
@@ -22,7 +22,7 @@ services:
     networks:
       - step-master-dev
     depends_on:
-      - mongodb 
+      - mongodb
   mongodb:
     container_name: mongodb
     image: mongo:latest

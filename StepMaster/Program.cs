@@ -15,7 +15,7 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Relise 1.014 New logic achievements-grades");
+            Console.WriteLine("Debug 1.016 Friends system 1.1");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;

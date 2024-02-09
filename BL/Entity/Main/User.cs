@@ -4,41 +4,56 @@ using Newtonsoft.Json;
 using System.Globalization;
 using MongoDB.Driver;
 using Domain.Entity.Main.Titles;
+using Domain.Entity.Main;
 
 namespace StepMaster.Models.Entity
 {
-    public class User
-    {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string? _id { get; set; }
+    public class User:EntityDb
+    {        
         [BsonElement("email")]
-        public string email { get; set; }
+        public string Email { get; set; }
         [BsonElement("nickname")]
-        public string nickname { get; set; }
+        public string NickName { get; set; }
         [BsonElement("fullname")]
-        public string fullname { get; set; }
+        public string FullName { get; set; }
         [BsonElement("role")]
-        public string? role { get; set; }    
+        public string? Role { get; set; }    
         [BsonElement("password")]
-        public string password { get; set; }
+        public string Password { get; set; }
         [BsonElement("region_id")]
-        public string region_id { get; set; }
+        public string RegionId { get; set; }
+
         [BsonElement("gender")]
-        public string gender { get; set; }
+        public string Gender { get; set; }
         [BsonElement("lastCookie")]
-        public string? lastCookie { get; set; }
+        public string? LastCookie { get; set; }
         [BsonElement("vipStatus")]
-        public bool vipStatus{ get; set; }
+        public bool VipStatus{ get; set; }
         [BsonElement("titles")]
-        public List<string> titles { get; set; }
+        public List<string> Titles { get; set; }
         [BsonElement("selectedTitles")]
-        public List<string> selectedTitles { get; set; }
+        public List<string> SelectedTitles { get; set; }
+        [BsonElement("blockedUsers")]
+        public List<string> BlockedUsers { get; set; }
+        [BsonElement("requrequestInFriends")]
+        public List<string> RequrequestInFriends { get; set; }
+        [BsonElement("friends")]
+        public List<string> Friends { get; set; }
+        [BsonElement("lastBeOnline")]
+        public DateTime LastBeOnline { get; set; }
+        [BsonIgnore]
+        public string clanId { get; set; }
+
+        [BsonIgnore]
+        public string  actualTitleList{ get; set; }
 
         public User()
         {
-            titles = new List<string>();
-            selectedTitles = new List<string>();   
+            Friends = new List<string>();
+            RequrequestInFriends = new List<string>();
+            BlockedUsers = new List<string>();
+            Titles = new List<string>();
+            SelectedTitles = new List<string>();   
         }
 
         //public class TitleUser
@@ -60,30 +75,30 @@ namespace StepMaster.Models.Entity
 
         public void UpdateTitles(Condition newTitle)
         {
-            if (this.titles.Contains(newTitle._id.ToString()))
+            if (this.Titles.Contains(newTitle._id.ToString()))
             {
                 return;
             }
-            this.titles.Add(newTitle._id.ToString());
+            this.Titles.Add(newTitle._id.ToString());
         }
 
         public User UpdateUser( User newValue)
         {
-            if(newValue.fullname != null) this.fullname = newValue.fullname;
-            if(newValue.nickname != null) this.nickname = newValue.nickname;
-            if(newValue.region_id != null) this.region_id = newValue.region_id;
+            if(newValue.FullName != null) this.FullName = newValue.FullName;
+            if(newValue.NickName != null) this.NickName = newValue.NickName;
+            if(newValue.RegionId != null) this.RegionId = newValue.RegionId;
             return this;
         }
 
         public void UpdateSelectedTitles(string conditionMongoId)
         {
-            if (this.titles.Contains(conditionMongoId))
+            if (this.Titles.Contains(conditionMongoId))
             {
-                if(this.selectedTitles.Count >= 3)
+                if(this.SelectedTitles.Count >= 3)
                 {
-                    this.selectedTitles.RemoveAt(0);
+                    this.SelectedTitles.RemoveAt(0);
                 }
-                this.selectedTitles.Add(conditionMongoId);
+                this.SelectedTitles.Add(conditionMongoId);
             }
             else
             {

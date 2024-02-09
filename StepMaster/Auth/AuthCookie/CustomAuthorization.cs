@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Infrastructure.MongoDb.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using StepMaster.Services.ForDb.Interfaces;
+using StepMaster.Services.ForDb.Repositories;
 using System.Linq.Expressions;
 using System.Net;
 using System.Security;
@@ -13,8 +16,8 @@ namespace API.Auth.AuthCookie
     public sealed class CustomAuthorizeUserAttribute : Attribute, IAuthorizationFilter
     {
         private string _option;
-        public CustomAuthorizeUserAttribute(string option)
-        {
+        public  CustomAuthorizeUserAttribute(string option)
+        {           
             _option = option;
         }
 
@@ -23,6 +26,7 @@ namespace API.Auth.AuthCookie
             if (context != null)
             {
                 var role = string.Empty;
+             
                 try
                 {
                     role = context.HttpContext.User.FindFirst(x => x.Type == ClaimsIdentity.DefaultRoleClaimType).Value;

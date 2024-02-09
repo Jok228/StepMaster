@@ -55,14 +55,14 @@ namespace API.Auth.AuthBase
             var clientSecret = authSplit[1];
 
             // Client ID and secret are incorrect
-            var user = _userService.GetByLoginAsync(clientId).Result.Data;
+            var user = await  _userService.GetByLoginAsync(clientId);
             if (user == null)
             {
                 return await Task.FromResult(AuthenticateResult.Fail(string.Format("User not found '{0}'", clientId)));
             }
-            if (HashCoder.Verify(passwordHash: user.password, clientSecret))
+            if (HashCoder.Verify(passwordHash: user.Password, clientSecret))
             {
-                var nameIndentity = user.email;
+                var nameIndentity = user.Email;
                 // Authenicate the client using basic authentication
                 var client = new BasicAuthenticationClient
                 {
@@ -75,8 +75,8 @@ namespace API.Auth.AuthBase
                 // Set the client ID as the name claim type.
                 var claimsPrincipal = new ClaimsPrincipal(new ClaimsIdentity(client, new[]
                 {
-                    new Claim(ClaimTypes.Name, nameIndentity),
-                    new Claim( ClaimTypes.Role, user.role),
+                    new Claim( ClaimTypes.Name, nameIndentity),
+                    new Claim( ClaimTypes.Role, user.Role),
                     new Claim( ClaimTypes.Hash,clientSecret )
                 }));
 

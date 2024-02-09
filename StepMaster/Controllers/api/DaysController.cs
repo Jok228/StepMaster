@@ -5,10 +5,10 @@ using StepMaster.Services.ForDb.Interfaces;
 using API.Auth.AuthCookie;
 using Domain.Entity.API;
 using Domain.Entity.Main;
-using StepMaster.Auth.ResponseLogic;
 using StepMaster.Models.API.Day;
 using StepMaster.Auth.AuthRequest;
 using Application.Services.Entity.Interfaces_Service;
+using StepMaster.HandlerException;
 
 
 namespace StepMaster.Controllers.api
@@ -19,12 +19,17 @@ namespace StepMaster.Controllers.api
     {
         private readonly IDays_Service _days;
         private readonly ITitles_Services _titlesService;
-        public DaysController(IDays_Service days, ITitles_Services titlesService)
+        private readonly IClan_Service _clanService;
+        private readonly IUser_Service _userService;
+        public DaysController(IDays_Service days, ITitles_Services titlesService, IClan_Service clanService, IUser_Service userService = null)
         {
             _days = days;
             _titlesService = titlesService;
+            _clanService = clanService;
+            _userService = userService;
         }
         [HttpGet]
+        [ConventionalMiddleware]
         [CustomAuthorizeUser("user")]
         [Route("GetAllDayUser")]
         public async Task<ResponseList<Day>> GetAllDayUser()
@@ -32,7 +37,7 @@ namespace StepMaster.Controllers.api
             var email = User.Identity.Name;            
             var responseBody = await _days.GetDaysUserByEmail(email);
             await _titlesService.UpdateTitlesList(email);
-            return ResponseLogic<ResponseList<Day>>.Response(Response, responseBody.Status, new ResponseList<Day>(responseBody.Data));
+            return new ResponseList<Day>(responseBody);
            
 
         }
@@ -44,11 +49,12 @@ namespace StepMaster.Controllers.api
             var email = User.Identity.Name;            
             var response = await _days.SetDayAsync(daySet.ConvertToBase(), email);
             await _titlesService.UpdateTitlesList(email);
-            if(response.Data != null)
+            await _clanService.UpdateStepsInClanByUser(email);
+            if (response != null)
             {
                 Response.StatusCode = 201;
             }
-            return response.Data;
+            return response;
 
         }
         [HttpPut]
@@ -60,7 +66,8 @@ namespace StepMaster.Controllers.api
             var email = User.Identity.Name;
             var response = await _days.UploadDayAsync(DayResponse.ConvertToBase(dayUpd));
             await _titlesService.UpdateTitlesList(email);
-            return ResponseLogic<Day>.Response(Response, response.Status, response.Data);
+            await _clanService.UpdateStepsInClanByUser(email);
+            return response;
         }
        
     }

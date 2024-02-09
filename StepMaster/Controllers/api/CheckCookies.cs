@@ -13,6 +13,7 @@ public class CheckCookies : ControllerBase
     {
         return "You User";
     }
+    
     [CustomAuthorizeUser("admin")]
     [HttpGet]
     [Route("MethodForAdmin")]

@@ -122,5 +122,10 @@ namespace Infrastructure.MongoDb.Repositories
                 throw new HttpRequestException("Shit happens", null, HttpStatusCode.InternalServerError);
             }
         }
+
+        public async Task<List<Condition>> GetGroupConditionsAsync(string type, int groupId)
+        {
+            return await _condition.FindAsync(a => a.GroupId == groupId & a.Type == type).Result.ToListAsync();
+        }
     }
 }
