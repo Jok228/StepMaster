@@ -293,7 +293,7 @@ namespace Infrastructure.MongoDb.Repositories
                     "$match", new BsonDocument()
                     {
                         {
-                            "email",new BsonDocument()
+                            "nickname",new BsonDocument()
                             {
                                 {
                                     "$regex",searchText

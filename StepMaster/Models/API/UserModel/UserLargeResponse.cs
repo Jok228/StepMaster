@@ -1,19 +1,30 @@
 ﻿using DnsClient;
 using Domain.Entity.Main.Titles;
+using Newtonsoft.Json;
 using StepMaster.Models.Entity;
 using StepMaster.Models.HashSup;
+using static StepMaster.Models.API.UserModel.UserLargeResponse;
 using static StepMaster.Models.Entity.User;
 
 namespace StepMaster.Models.API.UserModel
-{
-    
-    public abstract class UserBaseResponse
     {
-        public string? email { get; set; }
 
-        public string? nickname { get; set; }
+    public abstract class UserBaseResponse : UserSearchResponse
+        {
+        protected UserBaseResponse ( User user ) : base (user)
+            {
+            clanId = user.clanId;
+            role = user.Role;
+            gender = user.Gender;
+            region_id = user.RegionId;
+            titles = user.Titles;
+            selectedTitles = user.SelectedTitles;
+            vipStatus = user.VipStatus;
 
-        public string? fullname { get; set; }
+            friends = user.Friends;
+            blockedUsers = user.BlockedUsers;
+            requrequestInFriends = user.RequrequestInFriends;
+            }
 
         public string? clanId { get; set; }
 
@@ -28,121 +39,117 @@ namespace StepMaster.Models.API.UserModel
         public List<string> selectedTitles { get; set; }
         public List<string> friends { get; set; }
 
-        public bool isOnline { get; set; }
-
-        public string actualTitleId { get; set; }
-
         public List<string> blockedUsers { get; set; }
 
         public List<string> requrequestInFriends { get; set; }
-        public UserBaseResponse(User user)
-        {
-            if (user != null)
-            {
-                if (DateTime.UtcNow < user.LastBeOnline.AddMinutes(5))
-                {
-                    this.isOnline = true;
-                }
-                else
-                {
-                    this.isOnline = false;
-                }
-
-                actualTitleId = user.actualTitleList;
-
-                clanId = user.clanId;
-                email = user.Email;
-                nickname = user.NickName;
-                fullname = user.FullName;
-                role = user.Role;
-                gender = user.Gender;
-                region_id = user.RegionId;
-                titles = user.Titles;
-                selectedTitles = user.SelectedTitles;
-                vipStatus = user.VipStatus;
-
-                friends = user.Friends;
-                blockedUsers = user.BlockedUsers;
-                requrequestInFriends = user.RequrequestInFriends;
-            }
 
         }
-    }
     public class UserLiteResponse : UserBaseResponse
-    {
-        public UserLiteResponse(User user) : base(user)
         {
-
-        }
-    }
-    public class UserLargeResponse:UserBaseResponse
-    { 
-        public UserRanking? rating { get; set; }
-        public string avatarLink { get; set; }
-        public List<UserFriendHideResponse> friends { get; set; }
-        public UserLargeResponse(User user, UserRanking ranking, string avatar,List<UserFriendHideResponse> friends) : base(user)
-
-        {
-            if (user != null)
+        public UserLiteResponse ( User user ) : base (user)
             {
-                this.friends = friends;
-                this.actualTitleId = actualTitleId;
-                rating = ranking;                
-                avatarLink = avatar;                
+
             }
-        }       
-    }
+        }
+    public class UserLargeResponse : UserBaseResponse
+        {
+        public UserRanking? rating { get; set; }
+        public List<UserFriendHideResponse> detailedFriendsList { get; set; }
+        public UserLargeResponse ( User user,UserRanking ranking,string avatar,List<UserFriendHideResponse> friends ) : base (user)
+            {
+            if (user != null)
+                {
+                this.detailedFriendsList = friends;
+                rating = ranking;
+                avatarLink = avatar;
+                }
+            }
+        }
+
     #region Friends Pages
     public class UserFriendHideResponse
-    {
+        {
         public string? email { get; set; }
         public bool isOnline { get; set; }
-        public UserFriendHideResponse(User user)
-        {
+        public UserFriendHideResponse ( User user )
+            {
             email = user.Email;
-            if (DateTime.UtcNow < user.LastBeOnline.AddMinutes(5))
-            {
+            if (DateTime.UtcNow < user.LastBeOnline.AddMinutes (5))
+                {
                 this.isOnline = true;
-            }
+                }
             else
-            {
+                {
                 this.isOnline = false;
+                }
             }
+
+
         }
-
-
-    }
-    public class UserFriendResponse: UserFriendHideResponse
-    {
-        public UserFriendResponse(User user) : base(user)
+    public class UserFriendResponse : UserFriendHideResponse
         {
+        public UserFriendResponse ( User user ) : base (user)
+            {
             fullName = user.FullName;
-        }
+            idActualTitle = user.actualTitle;
+            }
 
         public string fullName { get; set; }
 
         public string avatarLink { get; set; }
 
         public string idActualTitle { get; set; }
-    }
-    public class UserSearchResponse : UserFriendResponse
-    {
-        public string nickName { get; set; }
-        public Relative relative { get; set; }
-        public UserSearchResponse(User user,Relative relative) : base(user)
-        {
-            nickName = user.NickName;
-            this.relative = relative;
         }
-    }
+    public class UserSearchResponse : UserFriendResponse
+        {
+        public string nickName { get; set; }
+        public Relative? relative { get; set; } = null;
+        public UserSearchResponse ( User user ) : base (user)
+            {
+            nickName = user.NickName;
+            }
+        public static Relative SetRelative ( User userResponse,User mainUser )
+            {
+
+            if (mainUser.Friends.Contains (userResponse.Email))
+                {
+                return Relative.Friend;
+                }
+            if (mainUser.RequrequestInFriends.Contains (userResponse.Email))
+                {
+                return Relative.RequestToMe;
+                
+                }
+            if (userResponse.RequrequestInFriends.Contains (mainUser.Email))
+                {
+                return Relative.RequestToIt;
+               
+                }
+            if (userResponse.BlockedUsers.Contains (mainUser.Email))
+                {
+                return Relative.BanToMe;
+                ;
+                }
+            if (mainUser.BlockedUsers.Contains (userResponse.Email))
+                {
+                return Relative.BanToIt;
+               
+                }
+            return Relative.None;
+            }
+
+        }
     public enum Relative
-    {
-        Friend  = 0,
-        Request = 1,
+        {
+        Friend = 0,
+        RequestToIt = 1,
         None = 2,
-        Ban = 3,
-    }
+        BanToIt = 3,
+        BanToMe = 4,
+        RequestToMe = 5,
+        }
 
     #endregion
 
-}
+    }
+

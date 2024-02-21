@@ -46,11 +46,9 @@ namespace Application.Services.Entity.Realization_Services
             await _rating.UpdateRating(ratingRegion);
 
         }
-        private async Task<Rating> SortRating(List<User> users, Rating ratingRegion)
+        public async Task<Rating> SortRating(List<User> users, Rating ratingRegion)
         {
-            TimeSpan diff = DateTime.UtcNow - ratingRegion.lastUpdate;
-            if (diff.TotalMinutes > 20)
-            {
+            TimeSpan diff = DateTime.UtcNow - ratingRegion.lastUpdate;            
                 ratingRegion.RatingUsers = new List<Position>();
                 foreach (var user in users)
                 {
@@ -70,7 +68,7 @@ namespace Application.Services.Entity.Realization_Services
 
                 }
                 ratingRegion.Sort();
-            }
+            
             return ratingRegion;
         }
         private async Task<Rating> CreateNewRating(string region)
@@ -82,11 +80,11 @@ namespace Application.Services.Entity.Realization_Services
         }
         public async  Task <UserRanking> AddNewPosition(string email,string regionId)
         {
-            var listRatRegion = await  GetRating(regionId);            
-            listRatRegion.Sort();
+            var listRatRegion = await  GetRating(regionId);
+            await SortRating(await _users.GetObjectsByRegion(regionId), listRatRegion);
 
-            var listRatCountry = await GetRating(null);            
-            listRatCountry.Sort();
+            var listRatCountry = await GetRating(null);
+            await SortRating(await _users.GetUserByCountry(), listRatCountry);
 
 
             await _rating.UpdateRating(listRatCountry);

@@ -4,6 +4,8 @@ using Application.Repositories.Db.Interfaces_Repository;
 using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
 using Application.Services.Entity.Realization_Services;
+using Application.Services.FIreBase.Interfaces;
+using Application.Services.FIreBase.Realization;
 using Application.Services.ForDb.APIDatebaseSet;
 
 using Application.Services.Post.Repositories;
@@ -30,6 +32,7 @@ namespace StepMaster.Initialization.Scope
         {
             service.AddTransient<FactoryMiddleware>();         
             service.AddScoped<ITitles_Services, Titles_Service>();
+            service.AddScoped<IFireBase_Service, FireBase_Service>();
             service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IUser_Service, User_Service>();

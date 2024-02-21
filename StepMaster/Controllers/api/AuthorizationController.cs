@@ -69,6 +69,16 @@ namespace StepMaster.Controllers.api
             }
         }
         [HttpPost]
+        [CustomAuthorizeUser("all")]
+        [Route("SetToken")]
+        public async Task<User> SetToken([FromForm] string token)
+        {
+            var email = User.Identity.Name;
+            var user = await _usersService.GetByLoginAsync(email);
+            user.FireBaseToken = token;
+            return await _usersService.UpdateUser(user);   
+        }
+        [HttpPost]
         [Route("Registration")]
         public async Task<UserLargeResponse> Registration([FromForm] UserRegModel user)
         {

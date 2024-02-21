@@ -102,8 +102,20 @@ namespace StepMaster.Controllers.api
             var rating = await _ratingService.GetUserRanking(email, userResponse.RegionId, clanId);
             var friendsList = await GetFriendsHide(userResponse.Friends);
             await _titleService.UpdateTitlesList(email);
-            return new UserLargeResponse(userResponse, rating, avatarLink, friendsList);
+            var response = new UserLargeResponse(userResponse, rating, avatarLink, friendsList);
+            if (email != User.Identity.Name)
+                {
+                var mainUser = await _usersService.GetByLoginAsync(User.Identity.Name);
+                response.relative = UserSearchResponse.SetRelative (userResponse,mainUser);
+                return response;
+                }
+            else
+                {
+                return response;
+                }
+            
         }
+       
         [HttpGet]
         [CustomAuthorizeUser("all")]
         [Route("GetUserByEmail")]
@@ -305,14 +317,14 @@ namespace StepMaster.Controllers.api
             if(myRegion)
             {
                 var listUsers = await _usersService.GetUsers(searchText, page, mainUser.RegionId);
-                var response = SetRelativeList(mainUser, listUsers);
+                var response = await  SetRelativeList(mainUser, listUsers);
                 response = await SetAvatarLinks(response);
                 return new ResponseList<UserSearchResponse>(response);
             }
             else
             {
                 var listUsers = await _usersService.GetUsers(searchText, page,null);
-                var response = SetRelativeList(mainUser, listUsers);
+                var response = await SetRelativeList(mainUser, listUsers);
                 response = await SetAvatarLinks(response);                
                 return new ResponseList<UserSearchResponse>(response);
             }           
@@ -326,47 +338,18 @@ namespace StepMaster.Controllers.api
             }
             return users;
         }
-        private List<UserSearchResponse> SetRelativeList(User user, List<User> listUsers)
+        private async Task<List<UserSearchResponse>> SetRelativeList(User user, List<User> listUsers)
         {
             var response = new List<UserSearchResponse>();
-            SetRelativeOfGroup(response,user.Friends,listUsers,Relative.Friend);
-            SetRelativeOfGroup(response, user.BlockedUsers, listUsers, Relative.Ban);
-            SetRelativeOfGroup(response, user.RequrequestInFriends, listUsers, Relative.Request);
-            
-            foreach (var haveStatus in response)
-            {
-                foreach(User itemUser in listUsers)
+            foreach(var findUser in listUsers)
                 {
-                    if (itemUser.Email == haveStatus.email)
-                    {
-                        listUsers.Remove(itemUser);
-                        break;
-                    }
+                var fullUser = await _usersService.GetByLoginAsync (findUser.Email);
+                var newUserResponse = new UserSearchResponse (fullUser);
+                newUserResponse.relative = UserSearchResponse.SetRelative (fullUser,user);
+                response.Add (newUserResponse);
                 }
-            }
-            foreach(User requestUser in listUsers)
-            {
-                response.Add(new UserSearchResponse(user, Relative.None));
-            }          
-            
-                
-            
-            response.OrderBy(user => user.relative);
+            response.OrderBy (user => user.relative);
             return response;
-        }
-        private List<UserSearchResponse> SetRelativeOfGroup(List<UserSearchResponse> listResponse,List<string> listEmails, List<User> users,Relative relative)
-        {
-            foreach(var emailUser in listEmails)
-            {
-                foreach (User userDb  in users)
-                {
-                    if (userDb.Email == emailUser)
-                    {
-                        listResponse.Add(new UserSearchResponse(userDb, relative));
-                    }
-                }
-            }
-            return listResponse;
         }
 
         #endregion

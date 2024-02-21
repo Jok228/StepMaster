@@ -22,7 +22,7 @@ namespace StepMaster.HandlerException
             //_logger.LogInformation("Before request");
             try
             {
-                context.Response.Headers.Add("Version", "Debug 1.016 Friends system 1.1");
+                context.Response.Headers.Add("Version","Relise 1.016");
                 if (context.Request.Headers.ContainsKey("IsOnline"))
                 {
                     context.Request.Headers.TryGetValue("Cookie", out var newCookies);

@@ -2,9 +2,12 @@ using API.Auth.AuthBase;
 using Application.Services.ForDb.APIDatebaseSet;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using NLog;
 using NLog.Web;
 using StepMaster.HandlerException;
+using StepMaster.Initialization.FireBase;
 using StepMaster.Initialization.Scope;
 using System.Text;
 namespace StepMaster
@@ -15,10 +18,11 @@ namespace StepMaster
 
         public async static Task Main(string[] args)
         {
-            Console.WriteLine("Debug 1.016 Friends system 1.1");
+            Console.WriteLine("Relise 1.016");
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;
+
             services
        .AddAuthentication(o =>
        {
@@ -26,6 +30,7 @@ namespace StepMaster
        })
        .AddCookie();
             builder.Host.UseNLog();
+            ReadFireBaseAdminSDK.ReadFireBaseAdminSdk();
             var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
             logger.Info("Process start");
             builder.Services.Configure<ApiDatabaseSettings>(

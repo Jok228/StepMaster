@@ -27,6 +27,8 @@ namespace StepMaster.Models.Entity
         public string Gender { get; set; }
         [BsonElement("lastCookie")]
         public string? LastCookie { get; set; }
+        [BsonElement("fireBaseToken")]
+        public string? FireBaseToken { get; set; }
         [BsonElement("vipStatus")]
         public bool VipStatus{ get; set; }
         [BsonElement("titles")]
@@ -45,7 +47,7 @@ namespace StepMaster.Models.Entity
         public string clanId { get; set; }
 
         [BsonIgnore]
-        public string  actualTitleList{ get; set; }
+        public string  actualTitle{ get; set; }
 
         public User()
         {
