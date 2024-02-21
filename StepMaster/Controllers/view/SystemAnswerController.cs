@@ -28,15 +28,15 @@ namespace StepMaster.Controllers.view
         {
 
             _cache.TryGetValue(email + password, out var result);
-            string response = string.Empty;
+            var response = string.Empty;
             if (result != null)
-            {
-                var user = await _user.GetByLoginAsync(email);                
+            {             
                 
-                if (user.Data != null)
+                if (await _user.CheckUser(email))
                 {
-                    user.Data.password = HashCoder.GetHash(password);
-                    var state = _user.UpdateUser(user.Data);
+                    var user = await _user.GetByLoginAsync(email);
+                    user.Password = HashCoder.GetHash(password);
+                    var state = _user.UpdateUser(user);
 
                     if (state != null)
                     {

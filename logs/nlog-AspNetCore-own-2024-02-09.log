@@ -1,0 +1,19 @@
+2024-02-09 10:49:56.3173|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 10:49:56.9413|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 10:49:57.0758|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 10:49:57.0758|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 10:49:57.0758|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 10:49:57.0846|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 11:31:27.9119|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 11:31:32.5667|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 11:31:32.7102|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 11:31:32.7102|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 11:31:32.7190|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 11:31:32.7190|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 11:36:54.0818|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-09 11:36:58.4974|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
+2024-02-09 11:36:58.6261|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
+2024-02-09 11:36:58.6292|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-09 11:36:58.6292|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-09 11:36:58.6292|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
+2024-02-09 11:39:07.1026|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 

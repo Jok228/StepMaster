@@ -1,0 +1,6 @@
+2024-02-12 18:48:08.7964|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-12 18:48:09.5562|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-12 18:48:09.5624|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-12 18:48:09.5624|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-12 18:48:09.5624|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-12 18:48:12.2476|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 

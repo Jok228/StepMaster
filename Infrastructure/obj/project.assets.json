@@ -63,6 +63,109 @@
           }
         }
       },
+      "FirebaseAdmin/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Api.Gax.Rest": "3.2.0",
+          "Google.Apis.Auth": "1.49.0",
+          "System.Collections.Immutable": "1.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FirebaseAdmin.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FirebaseAdmin.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Google.Api.Gax/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.Gax.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Api.Gax.Rest/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Api.Gax": "3.2.0",
+          "Google.Apis.Auth": "[1.48.0, 2.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Auth/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.49.0",
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Apis.Core/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Http.Features/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -76,6 +179,17 @@
         },
         "runtime": {
           "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
             "related": ".xml"
           }
         }
@@ -331,6 +445,185 @@
           }
         }
       },
+      "Plugin.Firebase/2.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Analytics": "2.0.2",
+          "Plugin.Firebase.Auth": "2.0.7",
+          "Plugin.Firebase.CloudMessaging": "2.0.4",
+          "Plugin.Firebase.Core": "2.0.1",
+          "Plugin.Firebase.Crashlytics": "2.0.3",
+          "Plugin.Firebase.DynamicLinks": "2.0.1",
+          "Plugin.Firebase.Firestore": "2.0.6",
+          "Plugin.Firebase.Functions": "2.0.2",
+          "Plugin.Firebase.RemoteConfig": "2.0.1",
+          "Plugin.Firebase.Storage": "2.0.2"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Analytics/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Analytics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Analytics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Auth/2.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Auth.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Auth.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.CloudMessaging/2.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.CloudMessaging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.CloudMessaging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Core/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Crashlytics/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Crashlytics.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Crashlytics.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.DynamicLinks/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.DynamicLinks.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.DynamicLinks.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Firestore/2.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Firestore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Firestore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Functions/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Functions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Functions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.RemoteConfig/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.RemoteConfig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.RemoteConfig.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Plugin.Firebase.Storage/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Plugin.Firebase.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Plugin.Firebase.Storage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Plugin.Firebase.Storage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -360,6 +653,19 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Collections.Immutable/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.IO.Pipelines/5.0.2": {
@@ -458,8 +764,10 @@
         "dependencies": {
           "AWSSDK.S3": "3.7.304.5",
           "Domain": "1.0.0",
+          "FirebaseAdmin": "2.4.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
-          "Microsoft.Extensions.Caching.Memory": "8.0.0"
+          "Microsoft.Extensions.Caching.Memory": "8.0.0",
+          "Plugin.Firebase": "2.0.12"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -597,6 +905,129 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
+    "FirebaseAdmin/2.4.0": {
+      "sha512": "0O89+8oFnHys8TPsk6af0nqcthedok4R467q/tQ/mUyKsXgG45fu1U0acnkKpOGSXT+550cyFfcUj5QlicoOvg==",
+      "type": "package",
+      "path": "firebaseadmin/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "firebaseadmin.2.4.0.nupkg.sha512",
+        "firebaseadmin.nuspec",
+        "lib/net461/FirebaseAdmin.dll",
+        "lib/net461/FirebaseAdmin.xml",
+        "lib/netstandard2.0/FirebaseAdmin.dll",
+        "lib/netstandard2.0/FirebaseAdmin.xml"
+      ]
+    },
+    "Google.Api.Gax/3.2.0": {
+      "sha512": "0OjahFAHTOoprSgvJiQ6/fIQLrUYU4QIFgkuJ51/lcmhZbuXxB3ycPk3JTVEvx6A5yQBL14wgmHgwXLcEsnu3Q==",
+      "type": "package",
+      "path": "google.api.gax/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.api.gax.3.2.0.nupkg.sha512",
+        "google.api.gax.nuspec",
+        "lib/net461/Google.Api.Gax.dll",
+        "lib/net461/Google.Api.Gax.pdb",
+        "lib/net461/Google.Api.Gax.xml",
+        "lib/netstandard2.0/Google.Api.Gax.dll",
+        "lib/netstandard2.0/Google.Api.Gax.pdb",
+        "lib/netstandard2.0/Google.Api.Gax.xml"
+      ]
+    },
+    "Google.Api.Gax.Rest/3.2.0": {
+      "sha512": "YY4mD0nGxTx1uez7Perm+zAd3FH50dd3+7HTYsRFCywDEtj3RkrMjcAmw6mNpKkw2sRICu7aYNy1mgMjd3nVbw==",
+      "type": "package",
+      "path": "google.api.gax.rest/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.api.gax.rest.3.2.0.nupkg.sha512",
+        "google.api.gax.rest.nuspec",
+        "lib/net461/Google.Api.Gax.Rest.dll",
+        "lib/net461/Google.Api.Gax.Rest.pdb",
+        "lib/net461/Google.Api.Gax.Rest.xml",
+        "lib/netstandard2.0/Google.Api.Gax.Rest.dll",
+        "lib/netstandard2.0/Google.Api.Gax.Rest.pdb",
+        "lib/netstandard2.0/Google.Api.Gax.Rest.xml"
+      ]
+    },
+    "Google.Apis/1.49.0": {
+      "sha512": "fmXQQTxZFOBlnvokvdQMzq0Lt+g2QzpZ4H6U8lMMFHgAR8ZqxQnPN5yHDpoHf7a++hJHb5W3pALxauGsq+afKQ==",
+      "type": "package",
+      "path": "google.apis/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.49.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.49.0": {
+      "sha512": "3V9ohvixQtjaEvk7T9Ac7E/KvwEPa7eL4aMNreJDI0CEPzCdQdk2zCvaJPRrNIjhe+UuBeOeom1oAOMFB74JHg==",
+      "type": "package",
+      "path": "google.apis.auth/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.49.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.49.0": {
+      "sha512": "9DgGdtyzgrCfHWwc/HiDXDbykNMeKQozbEHYEUEcezRuH+YR3fvq7YGVBDmUM8g6qEL3kDk6h5EU4h0IJwue1w==",
+      "type": "package",
+      "path": "google.apis.core/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.49.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Http.Features/5.0.17": {
       "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
       "type": "package",
@@ -614,6 +1045,30 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
         "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
+      ]
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+      "sha512": "K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
+      "type": "package",
+      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "ref/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/8.0.0": {
@@ -1033,6 +1488,204 @@
         "packageIcon.png"
       ]
     },
+    "Plugin.Firebase/2.0.12": {
+      "sha512": "6VDsPom9I947fFaF0nWM/UMJtj2BzZMdFECCs+EegaI1cAbQJWNoY1Hki5hBC1MxetodF7olIoluE0RCokGgYQ==",
+      "type": "package",
+      "path": "plugin.firebase/2.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.xml",
+        "lib/net6.0/Plugin.Firebase.dll",
+        "lib/net6.0/Plugin.Firebase.xml",
+        "plugin.firebase.2.0.12.nupkg.sha512",
+        "plugin.firebase.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Analytics/2.0.2": {
+      "sha512": "yVd49jWJ+jsL4A5A4odDItFQ7jTBlixlR6zlmfvgz6JMYRwp9q2TTpc2MVwBJFx1yEzyOQYz3B5vl/Z1cvBKCQ==",
+      "type": "package",
+      "path": "plugin.firebase.analytics/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Analytics.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Analytics.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Analytics.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Analytics.xml",
+        "lib/net6.0/Plugin.Firebase.Analytics.dll",
+        "lib/net6.0/Plugin.Firebase.Analytics.xml",
+        "plugin.firebase.analytics.2.0.2.nupkg.sha512",
+        "plugin.firebase.analytics.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Auth/2.0.7": {
+      "sha512": "OSvTaJKpo+fEbznDf/JzoxRnkxyA/5k1U7TRyXy//prT93DPGTIvShYDK+9OcZ4J5BI06XGmMUwEO+tAI21EWg==",
+      "type": "package",
+      "path": "plugin.firebase.auth/2.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Auth.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Auth.xml",
+        "lib/net6.0/Plugin.Firebase.Auth.dll",
+        "lib/net6.0/Plugin.Firebase.Auth.xml",
+        "plugin.firebase.auth.2.0.7.nupkg.sha512",
+        "plugin.firebase.auth.nuspec"
+      ]
+    },
+    "Plugin.Firebase.CloudMessaging/2.0.4": {
+      "sha512": "lwBbUlFygmy6/LrAyJU9DTSVwfkhg2xERCjXy/JyHY0jup9DerhO1DQ8fIxIN2ktebZ7A1XrLkjUYPfBfxofOA==",
+      "type": "package",
+      "path": "plugin.firebase.cloudmessaging/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.CloudMessaging.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.CloudMessaging.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.CloudMessaging.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.CloudMessaging.xml",
+        "lib/net6.0/Plugin.Firebase.CloudMessaging.dll",
+        "lib/net6.0/Plugin.Firebase.CloudMessaging.xml",
+        "plugin.firebase.cloudmessaging.2.0.4.nupkg.sha512",
+        "plugin.firebase.cloudmessaging.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Core/2.0.1": {
+      "sha512": "bO4LOnP45OToY2PHkeqSi9TFCKQaRmPLnmxQHeeiXCNLD8iNFqAs2MEFyAPQ47SANQJo4skRNsxHpmAtlexT4g==",
+      "type": "package",
+      "path": "plugin.firebase.core/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Core.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Core.xml",
+        "lib/net6.0-ios16.0/Plugin.Firebase.Core.dll",
+        "lib/net6.0-ios16.0/Plugin.Firebase.Core.xml",
+        "lib/net6.0/Plugin.Firebase.Core.dll",
+        "lib/net6.0/Plugin.Firebase.Core.xml",
+        "plugin.firebase.core.2.0.1.nupkg.sha512",
+        "plugin.firebase.core.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Crashlytics/2.0.3": {
+      "sha512": "8VCKv06bF0Uv+wv9EX5kcHgmVyRlYgUhGGWQZvZfH8fHIACbKkku/xNvyqH+P9uFsC6f9KTxHsLtAQo06H/U4w==",
+      "type": "package",
+      "path": "plugin.firebase.crashlytics/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Crashlytics.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Crashlytics.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Crashlytics.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Crashlytics.xml",
+        "lib/net6.0/Plugin.Firebase.Crashlytics.dll",
+        "lib/net6.0/Plugin.Firebase.Crashlytics.xml",
+        "plugin.firebase.crashlytics.2.0.3.nupkg.sha512",
+        "plugin.firebase.crashlytics.nuspec"
+      ]
+    },
+    "Plugin.Firebase.DynamicLinks/2.0.1": {
+      "sha512": "E83giZ9O2Em4e7RTr0/5LQ5F9C/xPwb40Vinspe36ax8gSIHYCFUkN3zEE80mqcVlSOIUMTxoNPiidWy8O2kdQ==",
+      "type": "package",
+      "path": "plugin.firebase.dynamiclinks/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.DynamicLinks.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.DynamicLinks.xml",
+        "lib/net6.0-ios16.0/Plugin.Firebase.DynamicLinks.dll",
+        "lib/net6.0-ios16.0/Plugin.Firebase.DynamicLinks.xml",
+        "lib/net6.0/Plugin.Firebase.DynamicLinks.dll",
+        "lib/net6.0/Plugin.Firebase.DynamicLinks.xml",
+        "plugin.firebase.dynamiclinks.2.0.1.nupkg.sha512",
+        "plugin.firebase.dynamiclinks.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Firestore/2.0.6": {
+      "sha512": "thnNwvFwpYMi0WV/IOUUHbcoXs0SQCXEFymjGFINLv0blm7xWB6FhLyLtg5K2+g0vTogUK3PQTgAd3S+2/ze7g==",
+      "type": "package",
+      "path": "plugin.firebase.firestore/2.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Firestore.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Firestore.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Firestore.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Firestore.xml",
+        "lib/net6.0/Plugin.Firebase.Firestore.dll",
+        "lib/net6.0/Plugin.Firebase.Firestore.xml",
+        "plugin.firebase.firestore.2.0.6.nupkg.sha512",
+        "plugin.firebase.firestore.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Functions/2.0.2": {
+      "sha512": "X/iF7TEgnX7U2cWDsCSQmIJBygKiIi6rzyFlhJdkC1Pnzo2IqJLzie1rWUVsXMonqCDgcLH644A0iSI3LV6ofw==",
+      "type": "package",
+      "path": "plugin.firebase.functions/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Functions.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Functions.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Functions.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Functions.xml",
+        "lib/net6.0/Plugin.Firebase.Functions.dll",
+        "lib/net6.0/Plugin.Firebase.Functions.xml",
+        "plugin.firebase.functions.2.0.2.nupkg.sha512",
+        "plugin.firebase.functions.nuspec"
+      ]
+    },
+    "Plugin.Firebase.RemoteConfig/2.0.1": {
+      "sha512": "sGNaGyuqQJwQqX5FS+9aAHrg/QEIaa3/Ki7Fa2zQFqRCq+ybD+rQIdAsXZeDnjvzYCpva+bG8XLzUzgZ2T5AUg==",
+      "type": "package",
+      "path": "plugin.firebase.remoteconfig/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.RemoteConfig.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.RemoteConfig.xml",
+        "lib/net6.0-ios16.0/Plugin.Firebase.RemoteConfig.dll",
+        "lib/net6.0-ios16.0/Plugin.Firebase.RemoteConfig.xml",
+        "lib/net6.0/Plugin.Firebase.RemoteConfig.dll",
+        "lib/net6.0/Plugin.Firebase.RemoteConfig.xml",
+        "plugin.firebase.remoteconfig.2.0.1.nupkg.sha512",
+        "plugin.firebase.remoteconfig.nuspec"
+      ]
+    },
+    "Plugin.Firebase.Storage/2.0.2": {
+      "sha512": "aZtJpi3euoxCltcn7Hoz2VWd0L16aozo14zzJU6tV+H+HTnIO2bHNYj35rn5oxXc8a8D7KE164uDdhDLnVRZuA==",
+      "type": "package",
+      "path": "plugin.firebase.storage/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net6.0-android31.0/Plugin.Firebase.Storage.dll",
+        "lib/net6.0-android31.0/Plugin.Firebase.Storage.xml",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Storage.dll",
+        "lib/net6.0-ios16.1/Plugin.Firebase.Storage.xml",
+        "lib/net6.0/Plugin.Firebase.Storage.dll",
+        "lib/net6.0/Plugin.Firebase.Storage.xml",
+        "plugin.firebase.storage.2.0.2.nupkg.sha512",
+        "plugin.firebase.storage.nuspec"
+      ]
+    },
     "SharpCompress/0.30.1": {
       "sha512": "XqD4TpfyYGa7QTPzaGlMVbcecKnXy4YmYLDWrU+JIj7IuRNl7DH2END+Ll7ekWIY8o3dAMWLFDE1xdhfIWD1nw==",
       "type": "package",
@@ -1096,6 +1749,32 @@
         "ref/uap10.0.16299/_._",
         "system.buffers.4.5.1.nupkg.sha512",
         "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Collections.Immutable/1.7.1": {
+      "sha512": "B43Zsz5EfMwyEbnObwRxW5u85fzJma3lrDeGcSAV1qkhSRTNY5uXAByTn9h9ddNdhM+4/YoLc/CI43umjwIl9Q==",
+      "type": "package",
+      "path": "system.collections.immutable/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Collections.Immutable.dll",
+        "lib/net461/System.Collections.Immutable.xml",
+        "lib/netstandard1.0/System.Collections.Immutable.dll",
+        "lib/netstandard1.0/System.Collections.Immutable.xml",
+        "lib/netstandard1.3/System.Collections.Immutable.dll",
+        "lib/netstandard1.3/System.Collections.Immutable.xml",
+        "lib/netstandard2.0/System.Collections.Immutable.dll",
+        "lib/netstandard2.0/System.Collections.Immutable.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
+        "system.collections.immutable.1.7.1.nupkg.sha512",
+        "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]

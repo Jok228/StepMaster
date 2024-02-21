@@ -1,17 +1,7 @@
-﻿using Amazon.S3;
-using Application.Repositories.Db.Interfaces_Repository;
+﻿using Application.Repositories.Db.Interfaces_Repository;
 using Application.Services.Entity.Interfaces_Service;
-using DnsClient;
-using Domain.Entity.API;
-using Domain.Entity.Main;
-using MongoDB.Driver.Linq;
 using StepMaster.Models.Entity;
-using StepMaster.Services.ForDb.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using static Domain.Entity.Main.ClassWithPosition;
 
 namespace Application.Services.Entity.Realization_Services
 {
@@ -20,17 +10,19 @@ namespace Application.Services.Entity.Realization_Services
         private readonly IRating_Repository _rating;
         private readonly IUser_Repository _users;
         private readonly IDay_Repository _days;
+        private readonly IClan_Repository _clanRepository;
 
-        public Rating_Service(IRating_Repository rating, IUser_Repository user, IDay_Repository day)
+        public Rating_Service(IRating_Repository rating, IUser_Repository user, IDay_Repository day, IClan_Repository clanRepository = null)
         {
             _rating = rating;
             _users = user;
             _days = day;
+            _clanRepository = clanRepository;
         }
 
         public async Task<Rating> GetRating(string regionId)
         {
-            var listRatRegion = _rating.GetRating(regionId).Result.Data;
+            var listRatRegion = await _rating.GetRating(regionId);
             if (listRatRegion == null)
             {
                 listRatRegion = await CreateNewRating(regionId);
@@ -40,54 +32,59 @@ namespace Application.Services.Entity.Realization_Services
         }
         public async Task UpdateRating(string region)
         {
-            var ratingRegion = await GetRating(region);            
-            var users = await _users.GetObjectsByRegion(region);
-            ratingRegion = await SortRating(users.Data, ratingRegion);
+            var ratingRegion = await GetRating(region); 
+            var users = new List<User>();
+            if(region == null)
+            {
+                users = await _users.GetUserByCountry();
+            }
+            else
+            {
+                users = await _users.GetObjectsByRegion(region);
+            }            
+            ratingRegion = await SortRating(users, ratingRegion);
             await _rating.UpdateRating(ratingRegion);
 
         }
-        private async Task<Rating> SortRating(List<User> users, Rating ratingRegion)
+        public async Task<Rating> SortRating(List<User> users, Rating ratingRegion)
         {
-            TimeSpan diff = DateTime.UtcNow - ratingRegion.lastUpdate;
-            if (diff.TotalMinutes > 20)
-            {
-                ratingRegion.ratingUsers = new List<Position>();
+            TimeSpan diff = DateTime.UtcNow - ratingRegion.lastUpdate;            
+                ratingRegion.RatingUsers = new List<Position>();
                 foreach (var user in users)
                 {
 
-                    var dayUser = await _days.GetActualDay(user.email);
+                    var dayUser = await _days.GetActualDay(user.Email);
                     int steps = 0;
-                    foreach (var day in dayUser.Data)
+                    foreach (var day in dayUser)
                     {
                         steps += (int)day.steps;
                     }
-                    ratingRegion.ratingUsers.Add(new Position
+                    ratingRegion.RatingUsers.Add(new Position
                     {
-                        email = user.email,                        
-                        step = steps,
+                        NickName = user.NickName,
+                        Email = user.Email,                        
+                        Step = steps,
                     });
 
                 }
                 ratingRegion.Sort();
-            }
+            
             return ratingRegion;
         }
         private async Task<Rating> CreateNewRating(string region)
         {
             var ratingRegion = await _rating.CreateRating(region);
             var users = await _users.GetObjectsByRegion(region);
-            ratingRegion.Data = await SortRating(users.Data, ratingRegion.Data);
-            return ratingRegion.Data;
+            ratingRegion = await SortRating(users, ratingRegion);
+            return ratingRegion;
         }
         public async  Task <UserRanking> AddNewPosition(string email,string regionId)
         {
-            var newRating = new Position(email);//Create new user rating for top list in DB
+            var listRatRegion = await  GetRating(regionId);
+            await SortRating(await _users.GetObjectsByRegion(regionId), listRatRegion);
 
-            var listRatRegion = await  GetRating(regionId);            
-            listRatRegion.Sort();
-
-            var listRatCountry = await GetRating(null);            
-            listRatCountry.Sort();
+            var listRatCountry = await GetRating(null);
+            await SortRating(await _users.GetUserByCountry(), listRatCountry);
 
 
             await _rating.UpdateRating(listRatCountry);
@@ -98,18 +95,32 @@ namespace Application.Services.Entity.Realization_Services
                 placeInCountry = listRatCountry.GetUserRanking(email),
             };           
         }
-        public async Task<UserRanking> GetUserRanking(string email, string regionId)
+        public async Task<UserRanking> GetUserRanking(string email, string regionId, string? clanId)
         {
+            string placeRating = null;
+            if(clanId != null)
+            {
+                var clan = await _clanRepository.GetClansById(clanId);
+                var placeUser = clan.RatingUsers.IndexOf(clan.RatingUsers.Find(user => user.Email == email))+1;
+                placeRating = $"{placeUser}/{clan.RatingUsers.Count}";
+            }
             await UpdateRating(regionId);
             await UpdateRating(null);
             var listRatRegion = await GetRating(regionId);
             var listRatCountry = await GetRating(null);
+
+
             return new UserRanking()
             {
                 placeInRegion = listRatRegion.GetUserRanking(email),
                 placeInCountry = listRatCountry.GetUserRanking(email),
+                placeInClan = placeRating
             };
         }
+
+        
+
+
         public async Task SwapPosition(string oldRegionId, string newRegionId,string email)
         {
             var oldRating = await GetRating(oldRegionId);

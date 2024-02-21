@@ -1,21 +1,24 @@
-﻿using Domain.Entity.API;
-using MongoDB.Bson.Serialization.Serializers;
-using StepMaster.Models.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using StepMaster.Models.Entity;
 
 namespace Application.Repositories.Db.Interfaces_Repository
 {
     public interface IUser_Repository : IBase_Repository<User>
     {
 
-        Task<BaseResponse<User>> GetByCookie(string cookie);
+        Task<User> GetByCookie(string cookie);
 
-        Task<BaseResponse<List<User>>> GetObjectsByRegion(string regionId);
+        Task<List<User>> GetObjectsByRegion(string regionId);
 
-        Task<bool> DeleteUser(string email);
+        Task<List<User>> GetUserByCountry();
+
+        Task<bool> CheckUser(string email);
+
+        #region Friends System
+
+        Task<List<User>> GetUsers(string searchText, string? regionId, int page);
+
+        Task<List<User>> GetOnlineUsersByList(List<string> users, int page, bool isOnline);
+
+        #endregion
     }
 }

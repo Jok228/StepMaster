@@ -10,154 +10,353 @@ using System.Text;
 using System.Threading.Tasks;
 using Application.Services.ForDb.APIDatebaseSet;
 using Infrastructure.MongoDb.Settings;
-using Domain.Entity.API;
+
 using Infrastructure.MongoDb.DbHelper;
 using Application.Repositories.Db.Interfaces_Repository;
+using System.Net;
+using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 
 namespace Infrastructure.MongoDb.Repositories
 {
     public class User_Repository : IUser_Repository
     {
-        private readonly IMongoCollection<User> _users;
+        private readonly IMongoCollection<User> _usersDb;
         private IMy_Cache _cache;
-        public User_Repository(IMy_Cache cache, IAPIDatabaseSettings settings, IMongoClient mongoClient) 
+        private ILogger<User_Repository> _logger;
+        private int _limit = 16;
+        public User_Repository(IMy_Cache cache, IAPIDatabaseSettings settings, IMongoClient mongoClient, ILogger<User_Repository> logger)
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
-            _users = database.GetCollection<User>(TableName.User);
+            _usersDb = database.GetCollection<User>(TableName.User);
             _cache = cache;
-
+            _logger = logger;
         }
 
-        public async Task<BaseResponse<User>> GetByCookie(string cookie)
+        public async Task<User> GetByCookie(string cookie)
         {
             try
             {
-                var user = await _users.FindAsync(user => user.lastCookie == cookie)
+                var user = await _usersDb.FindAsync(user => user.LastCookie == cookie)
                     .Result
                     .FirstAsync();
-                
-                return BaseResponse<User>.Create(user, MyStatus.Success);
+                return user;
             }
             catch (Exception ex) 
             {
-                if(ex.Message == DbExMessage.NotFound)
+                if (ex.Message == DbExMessage.NoElements)
                 {
-                    return BaseResponse<User>.Create(null, MyStatus.NotFound);
+                    throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
-                Console.WriteLine(ex.Message);
-                return BaseResponse<User>.Create(null, MyStatus.Except);
-            
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+
             }
         }
+        public async Task<List<User>> GetUserByCountry()
+        {
+            var usersAllList = await _usersDb.FindAsync(users => true)
+                    .Result
+                    .ToListAsync();
+            return usersAllList;
+        }
 
-        public async Task<BaseResponse<List<User>>> GetObjectsByRegion(string regionId)
-        { 
-            
+        public async Task<List<User>> GetObjectsByRegion(string regionId)
+        {             
             try
             {
-                if(regionId == null)
-                {
-                    var usersAllList = await _users.FindAsync(users => true)
+               var usersList = await _usersDb.FindAsync(users=>users.RegionId == regionId)
                     .Result
                     .ToListAsync();
-                    return BaseResponse<List<User>>.Create(usersAllList, MyStatus.Success);
-                }
-               var usersList = await _users.FindAsync(users=>users.region_id == regionId)
-                    .Result
-                    .ToListAsync();
-               return BaseResponse<List<User>>.Create(usersList,MyStatus.Success);
+                return usersList;
             }
             catch (Exception ex)
             {
-                if (ex.Message == DbExMessage.NotFound)
+                if (ex.Message == DbExMessage.NoElements)
                 {
-                    return BaseResponse<List<User>>.Create(new List<User>(), MyStatus.Success);
+                    throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
-                Console.WriteLine(ex.Message);
-                return BaseResponse<List<User>>.Create(null,MyStatus.Except);
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
 
-        public async Task<BaseResponse<User>> GetObjectBy(string email)
+        public async Task<User> GetObjectBy(string email)
         {
+           
             try
             {
                 var user =  (User)_cache.GetObject(email);
                 if (user == null)
                 {
-                    user = await _users.FindAsync(user => user.email == email)
+                    user = await _usersDb.FindAsync(user => user.Email == email)
                         .Result
-                        .FirstAsync();                    
-                    return BaseResponse<User>.Create(user, MyStatus.Success);
+                        .FirstAsync();
+                    return user;
                 }
                 else
                 {
-                    return BaseResponse<User>.Create(user, MyStatus.Success);
+                    return user;
                 }
             }
             catch (Exception ex)
             {
                 if (ex.Message == DbExMessage.NoElements)
-                {                    
-                    return BaseResponse<User>.Create(null, MyStatus.NotFound);
+                {
+                    throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
-                Console.WriteLine(ex.Message);
-                return BaseResponse<User>.Create(null, MyStatus.Except); ;
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
 
         }
 
-        public async Task<BaseResponse<User>> SetObject(User value)
+        public async Task<User> SetObject(User value)
         {
             
             try
             {
-               await _users.InsertOneAsync(value);
-               return BaseResponse<User>.Create(value,MyStatus.Success);
+               await _usersDb.InsertOneAsync(value);
+                return value;
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return BaseResponse<User>.Create(null, MyStatus.Except);
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
 
-        public async Task<BaseResponse<User>> UpdateObject(User newValue)
+        public async Task<User> UpdateObject(User newValue)
         {
           
             try
             {
-                var filter = Builders<User>.Filter.Eq("email", newValue.email);
-                await _users.ReplaceOneAsync(filter, newValue);
-                _cache.DeleteObject(newValue.email);
-                _cache.SetObject(newValue.email, newValue,10);
-                return BaseResponse<User>.Create(newValue, MyStatus.Success);
+                var filter = Builders<User>.Filter.Eq("email", newValue.Email);
+                await _usersDb.ReplaceOneAsync(filter, newValue);
+                _cache.DeleteObject(newValue.Email);
+                _cache.SetObject(newValue.Email, newValue,10);
+                return newValue;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);                
-                return BaseResponse<User>.Create(null, MyStatus.Except);
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
             }
         }
 
-        public async Task<bool> DeleteUser(string email)
+        public async Task<User> DeleteObject(string email)
         {
             try
             {
                 _cache.DeleteObject(email);
-                var response = await _users.DeleteOneAsync(user => user.email == email);
-                if (response.DeletedCount == 0)
+                var response = await _usersDb.FindAsync(user => user.Email == email).Result.FirstAsync();
+                await _usersDb.DeleteOneAsync(user => user.Email == email);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+            }
+        }
+
+        public async Task<bool> CheckUser(string email)
+        {
+            try
+            {
+                var user = (User)_cache.GetObject(email);
+                if (user == null)
                 {
-                    return false;
+                    user = await _usersDb.FindAsync(user => user.Email == email)
+                        .Result
+                        .FirstAsync();                    
                 }
                 return true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {              
+                if (ex.Message == DbExMessage.NoElements)
+                {
+                    return false;
+                }
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+            }
+        
+        }
+        #region Friend views
+        public async Task<List<User>> GetOnlineUsersByList(List<string> users,int page,bool isOnline)
+        {
+            var skip = page * _limit;
+
+            var aggregateOne = new BsonDocument()
             {
-                Console.WriteLine($"{ex.Message} - - - {ex.StackTrace}");
-                return false;
+                {
+                  "$match", new BsonDocument()
+                  {
+                      {
+                          "email", new BsonDocument()
+                          {
+                              {
+                                  "$in", new BsonArray(users)
+                              }
+                          }
+                      }
+                  }
+                }
+            };
+            var aggregateTwo = new BsonDocument();
+            if (isOnline)
+            {
+                aggregateTwo = new BsonDocument()
+               {
+                  {
+
+                    "$match", new BsonDocument()
+                    {
+                        {
+                            "lastBeOnline", new BsonDocument()
+                            {
+                                {
+                                    "$gte",DateTime.UtcNow.AddMinutes(-5)
+                                }
+                            }
+                        }
+                    }
+                  }
+               };
+
+
+
+            }
+            else
+            {
+                aggregateTwo = new BsonDocument()
+               {
+                  {
+
+                    "$match", new BsonDocument()
+                    {
+                        {
+                            "lastBeOnline", new BsonDocument()
+                            {
+                                {
+                                    "$lte",DateTime.UtcNow.AddMinutes(-5)
+                                }
+                            }
+                        }
+                    }
+                  }
+               };
+            }
+           
+
+            var aggreagetThree = new BsonDocument()
+            {
+                {
+                    "$skip",skip
+                }
+            };
+
+            var aggreagetFour = new BsonDocument()
+            {
+                {
+                    "$limit",_limit
+                }
+            };
+
+            var pipeline = new BsonDocument[] { aggregateOne, aggregateTwo, aggreagetThree, aggreagetFour };
+            try
+            {
+                return await _usersDb.Aggregate<User>(pipeline).ToListAsync();           
+                
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == DbExMessage.NoElements)
+                {
+                    return new List<User>();
+                }
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.InternalServerError);
+            }
+
+
+        }
+
+        public async Task<List<User>> GetUsers(string searchText, string? regionId, int page)
+        {
+            var skip = page * _limit;
+            var aggregateOne = new BsonDocument()
+            {
+                {
+                    "$match", new BsonDocument()
+                    {
+                        {
+                            "nickname",new BsonDocument()
+                            {
+                                {
+                                    "$regex",searchText
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            };
+            var aggregateTwo = new BsonDocument();
+            if (regionId != null)
+            {
+                aggregateTwo = new BsonDocument()
+                {
+                    {
+                        "$match", new BsonDocument()
+                        {
+                            {
+                                "region_id",regionId
+                            }
+                        }
+                    }
+                };
+            }
+            var aggregateThree = new BsonDocument()
+            {
+                {
+                    "$skip", skip
+                }
+            };
+            var aggreagetFour = new BsonDocument()
+            {
+                {
+                    "$limit", _limit
+                }
+            };
+            var pipeline =  new BsonDocument [4];
+            if (regionId != null)
+            {
+                pipeline = new BsonDocument[] { aggregateOne, aggregateTwo, aggregateThree, aggreagetFour };
+            }
+            else
+            {
+                pipeline = new BsonDocument[] { aggregateOne, aggregateThree, aggreagetFour };
+            }
+            try
+            {
+                return await _usersDb.Aggregate<User>(pipeline).ToListAsync();
+
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message == DbExMessage.NoElements)
+                {
+                    return new List<User>();
+                }
+                _logger.LogError(ex.Message);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.InternalServerError);
             }
         }
+
+        #endregion
+
     }
 }

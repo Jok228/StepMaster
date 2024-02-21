@@ -5,7 +5,6 @@ using Domain.Entity.API;
 using Domain.Entity.Main.Titles;
 using Infrastructure.MongoDb.Cache.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using StepMaster.Auth.ResponseLogic;
 using StepMaster.Models.API.Title;
 using StepMaster.Models.API.TitlesModel;
 

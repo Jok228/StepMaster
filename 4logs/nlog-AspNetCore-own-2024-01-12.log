@@ -1,7 +1,0 @@
-2024-01-12 03:56:59.7449|0|ERROR|StepMaster.Program|init main |url: |action: 
-2024-01-12 03:57:00.1893|60|WARN|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. |url: |action: 
-2024-01-12 03:57:00.2891|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://[::]:80 |url: |action: 
-2024-01-12 03:57:00.2946|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
-2024-01-12 03:57:00.2946|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
-2024-01-12 03:57:00.2946|0|INFO|Microsoft.Hosting.Lifetime|Content root path: /app |url: |action: 
-2024-01-12 03:59:31.0246|0|INFO|Microsoft.Hosting.Lifetime|Application is shutting down... |url: |action: 

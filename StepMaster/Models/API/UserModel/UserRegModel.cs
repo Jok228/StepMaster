@@ -24,14 +24,15 @@ namespace StepMaster.Models.API.UserModel
         {
             return new User()
             {
-                email = regModel.email,
-                nickname = regModel.nickname,
-                fullname = regModel.fullname,
-                password = HashCoder.GetHash(regModel.password),
-                region_id = regModel.region_id,
-                gender = regModel.gender,
-                role = "user",
-                vipStatus = true
+                Email = regModel.email,
+                NickName = regModel.nickname,
+                FullName = regModel.fullname,
+                Password = HashCoder.GetHash(regModel.password),
+                RegionId = regModel.region_id,
+                Gender = regModel.gender,
+                Role = "user",
+                VipStatus = true,
+                LastBeOnline = DateTime.UtcNow,
                 
 
             };

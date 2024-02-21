@@ -14,11 +14,12 @@ using Application.Logic.CodeGenerate;
 using Domain.Entity.Main;
 using StepMaster.Services.ForDb.Interfaces;
 using Application.Services.Post.Repositories;
-using StepMaster.Auth.ResponseLogic;
 using Domain.Entity.API;
 using StepMaster.Models.API.UserModel;
 using Infrastructure.MongoDb.Cache.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
+using Application.Repositories.Db.Interfaces_Repository;
+using System.Net;
 
 
 namespace StepMaster.Controllers.api
@@ -31,13 +32,15 @@ namespace StepMaster.Controllers.api
         private readonly IPost_Service _postService;
         private readonly IMy_Cache _cacheService;
         private readonly IRating_Service _ratingService;
+        private readonly IClan_Repository _clanRepository;
 
-        public AuthorizationController(IUser_Service user, IPost_Service post, IMy_Cache cache, IRating_Service ratingService)
+        public AuthorizationController(IUser_Service user, IPost_Service post, IMy_Cache cache, IRating_Service ratingService, IClan_Repository clanRepository)
         {
             _postService = post;
             _usersService = user;
             _cacheService = cache;
             _ratingService = ratingService;
+            _clanRepository = clanRepository;
         }
         [HttpGet]
         [Route("Auth")]
@@ -47,63 +50,69 @@ namespace StepMaster.Controllers.api
 
             var response = await _usersService.GetByLoginAsync(User.Identity.Name);
 
-            await Authenticate(response.Data,true);
+            await Authenticate(response,true);
             
 
         }
         [HttpPost]
         [Route("SendCode")]
         public async Task<Code> SendCode([FromForm] string email)
-        {   
-            var checkUser = await _usersService.GetByLoginAsync(email);
-            if (checkUser.Status == MyStatus.NotFound)
+        {              
+            if (!await _usersService.CheckUser(email))
             {
                 var  send = await _postService.SendCodeUser(email);
-                return ResponseLogic<Code>.Response(Response, send.Status, send.Data);
+                return send;
             }
-            return ResponseLogic<Code>.Response(Response, MyStatus.Exists, new Code());
+            else
+            {
+                throw new HttpRequestException("409 This User already registred", null, HttpStatusCode.Conflict);
+            }
+        }
+        [HttpPost]
+        [CustomAuthorizeUser("all")]
+        [Route("SetToken")]
+        public async Task<User> SetToken([FromForm] string token)
+        {
+            var email = User.Identity.Name;
+            var user = await _usersService.GetByLoginAsync(email);
+            user.FireBaseToken = token;
+            return await _usersService.UpdateUser(user);   
         }
         [HttpPost]
         [Route("Registration")]
-        public async Task<UserResponse> Registration([FromForm] UserRegModel user)
+        public async Task<UserLargeResponse> Registration([FromForm] UserRegModel user)
         {
-            if(_usersService.GetByLoginAsync(user.email).Result.Status == MyStatus.NotFound)
+            if(! await _usersService.CheckUser(user.email))
             {
                 var resUser = await _usersService.RegUserAsync(UserRegModel.GetFullUser(user));
                 var resRating = await _ratingService.AddNewPosition(user.email, user.region_id);
-                if (resUser.Status == MyStatus.Success)
-                {
-                    await Authenticate(resUser.Data, true);
-                    await _usersService.UpdateUser(resUser.Data);
-                }
-                return ResponseLogic<UserResponse>.Response(Response, resUser.Status, new UserResponse(resUser.Data,resRating,null));
+                await Authenticate(resUser, true);
+                await _usersService.UpdateUser(resUser);
+                return new UserLargeResponse(resUser, resRating, null, null);
             }
-            return ResponseLogic<UserResponse>.Response(Response, MyStatus.Exists, null);
+            else
+            {
+                throw new HttpRequestException("409 This User already registred", null, HttpStatusCode.Conflict);
+            }
 
         }
         
         [HttpGet]
         [Route("SendNewPassword")]
         public async Task SendNewPassword([FromForm] string email)
-        {
-            var user = await _usersService.GetByLoginAsync(email);
-            var newPassword = CodeGenerate.RandomString(12);
-            var host = Request.GetEncodedUrl().Split("/api/")[0];           
-            if (user.Status == MyStatus.Success)
+        {          
+            if (await _usersService.CheckUser(email))
             {
-                
-                var send  = await _postService.SendPasswordOnMail(email, newPassword, host);
+                var newPassword = CodeGenerate.RandomString(12);
+                var host = Request.GetEncodedUrl().Split("/api/")[0];
+                await _postService.SendPasswordOnMail(email, newPassword, host);
                 _cacheService.SetObject(email + newPassword, newPassword, 10);
-                if (send.Status ==MyStatus.Success)
-                {
-                    Response.StatusCode = 200;
-                }
-                else
-                {
-                    Response.StatusCode = (int)send.Status;
-                }
             }
-            Response.StatusCode = (int)user.Status;
+            else
+            {
+                Response.StatusCode = 404;
+            }
+            
         }
 
         private async Task Authenticate(User user, bool firstReg)
@@ -111,8 +120,8 @@ namespace StepMaster.Controllers.api
             
             var claims = new List<Claim>
         {
-            new Claim(ClaimTypes.Name, user.email),
-            new Claim(ClaimsIdentity.DefaultRoleClaimType, user.role)
+            new Claim(ClaimTypes.Name, user.Email),
+            new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role)
         };
            
             
@@ -123,11 +132,12 @@ namespace StepMaster.Controllers.api
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(id));
             HttpContext.Response.Headers.TryGetValue("Set-Cookie", out var newCookies);
             var cookies = newCookies.ToString().Split(';')[0];
-            user.lastCookie = cookies;
+            user.LastCookie = cookies;
             if (firstReg)
             {
                await _usersService.UpdateUser(user);
             }
+            await _usersService.UpdateLastBeOnline(user.Email);
             
             
         }
@@ -141,14 +151,23 @@ namespace StepMaster.Controllers.api
                 var userEmail = User.Identity.Name;
                 var response = await _usersService.DeleteCookie(userEmail);
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-                Response.StatusCode = (int)response.Status;
+                if (response)
+                {
+                    Response.StatusCode = 200;
+                }
+                else
+                {
+                    Response.StatusCode = 500;
+                }
             }
             else
             {
                 HttpContext.Response.StatusCode = 419;
             }
         }
+        
         [HttpGet]
+       
         [Route("UpdateCookies")]        
         public async Task UpdateCookies()
         {
@@ -159,26 +178,16 @@ namespace StepMaster.Controllers.api
             }
             else
             {
-               var user = await _usersService.GetUserbyCookie(cookies);
-                if (user.Status == MyStatus.Success)
-                {
-                    await Authenticate(user.Data, true);
-                    Response.StatusCode = 200;
-                    
-                }
-                else
-                {
-                    Response.StatusCode = 404;
-                }
+               var user = await _usersService.GetUserbyCookie(cookies);                
+               await Authenticate(user, true);
+               Response.StatusCode = 200;
             }
         }
         [HttpDelete]
-        [Route("DeleteUser")]
-      
+        [Route("DeleteUser")]      
         public async Task DeleteUser([FromForm]string email)
         {            
             var response = await _usersService.DeleteUser(email);
-            Response.StatusCode = (int)response.Status;
 
         }
     }

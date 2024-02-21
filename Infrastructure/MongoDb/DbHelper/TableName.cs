@@ -13,5 +13,6 @@ namespace Infrastructure.MongoDb.Settings
         public static string Day = "Days";
         public static string Region = "Regions";
         public static string Condition = "Conditions";
+        public static string Clan = "Clans";
     }
 }

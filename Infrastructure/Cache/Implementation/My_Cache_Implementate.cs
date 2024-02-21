@@ -28,8 +28,12 @@ namespace Infrastructure.MongoDb.Cache.Implementation
             _cache.TryGetValue(key, out object value);            
             return value;
         }
-        public void SetObject(string key, object value, int timeMinute)
+        public void SetObject(string key, object value, int timeMinute = 0)
         {
+            if (timeMinute == 0)
+            {
+                _cache.Set(key, value);
+            }
             _cache.Set(key, value, TimeSpan.FromMinutes(timeMinute));
         }
     }

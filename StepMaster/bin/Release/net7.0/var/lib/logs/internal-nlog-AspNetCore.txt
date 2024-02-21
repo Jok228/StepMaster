@@ -118,3 +118,33 @@
 2024-01-12 10:12:35.2613 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
 2024-01-12 10:12:35.2613 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
 2024-01-12 10:12:35.2613 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:45.7451 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-01-15 10:25:45.7495 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-01-15 10:25:45.7495 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-01-15 10:25:45.7495 Info Registered target NLog.Targets.NLogViewerTarget(Name=TcpOutlet)
+2024-01-15 10:25:45.7495 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-01-15 10:25:45.7632 Info Validating config: TargetNames=TcpOutlet, lifetimeConsole, ownFile-web, ConfigItems=61, FilePath=D:\StepMaster\StepMaster\bin\Release\net7.0\NLog.config
+2024-01-15 10:25:45.7632 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2024-01-15 10:25:45.7632 Info Configuration initialized.
+2024-01-15 10:25:45.9180 Info Validating config: TargetNames=TcpOutlet, lifetimeConsole, ownFile-web, ConfigItems=61, FilePath=D:\StepMaster\StepMaster\bin\Release\net7.0\NLog.config
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505

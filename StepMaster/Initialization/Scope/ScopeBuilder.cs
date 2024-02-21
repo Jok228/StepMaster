@@ -4,6 +4,8 @@ using Application.Repositories.Db.Interfaces_Repository;
 using Application.Repositories.S3.Interfaces;
 using Application.Services.Entity.Interfaces_Service;
 using Application.Services.Entity.Realization_Services;
+using Application.Services.FIreBase.Interfaces;
+using Application.Services.FIreBase.Realization;
 using Application.Services.ForDb.APIDatebaseSet;
 
 using Application.Services.Post.Repositories;
@@ -30,16 +32,19 @@ namespace StepMaster.Initialization.Scope
         {
             service.AddTransient<FactoryMiddleware>();         
             service.AddScoped<ITitles_Services, Titles_Service>();
+            service.AddScoped<IFireBase_Service, FireBase_Service>();
             service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
             service.AddScoped<IUser_Service, User_Service>();
-            service.AddScoped<IDays_Service, DaysService>();
+            service.AddScoped<IDays_Service, Days_Service>();
+            service.AddScoped<IClan_Service, Clan_Service>();
             service.AddScoped<IPost_Service, Post_Service>();
         }
         public static void InitializerRepsitories(IServiceCollection service)
         {
             service.AddScoped<ICondition_Repository, Condition_Repository>();
             service.AddScoped<IDay_Repository, Day_Repository>();
+            service.AddScoped<IClan_Repository, Clan_Repository>();
             service.AddScoped<IRegion_Repository, Region_Repository>();
             service.AddScoped<IUser_Repository, User_Repository>();
             service.AddScoped<IRating_Repository, Rating_Repository>();
