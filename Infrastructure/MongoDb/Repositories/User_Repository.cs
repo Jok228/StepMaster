@@ -49,7 +49,7 @@ namespace Infrastructure.MongoDb.Repositories
                     throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null,HttpStatusCode.InternalServerError);
 
             }
         }
@@ -77,7 +77,7 @@ namespace Infrastructure.MongoDb.Repositories
                     throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null,HttpStatusCode.InternalServerError);
             }
         }
 
@@ -106,7 +106,7 @@ namespace Infrastructure.MongoDb.Repositories
                     throw new HttpRequestException("404 Not Found", null, HttpStatusCode.NotFound);
                 }
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null,HttpStatusCode.InternalServerError);
             }
 
         }
@@ -123,7 +123,7 @@ namespace Infrastructure.MongoDb.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null,HttpStatusCode.InternalServerError);
             }
         }
 
@@ -141,7 +141,7 @@ namespace Infrastructure.MongoDb.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null,HttpStatusCode.InternalServerError);
             }
         }
 
@@ -157,7 +157,7 @@ namespace Infrastructure.MongoDb.Repositories
             catch (Exception ex)
             {
                 _logger.LogError(ex.Message);
-                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.NotFound);
+                throw new HttpRequestException("500 Shit happens", null, HttpStatusCode.InternalServerError);
             }
         }
 

@@ -1,0 +1,17 @@
+2024-03-12 18:22:19.2230|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-12 18:22:20.1307|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-12 18:22:20.1385|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-12 18:22:20.1385|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-12 18:22:20.1385|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-12 18:22:24.6554|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: 
+2024-03-12 18:22:24.6687|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: 
+2024-03-12 18:22:24.7042|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger|action: 
+2024-03-12 18:22:24.7298|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-12 18:22:24.8406|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2024-03-12 18:22:24.8406|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui.css|action: 
+2024-03-12 18:22:24.8406|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2024-03-12 18:22:25.0363|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/favicon-32x32.png|action: 
+2024-03-12 18:22:44.3268|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Room/GetMessagesByRoom|action: GetMessagesByRoom
+2024-03-12 18:22:44.3268|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Room/GetMessagesByRoom|action: GetMessagesByRoom
+2024-03-12 18:22:48.0772|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-12 18:22:48.7497|0|ERROR|Infrastructure.MongoDb.Repositories.User_Repository|One or more errors occurred. (An exception occurred while opening a connection to the server.) |url: http://localhost/api/Authorization/Auth|action: Auth

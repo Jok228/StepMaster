@@ -10,6 +10,7 @@ using Application.Services.ForDb.APIDatebaseSet;
 
 using Application.Services.Post.Repositories;
 using Application.Services.Post.Services;
+using Domain.Entity.Main.Message;
 using Infrastructure.MongoDb.Cache.Implementation;
 using Infrastructure.MongoDb.Cache.Interfaces;
 using Infrastructure.MongoDb.Repositories;
@@ -32,6 +33,9 @@ namespace StepMaster.Initialization.Scope
         {
             service.AddTransient<FactoryMiddleware>();         
             service.AddScoped<ITitles_Services, Titles_Service>();
+            service.AddScoped<IMessage_Service,Message_Service> ();
+            service.AddScoped<IMessageFile_Service,MessageFile_Service> ();
+            service.AddScoped<IRoom_Service,Room_Service> ();
             service.AddScoped<IFireBase_Service, FireBase_Service>();
             service.AddScoped<IRating_Service, Rating_Service>();
             service.AddScoped<IRegion_Service, RegionRep>();
@@ -44,6 +48,9 @@ namespace StepMaster.Initialization.Scope
         {
             service.AddScoped<ICondition_Repository, Condition_Repository>();
             service.AddScoped<IDay_Repository, Day_Repository>();
+            service.AddScoped<IMessage_Repository,Message_Repository> ();
+            service.AddScoped<IRoom_Repository,Room_Repository> ();
+            service.AddScoped<IMessageFile_Repository,MessageFile_Repository> ();
             service.AddScoped<IClan_Repository, Clan_Repository>();
             service.AddScoped<IRegion_Repository, Region_Repository>();
             service.AddScoped<IUser_Repository, User_Repository>();

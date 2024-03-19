@@ -26,6 +26,8 @@ namespace Domain.Entity.Main
 
         [BsonElement("data_create")]
         public DateTime DataCreate { get; set; }
+        [BsonElement ("room_id")]
+        public string RoomId { get; set; }
         [BsonIgnore]
         public string NumberOfAllPlace { get; set; }
         [BsonIgnore]

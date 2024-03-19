@@ -3,6 +3,7 @@ using Application.Repositories.Db.Interfaces_Repository;
 using Application.Services.Entity.Interfaces_Service;
 using Domain.Entity.API;
 using Domain.Entity.Main;
+using Domain.Entity.Main.Room;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using StepMaster.HandlerException;
@@ -20,18 +21,17 @@ namespace StepMaster.Controllers.api
     {
         private readonly IDay_Repository _daysRepository;
         private readonly IClan_Service _clanService;
+ 
         public readonly IUser_Service _userService;
         private readonly IRegion_Service _regionService;
-        private readonly IClan_Repository _clanRepository;
-        public ClanController(IClan_Service clanService, IUser_Service userService, IRegion_Service regionService, IDay_Repository daysRepository, IClan_Repository clanRepository, IUser_Repository userRepository = null, IDay_Repository dayRepository = null, IRating_Repository regionRepository = null)
-        {
+
+        public ClanController(IClan_Service clanService,IUser_Service userService,IRegion_Service regionService,IDay_Repository daysRepository)
+            {
             _clanService = clanService;
             _userService = userService;
             _regionService = regionService;
             _daysRepository = daysRepository;
-            _clanRepository = clanRepository;
-
-        }
+            }
 
         [HttpGet]
         [Route("GetAll")]
@@ -75,8 +75,7 @@ namespace StepMaster.Controllers.api
         [Route("LeaveUser")]
         [CustomAuthorizeUser("all")]
         public async Task<Clan> LeaveUser([FromForm] string mongoIdClan)
-        {
-            
+        {            
             var email = User.Identity.Name;
             return await _clanService.LeaveUser(mongoIdClan, email);
         }
@@ -129,7 +128,8 @@ namespace StepMaster.Controllers.api
                 throw new HttpRequestException("User is not having a vip status", null, HttpStatusCode.Unauthorized);
             }
            var steps = await _daysRepository.GetAllStepsUser(email,null);
-           return await _clanService.SetNewClan(newClan.CreateFullClan(email,steps,user.NickName,region.fullName));
+           var clan = newClan.ConvertToClan (email,steps,user.NickName,region.fullName);
+           return await _clanService.SetNewClan(clan);
         }
 
     }

@@ -14,7 +14,7 @@ namespace StepMaster.Models.API.ClanModel
     
         public int MaxUsers { get; set; }
 
-        public Clan CreateFullClan(string email,int steps,string nickName,string regionName)
+        public Clan ConvertToClan(string email,int steps,string nickName,string regionName)
         {
             if(this.MaxUsers<1)
             {

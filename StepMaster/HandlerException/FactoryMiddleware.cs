@@ -22,8 +22,9 @@ namespace StepMaster.HandlerException
             //_logger.LogInformation("Before request");
             try
             {
-                context.Response.Headers.Add("Version","Relise 1.016");
-                if (context.Request.Headers.ContainsKey("IsOnline"))
+                context.Response.Headers.Add("Version","Relise 1.017 Chats 1.3");
+                string method = context.Request.Path.Value.Split('/')[context.Request.Path.Value.Split ('/').Length-1];
+                if (context.Request.Headers.ContainsKey("IsOnline") && method != "Auth")
                 {
                     context.Request.Headers.TryGetValue("Cookie", out var newCookies);
                     var user = await _userService.GetUserbyCookie(newCookies);

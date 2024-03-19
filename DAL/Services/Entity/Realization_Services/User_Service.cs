@@ -26,21 +26,24 @@ namespace StepMaster.Services.ForDb.Repositories
         private readonly ICondition_Repository _conditionRepository;
         private readonly IClan_Repository _clanRepository;
         private readonly IFireBase_Service _notificationService;
+        private readonly IRoom_Repository _roomRepository;
 
-        public User_Service(IUser_Repository users, IDay_Repository dayRepository, IRating_Repository ratingRepository, ICondition_Repository conditionRepository = null, IClan_Repository clanRepository = null, IFireBase_Service notificationService = null) {
+        public User_Service(IUser_Repository users,IDay_Repository dayRepository,IRating_Repository ratingRepository,ICondition_Repository conditionRepository = null,IClan_Repository clanRepository = null,IFireBase_Service notificationService = null,IRoom_Repository roomRepository = null)
+            {
             _usersRepository = users;
             _dayRepository = dayRepository;
             _ratingRepository = ratingRepository;
             _conditionRepository = conditionRepository;
             _clanRepository = clanRepository;
             _notificationService = notificationService;
+            _roomRepository = roomRepository;
             }
         #region CRUD
         public async Task<User> GetByLoginAsync(string email) {
             var user = await _usersRepository.GetObjectBy(email);
-            user.actualTitle = await GetActualAchievementUser(email);
-            var clan = await _clanRepository.GetClanByUser(email);
-            user.clanId = clan._id;
+            user.actualTitle = await GetActualAchievementUser(email);           
+            var clan = await _clanRepository.GetClanByUser (email);
+            user.clanId = clan._id;                
             return user;
             }
 
@@ -48,7 +51,14 @@ namespace StepMaster.Services.ForDb.Repositories
         #endregion
 
         public async Task<User> RegUserAsync(User newUser) {
-            return await _usersRepository.SetObject(newUser); // inser newUsers        
+            
+            var response = await _usersRepository.SetObject(newUser); // inser newUsers
+            #region Room logic
+            var globalRoom = await _roomRepository.GetGlobalRoom ();
+            globalRoom.AddUser (newUser.Email);
+            await _roomRepository.UpdateRoom (globalRoom);
+#endregion
+            return response;
             }
         public async Task<User> UpdateUser(User userUpdate) {
             return await _usersRepository.UpdateObject(userUpdate);
@@ -120,10 +130,15 @@ namespace StepMaster.Services.ForDb.Repositories
                 }
 
             userTarget.RequrequestInFriends.Add(emailMain);
-            var message = FireBaseWriteMessages.GenerateMessage(userOwnRequest.Email, PushType.FriendRequest);
+            var message = new RequestMessage (
+                new MessageParam
+                    {
+                    Email = emailMain,
+                    TypePush = "0",
+                    }).message;
             if(userTarget.FireBaseToken != null)
                 {
-                await _notificationService.SendMessage(userTarget.FireBaseToken, message);
+                await _notificationService.SendMessage(userTarget.FireBaseToken,message);
                 }
             
             return await _usersRepository.UpdateObject(userTarget);

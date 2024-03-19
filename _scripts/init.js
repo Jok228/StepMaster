@@ -6,10 +6,43 @@ db.auth("root","password")
 db = db.getSiblingDB('StepMaster');
 db.createCollection('Regions');
 db.createCollection('Clans');
+db.createCollection('Rooms');
 db.createCollection('Days');
 db.createCollection('Rating');
 db.createCollection('User');
 db.createCollection('Conditions')
+db.Rooms.insertMany(
+  [
+    {
+      "_id": ObjectId('65db00b4fdf0dd4420784265'),
+      "users": ["test@test.ru","dante_aligiri@rambler.ru","paxar14705@notedns.com"],
+      "messages": [],
+      "is_public": true,
+      "name": "GlobalChat"
+    },
+    {
+      "_id": ObjectId('65db32f3ec405086fa8f241b'),
+      "users": ["paxar14705@notedns.com"],
+      "messages": [],
+      "is_public": true,
+      "name": "Тестовый 1 можно удалить"
+    },
+    {
+      "_id": ObjectId('65db32f3ec405086fa8f241c'),
+      "users": ["test@test.ru","paxar14705@notedns.com"],
+      "messages": [],
+      "is_public": true,
+      "name": "Тестовый клан 2!"
+    },
+    {
+      "_id": ObjectId('65db32f3ec405086fa8f241d'),
+      "users": ["dante_aligiri@rambler.ru"],
+      "messages": [],
+      "is_public": true,
+      "name": "Тестовый клан 3!"
+    }
+  ]
+);
 db.Clans.insertMany(
 [
   { 
@@ -21,6 +54,7 @@ db.Clans.insertMany(
       "nickname": "Retro"
     }
   ],
+  "room_id":"65db32f3ec405086fa8f241b",
   "name": "Тестовый 1 можно удалить",
   "description": "Тестовый клан 1!",
   "region_name": "Республика Адыгея",
@@ -42,6 +76,7 @@ db.Clans.insertMany(
       "nickname": "Retro"
     }
   ],
+  "room_id":"65db32f3ec405086fa8f241c",
   "name": "Тестовый 2 можно удалить",
   "description": "Тестовый клан 2!",
   "region_name": "Республика Адыгея",
@@ -58,6 +93,7 @@ db.Clans.insertMany(
       "nickname": "Retro2333"
     }
   ],
+  "room_id":"65db32f3ec405086fa8f241d",
   "name": "Тестовый 3 можно удалить",
   "description": "Тестовый клан 3!",
   "region_name": "Республика Адыгея",
@@ -65,7 +101,7 @@ db.Clans.insertMany(
   "owner_user_email": "dante_aligiri@rambler.ru",
   "data_create": new Date()
 }
-])
+]);
 db.User.insertMany(
   [{ 
     "email": "paxar14705@notedns.com",

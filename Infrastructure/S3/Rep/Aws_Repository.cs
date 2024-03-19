@@ -5,9 +5,11 @@ using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using API.Services.ForS3.Configure;
 using Application.Repositories.S3.Interfaces;
+using Domain.Entity.Main.Message;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.IO;
+using System.Net;
 using System.Runtime.CompilerServices;
 
 namespace API.Services.ForS3.Rep
@@ -205,25 +207,23 @@ namespace API.Services.ForS3.Rep
                 }
             }
 
-        public async Task SaveFile(string pathToFile,IFormFile file)
+        public async Task SaveFile(IFormFile file,string path)
             {
-            var path = _pathForMessageFile + pathToFile;
-            var fullPathFile = string.Empty;
             try
                 {
                 using (var _client = new AmazonS3Client (_amazonAccessKeyId,_amazonSecretAccessKey,_config))
                     {
                     using (var newMemoryStream = new StreamContent (file.OpenReadStream (),bufferSize: _bufferSize).ReadAsStreamAsync ())
                         {
-                        fullPathFile = await GetOldFile (_client,path);
-                        if (fullPathFile != string.Empty)
+                        var fullPathFile = await GetOldFile (_client,path);
+                        if (fullPathFile != null)
                             {
                             await DeleteObject (fullPathFile,_client);
                             }
                         var uploadRequest = new TransferUtilityUploadRequest
                             {
                             InputStream = newMemoryStream.Result,
-                            Key = _beginPath + path + file.ContentType.Split ('/')[1].Insert (0,"."),
+                            Key = path,
                             BucketName = _bucketName,
                             ContentType = file.ContentType,
                             };
@@ -234,8 +234,23 @@ namespace API.Services.ForS3.Rep
                 }
             catch (Exception ex)
                 {
-
+                throw new HttpRequestException ("500 Shit happens (Exception on AWS)",null,HttpStatusCode.InternalServerError);
                 }
+            }
+        public async Task DeleteFile(MessageFile file)
+            {
+            try
+                {
+                using (var _client = new AmazonS3Client (_amazonAccessKeyId,_amazonSecretAccessKey,_config))
+                    {
+                      await DeleteObject (file.Path,_client);
+                    }
+                }
+            catch (Exception ex)
+                {
+                throw new HttpRequestException ("500 Shit happens (Exception on AWS)",null,HttpStatusCode.InternalServerError);
+                }
+
             }
         #region Additional functions
         private async Task DeleteObject(string fullPathFile,AmazonS3Client _client)
@@ -269,6 +284,8 @@ namespace API.Services.ForS3.Rep
                 }
             return null;
             }
+
+        
         }
     #endregion
     }

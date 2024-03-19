@@ -148,3 +148,102 @@
 2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
 2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
 2024-01-15 10:25:47.8303 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:31.8638 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2024-03-19 19:17:31.8638 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2024-03-19 19:17:31.8638 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2024-03-19 19:17:31.8638 Info Registered target NLog.Targets.NLogViewerTarget(Name=TcpOutlet)
+2024-03-19 19:17:31.8752 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.2.8.2366. Product version: 5.2.8+f586f1341c46fa38aaaff4c641e7f0fa7e813943. GlobalAssemblyCache: False
+2024-03-19 19:17:31.8752 Info Validating config: TargetNames=TcpOutlet, lifetimeConsole, ownFile-web, ConfigItems=61, FilePath=D:\StepMaster\StepMaster\bin\Release\net7.0\NLog.config
+2024-03-19 19:17:31.8752 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2024-03-19 19:17:31.8907 Info Configuration initialized.
+2024-03-19 19:17:31.9229 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\StepMaster\StepMaster\bin\Release\net7.0\var/lib/logs/nlog-AspNetCore-own-2024-03-19.log Exception: System.IO.IOException: The process cannot access the file 'D:\StepMaster\StepMaster\bin\Release\net7.0\var\lib\logs\nlog-AspNetCore-own-2024-03-19.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateDirectoryFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2024-03-19 19:17:32.0569 Info Validating config: TargetNames=TcpOutlet, lifetimeConsole, ownFile-web, ConfigItems=61, FilePath=D:\StepMaster\StepMaster\bin\Release\net7.0\NLog.config
+2024-03-19 19:17:32.2001 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\StepMaster\StepMaster\bin\Release\net7.0\var/lib/logs/nlog-AspNetCore-own-2024-03-19.log Exception: System.IO.IOException: The process cannot access the file 'D:\StepMaster\StepMaster\bin\Release\net7.0\var\lib\logs\nlog-AspNetCore-own-2024-03-19.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateDirectoryFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2024-03-19 19:17:32.2001 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\StepMaster\StepMaster\bin\Release\net7.0\var/lib/logs/nlog-AspNetCore-own-2024-03-19.log Exception: System.IO.IOException: The process cannot access the file 'D:\StepMaster\StepMaster\bin\Release\net7.0\var\lib\logs\nlog-AspNetCore-own-2024-03-19.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateDirectoryFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2024-03-19 19:17:32.2001 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\StepMaster\StepMaster\bin\Release\net7.0\var/lib/logs/nlog-AspNetCore-own-2024-03-19.log Exception: System.IO.IOException: The process cannot access the file 'D:\StepMaster\StepMaster\bin\Release\net7.0\var\lib\logs\nlog-AspNetCore-own-2024-03-19.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateDirectoryFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2024-03-19 19:17:32.2001 Warn FileTarget(Name=ownFile-web): Failed to create file appender: D:\StepMaster\StepMaster\bin\Release\net7.0\var/lib/logs/nlog-AspNetCore-own-2024-03-19.log Exception: System.IO.IOException: The process cannot access the file 'D:\StepMaster\StepMaster\bin\Release\net7.0\var\lib\logs\nlog-AspNetCore-own-2024-03-19.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.TryCreateDirectoryFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.BaseFileAppender.CreateFileStream(Boolean allowFileSharedWriting, Int32 overrideBufferSize)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender..ctor(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.SingleProcessFileAppender.Factory.NLog.Internal.FileAppenders.IFileAppenderFactory.Open(String fileName, ICreateFileParameters parameters)
+   at NLog.Internal.FileAppenders.FileAppenderCache.CreateAppender(String fileName, Int32 freeSpot)
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9312 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505
+2024-03-19 19:17:33.9330 Error NLogViewerTarget(Name=TcpOutlet): Error when sending. Exception: System.IO.IOException: Error: ConnectionRefused, Address: tcp://localhost:4505

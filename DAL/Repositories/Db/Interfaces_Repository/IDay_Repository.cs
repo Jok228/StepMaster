@@ -2,7 +2,7 @@
 
 namespace Application.Repositories.Db.Interfaces_Repository
 {
-    public interface IDay_Repository : IBase_Repository<Day>
+    public interface IDay_Repository : IBase_Operation<Day>
     {
         Task<List<Day>> GetDaysByEmail(string email);
 

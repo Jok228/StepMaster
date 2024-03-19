@@ -8,7 +8,7 @@ using static Domain.Entity.Main.Clan;
 
 namespace Application.Repositories.Db.Interfaces_Repository
 {
-    public interface IClan_Repository:IBase_Repository<Clan>
+    public interface IClan_Repository:IBase_Operation<Clan>
     {
         Task<List<ClanLite>> GetClansMinToMax(string nameSearch,int numberPage = 0);
 

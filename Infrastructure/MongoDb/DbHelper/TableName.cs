@@ -14,5 +14,8 @@ namespace Infrastructure.MongoDb.Settings
         public static string Region = "Regions";
         public static string Condition = "Conditions";
         public static string Clan = "Clans";
-    }
+        public static string Files = "Files";
+        public static string Rooms = "Rooms";
+        public static string Message = "Messages";
+        }
 }
