@@ -1,0 +1,112 @@
+2024-03-03 20:48:51.8949|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-03 20:48:52.7031|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-03 20:48:52.7031|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-03 20:48:52.7031|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-03 20:48:52.7031|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-03 20:48:53.7686|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: 
+2024-03-03 20:48:53.7686|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger|action: 
+2024-03-03 20:48:53.8317|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger|action: 
+2024-03-03 20:48:53.8593|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:48:54.0147|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-standalone-preset.js|action: 
+2024-03-03 20:48:54.0147|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui.css|action: 
+2024-03-03 20:48:54.0147|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/swagger-ui-bundle.js|action: 
+2024-03-03 20:48:55.9183|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/favicon-32x32.png|action: 
+2024-03-03 20:49:07.2485|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-03 20:49:07.9691|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-03 20:49:08.0047|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-03 20:49:08.0047|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-03 20:49:08.0047|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-03 20:49:11.3612|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:49:11.3717|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:49:11.4116|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:49:26.8594|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 20:49:26.8594|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 20:49:57.0171|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|One or more errors occurred. (A timeout occurred after 30000ms selecting a server using CompositeServerSelector{ Selectors = ReadPreferenceServerSelector{ ReadPreference = { Mode : Primary } }, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 }, OperationsCountServerSelector }. Client view of cluster state is { ClusterId : "1", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "93.190.106.199:5001" }", EndPoint: "93.190.106.199:5001", ReasonChanged: "Heartbeat", State: "Disconnected", ServerVersion: , TopologyVersion: , Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10060): Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера. 93.190.106.199:5001
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.Connect(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStream(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelper(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.Open(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.InitializeConnection(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.Heartbeat(CancellationToken cancellationToken)", LastHeartbeatTimestamp: "2024-03-03T13:49:50.1901407Z", LastUpdateTimestamp: "2024-03-03T13:49:50.1901416Z" }] }.) |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 20:50:46.4536|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-03 20:50:47.1807|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-03 20:50:47.1854|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-03 20:50:47.1854|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-03 20:50:47.1854|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-03 20:50:47.8628|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:50:47.8628|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:50:47.9061|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-03 20:51:07.5634|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 20:51:07.5634|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 20:51:12.7774|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:51:12.8925|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:04.9044|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:04.9185|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:06.5172|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:06.5323|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:09.1275|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:09.1395|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:16.2978|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 20:52:16.3097|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:11:54.1834|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Regions/GetRegions|action: GetRegions
+2024-03-03 21:11:56.9006|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:11:56.9366|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:12:45.9068|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:12:46.0288|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:12:55.2665|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:12:55.3232|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:15:21.4958|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:15:21.5481|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:33.0113|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:33.0682|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:46.2657|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:46.3175|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:58.3778|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:19:58.4209|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:21:59.3470|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:22:05.9656|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:22:17.6708|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:42:32.7234|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-03 21:42:33.4339|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-03 21:42:33.4339|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-03 21:42:33.4339|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-03 21:42:33.4339|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-03 21:42:33.9663|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:42:33.9663|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:42:34.0131|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:43:12.1387|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:43:12.2549|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/favicon.ico|action: 
+2024-03-03 21:43:14.4805|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/favicon.ico|action: 
+2024-03-03 21:43:26.2632|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:43:28.1106|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 26
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:43:35.4930|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:43:49.9731|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:43:51.3031|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-03 21:48:30.9985|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-03 21:48:31.7448|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-03 21:48:31.7764|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-03 21:48:31.7777|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-03 21:48:31.7777|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-03 21:48:35.2035|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:48:35.2035|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-03 21:48:35.2459|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 

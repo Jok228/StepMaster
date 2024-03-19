@@ -2,7 +2,7 @@
 
 namespace Application.Repositories.Db.Interfaces_Repository
 {
-    public interface IUser_Repository : IBase_Repository<User>
+    public interface IUser_Repository : IBase_Operation<User>
     {
 
         Task<User> GetByCookie(string cookie);

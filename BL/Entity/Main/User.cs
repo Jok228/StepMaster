@@ -40,7 +40,8 @@ namespace StepMaster.Models.Entity
         [BsonElement("requrequestInFriends")]
         public List<string> RequrequestInFriends { get; set; }
         [BsonElement("friends")]
-        public List<string> Friends { get; set; }
+        public List<string> Friends { get; set; }        
+
         [BsonElement("lastBeOnline")]
         public DateTime LastBeOnline { get; set; }
         [BsonIgnore]
@@ -55,7 +56,7 @@ namespace StepMaster.Models.Entity
             RequrequestInFriends = new List<string>();
             BlockedUsers = new List<string>();
             Titles = new List<string>();
-            SelectedTitles = new List<string>();   
+            SelectedTitles = new List<string>();
         }
 
         //public class TitleUser

@@ -1,0 +1,71 @@
+2024-03-17 09:44:40.3774|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 09:44:41.3520|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 09:44:41.3568|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 09:44:41.3568|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 09:44:41.3568|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 09:44:46.1921|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:44:46.1921|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:44:46.2624|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:45:36.3718|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:45:36.3718|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:46:35.0781|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 09:46:35.7755|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 09:46:35.7814|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 09:46:35.7814|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 09:46:35.7814|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 09:46:36.3553|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:46:36.3553|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:46:36.4007|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:46:40.1079|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:46:40.1210|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:47:03.2006|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:47:26.6677|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 09:47:27.3720|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 09:47:27.3720|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 09:47:27.3720|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 09:47:27.3720|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 09:47:30.9019|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:47:30.9019|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:47:30.9461|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 09:47:37.7146|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:47:37.7146|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:47:49.6731|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 09:48:00.9730|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-03-17 09:48:03.0533|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-03-17 09:48:03.0584|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-03-17 09:48:03.1471|0|WARN|Infrastructure.MongoDb.Repositories.Day_Repository|GetCountDayMoreMax |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-03-17 09:48:03.1471|0|ERROR|Infrastructure.MongoDb.Repositories.Day_Repository|Sequence contains no elements |url: http://localhost/api/Profile/GetUser|action: GetUser
+2024-03-17 10:04:45.6918|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 10:04:46.3936|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 10:04:46.3936|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 10:04:46.3936|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 10:04:46.4027|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 10:04:59.3735|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:04:59.3866|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:04:59.4306|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:05:49.0899|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-17 10:05:49.0899|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-17 10:05:49.3554|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-03-17 10:08:20.6534|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/DeleteUser|action: DeleteUser
+2024-03-17 10:08:28.1304|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 10:08:32.1276|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/DeleteUser|action: DeleteUser
+2024-03-17 10:08:53.5724|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration
+2024-03-17 10:09:57.2236|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 10:09:57.9026|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 10:09:57.9026|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 10:09:57.9026|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 10:09:57.9026|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 10:10:01.4362|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:10:01.4495|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:10:01.4928|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:11:17.0017|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-03-17 10:11:17.6681|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-03-17 10:11:17.6681|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-03-17 10:11:17.6681|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-03-17 10:11:17.6681|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-03-17 10:11:21.3005|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:11:21.3005|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:11:21.3424|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-03-17 10:11:27.6689|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/DeleteUser|action: DeleteUser
+2024-03-17 10:11:27.6689|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/Authorization/DeleteUser|action: DeleteUser
+2024-03-17 10:11:30.6088|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Registration|action: Registration

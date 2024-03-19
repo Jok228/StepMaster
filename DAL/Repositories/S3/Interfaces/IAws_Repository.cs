@@ -1,6 +1,7 @@
 ﻿using Amazon.S3.Model;
-
+using Domain.Entity.Main.Message;
 using Domain.Entity.Main.Titles;
+using FirebaseAdmin.Messaging;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -21,5 +22,9 @@ namespace Application.Repositories.S3.Interfaces
         public Task<bool> InsertFile(string userName, IFormFile file);
 
         public Task<ListObjectsResponse> GetListFiles(string path);
-    }
+
+        public Task SaveFile(IFormFile newFile,string pathToFile);
+
+        public Task DeleteFile(MessageFile file);
+        }
 }

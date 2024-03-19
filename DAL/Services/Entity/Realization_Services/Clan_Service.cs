@@ -1,6 +1,7 @@
 ﻿using Application.Repositories.Db.Interfaces_Repository;
 using Application.Services.Entity.Interfaces_Service;
 using Domain.Entity.Main;
+using Domain.Entity.Main.Room;
 using StepMaster.Models.Entity;
 using System;
 using System.Collections.Generic;
@@ -17,13 +18,20 @@ namespace Application.Services.Entity.Realization_Services
         private readonly IUser_Repository _userRepository;
         private readonly IDay_Repository _daysRepository;
         private readonly IClan_Repository _clansRepository;
-
-        public Clan_Service(IDay_Repository days, IClan_Repository clansRepository, IUser_Repository userRepository )
-        {
+        private readonly IRoom_Repository _roomsRepository;
+        private readonly IMessage_Repository _messageRepository;
+        private readonly IMessageFile_Repository _messageFileRepository;
+        private readonly IMessageFile_Service _messageFileService;
+        public Clan_Service(IDay_Repository days,IClan_Repository clansRepository,IUser_Repository userRepository,IRoom_Repository roomsRepository,IMessage_Repository messageRepository,IMessageFile_Repository messageFileRepository,IMessageFile_Service messageFileService)
+            {
             _daysRepository = days;
             _clansRepository = clansRepository;
             _userRepository = userRepository;
-        }
+            _roomsRepository = roomsRepository;
+            _messageRepository = messageRepository;
+            _messageFileRepository = messageFileRepository;
+            _messageFileService = messageFileService;
+            }
 
         public async Task<Clan> AddUser(string mongoIdClan, string email)
         {
@@ -39,8 +47,16 @@ namespace Application.Services.Entity.Realization_Services
                 Email = email,
                 Step = await _daysRepository.GetAllStepsUser(email, null)
             };
+            
             var editClan = await _clansRepository.GetObjectBy(mongoIdClan);
             editClan.AddUserPosittion(position);
+
+            #region Room logic
+            var roomClan = await _roomsRepository.GetRoom (editClan.RoomId);
+            roomClan.AddUser(email);
+            await _roomsRepository.UpdateRoom(roomClan);
+            #endregion
+
             return await _clansRepository.UpdateObject(editClan);
            
         }
@@ -53,11 +69,20 @@ namespace Application.Services.Entity.Realization_Services
             }
             var targetPosition = editClan.GetUserPosition(email);
             editClan.DeleteUserPosition(targetPosition);
-            if(editClan.RatingUsers.Count == 0)
+            
+
+            if (editClan.RatingUsers.Count == 0)
             {
                 await DeleteClan(mongoIdClan);
                 return null;
             }
+            #region Room logic
+            var roomClan = await _roomsRepository.GetRoom (editClan.RoomId);
+            roomClan.RemoveUser (email);
+            await _roomsRepository.UpdateRoom (roomClan);
+            #endregion
+
+
             return await _clansRepository.UpdateObject(editClan);
 
         }
@@ -101,8 +126,25 @@ namespace Application.Services.Entity.Realization_Services
             {
                 throw new HttpRequestException("The clan with too name and region already exist in Db ", null, HttpStatusCode.Conflict);
             }
-            var result = await _clansRepository.SetObject(newClan);
-            
+
+            #region Create room
+            var room = new Room ()
+                {
+                IsPublic = true,
+                Messages = new List<string>(),
+                Name = newClan.Name,
+                Users = new List<string> ()
+                    {
+                    newClan.OwnerUserEmail,
+                    },
+                };
+
+            room = await _roomsRepository.SetRoom(room);
+            newClan.RoomId = room._id;
+            #endregion
+
+            var result = await _clansRepository.SetObject (newClan);
+
             await _clansRepository.UpdateRatingClans();
             return result;
         }
@@ -122,16 +164,26 @@ namespace Application.Services.Entity.Realization_Services
 
         public async Task DeleteClan(string mongoIdClan)
         {
-            await _clansRepository.DeleteObject(mongoIdClan);
-            await _clansRepository.UpdateRatingClans();
-        }
-        public async Task CreateClan(Clan newClan)
-        {
-            
-            await _clansRepository.SetObject(newClan);
-            await _clansRepository.UpdateRatingClans();
-        }
+            var clan = await _clansRepository.GetClansById(mongoIdClan);
 
+            #region Room logic
+            var roomClan = await _roomsRepository.GetRoom (clan.RoomId);
+            foreach(var message in roomClan.Messages)
+                {
+                var messageFull = await _messageRepository.GetObjectBy (message);
+                foreach(var file in messageFull.FileIds)
+                    {
+                    await _messageFileService.DeleteFile(file);
+                    }
+                await _messageRepository.DeleteObject(message);
+                }
+            await _roomsRepository.DeleteRoom (roomClan._id);
+            #endregion
+
+            await _clansRepository.DeleteObject(mongoIdClan);
+            
+            await _clansRepository.UpdateRatingClans();
+        }
         public async Task UpdateStepsInClanByUser(string email)
         {
             if (!await _clansRepository.CheckClansByUser(email))

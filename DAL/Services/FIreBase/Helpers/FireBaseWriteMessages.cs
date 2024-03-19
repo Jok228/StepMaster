@@ -11,7 +11,7 @@ namespace Application.Services.FIreBase.Helpers
         public enum PushType
             {
             FriendRequest = 0,
-            Message = 1,
+            Message = 1,            
             }
         public static Dictionary<string, string> GenerateMessage(string email, PushType type) {
             if (PushType.Message.ToString() == type.ToString())

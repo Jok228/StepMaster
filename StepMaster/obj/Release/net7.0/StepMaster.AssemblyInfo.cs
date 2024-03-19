@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StepMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee3b02976231587ccfd04b2be7474c8642c6bdc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35768f301d3cab67e58d0f6b36b40f2e0c266436")]
 [assembly: System.Reflection.AssemblyProductAttribute("StepMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StepMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

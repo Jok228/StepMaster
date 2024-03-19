@@ -1,0 +1,223 @@
+2024-02-21 14:38:10.4851|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 14:38:11.1320|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 14:38:11.1401|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 14:38:11.1401|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 14:38:11.1401|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 14:38:22.9218|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 14:40:58.4108|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 14:40:59.0485|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 14:40:59.0485|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 14:40:59.0485|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 14:40:59.0485|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 14:41:07.0719|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 14:41:47.1245|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 14:41:47.9667|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 14:41:47.9667|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 14:41:47.9667|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 14:41:47.9667|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 14:41:48.5792|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 14:42:02.6424|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/SetNewFile|action: 
+2024-02-21 14:42:02.6618|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/SetNewFile|action: 
+2024-02-21 14:42:13.5961|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:42:21.0060|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-21 14:42:21.2416|8|DEBUG|API.Auth.AuthBase.BasicAunteficationHandler|AuthenticationScheme: Basic was successfully authenticated. |url: http://localhost/api/Authorization/Auth|action: Auth
+2024-02-21 14:42:23.8178|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:44:27.0942|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 14:44:27.8116|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 14:44:27.8116|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 14:44:27.8116|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 14:44:27.8116|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 14:44:31.0492|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:44:31.0615|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:47:47.9425|13|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HN1IM3NAV5L9", Request id "0HN1IM3NAV5L9:00000001": An unhandled exception was thrown by the application. System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionAsync(Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.GetScriptTag(String requestId, Boolean isHttps, String hostUrl)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)|url: http://localhost/swagger/index.html|action: 
+2024-02-21 14:48:48.0060|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:55:50.1469|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 14:55:50.9621|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 14:55:50.9693|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 14:55:50.9693|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 14:55:50.9693|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 14:56:03.5292|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 14:56:21.0605|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 14:56:21.0605|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:01:37.0455|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 15:01:37.7132|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 15:01:37.7189|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 15:01:37.7189|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 15:01:37.7189|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 15:01:38.4784|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 15:01:50.9197|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:01:50.9406|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:29:55.1392|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 15:29:55.7715|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 15:29:55.7800|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 15:29:55.7800|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 15:29:55.7800|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 15:29:56.5460|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 15:30:04.4562|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:30:04.4803|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:30:37.8513|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:31:00.2827|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:32:51.4995|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 15:32:52.1112|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 15:32:52.1231|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 15:32:52.1231|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 15:32:52.1231|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 15:32:52.7482|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 15:32:57.2797|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:32:57.2797|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:33:04.3422|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 15:33:17.2612|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:02:12.8660|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:02:13.7554|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:02:13.7648|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:02:13.7648|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:02:13.7648|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:02:27.6073|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:05:04.7328|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:05:05.4958|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:05:05.5014|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:05:05.5014|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:05:05.5014|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:05:06.1635|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:05:10.8108|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:05:10.8108|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:05:28.1393|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:05:33.8893|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/GetFIle|action: GetFile
+2024-02-21 16:05:54.2217|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/GetFIle|action: GetFile
+2024-02-21 16:07:41.9019|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:07:42.8429|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:07:42.8429|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:07:42.8607|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:07:42.8607|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:07:43.5064|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:07:47.0215|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:07:47.0302|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:11:43.2436|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:11:43.9263|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:11:43.9263|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:11:43.9263|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:11:43.9365|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:11:50.8924|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:11:54.2192|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:11:54.2346|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:14:01.9371|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:14:02.7661|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:14:02.7661|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:14:02.7661|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:14:02.7805|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:14:03.3941|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:14:06.2953|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:14:06.2953|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:14:13.9313|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string. (Parameter 'startIndex')
+   at System.String.ThrowSubstringArgumentOutOfRange(Int32 startIndex, Int32 length)
+   at System.String.Substring(Int32 startIndex, Int32 length)
+   at Domain.Entity.Main.Message.MessageFile..ctor(IFormFile file) in D:\StepMaster\BL\Entity\Main\Message\MessageFile.cs:line 25
+   at StepMaster.Controllers.api.FileController.AddFile(IFormFile file) in D:\StepMaster\StepMaster\Controllers\api\FileController.cs:line 27
+   at lambda_method11(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 34
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:18:56.5689|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:18:57.3502|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:18:57.3573|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:18:57.3573|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:18:57.3749|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:18:58.0075|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:19:05.6391|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:19:05.6391|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:19:09.9381|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentOutOfRangeException: startIndex cannot be larger than length of string. (Parameter 'startIndex')
+   at System.String.ThrowSubstringArgumentOutOfRange(Int32 startIndex, Int32 length)
+   at System.String.Substring(Int32 startIndex)
+   at Domain.Entity.Main.Message.MessageFile..ctor(IFormFile file) in D:\StepMaster\BL\Entity\Main\Message\MessageFile.cs:line 26
+   at StepMaster.Controllers.api.FileController.AddFile(IFormFile file) in D:\StepMaster\StepMaster\Controllers\api\FileController.cs:line 27
+   at lambda_method11(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at StepMaster.HandlerException.FactoryMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\StepMaster\StepMaster\HandlerException\FactoryMiddleware.cs:line 34
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)|url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:19:15.4200|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:19:30.3629|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:19:31.2163|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:19:31.2343|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:19:31.2343|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:19:31.2343|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:19:32.4625|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:19:32.4687|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:21:47.9847|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:21:48.7031|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:21:48.7031|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:21:48.7031|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:21:48.7031|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:21:49.4407|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:21:51.3733|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:21:51.3733|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:23:29.2790|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:23:29.9444|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:23:29.9554|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:23:29.9554|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:23:29.9554|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:23:30.5797|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:23:47.0612|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:23:47.0786|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:24:22.7472|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:24:23.5343|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:24:23.5343|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:24:23.5461|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:24:23.5461|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:24:34.7062|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:24:37.8891|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:24:37.9056|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:25:39.5667|0|INFO|StepMaster.Program|Process start |url: |action: 
+2024-02-21 16:25:40.2663|14|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5016 |url: |action: 
+2024-02-21 16:25:40.2663|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: 
+2024-02-21 16:25:40.2663|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: 
+2024-02-21 16:25:40.2663|0|INFO|Microsoft.Hosting.Lifetime|Content root path: D:\StepMaster\StepMaster |url: |action: 
+2024-02-21 16:25:46.8449|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:25:46.8580|3|WARN|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|Failed to determine the https port for redirect. |url: http://localhost/api/File/AddFile|action: AddFile
+2024-02-21 16:25:53.5453|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/swagger/index.html|action: 
+2024-02-21 16:26:24.1699|0|DEBUG|Infrastructure.MongoDb.Repositories.Day_Repository|NLog is integrate to Day_Controler  |url: http://localhost/api/File/GetFIle|action: GetFile
